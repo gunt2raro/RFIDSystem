@@ -236,6 +236,7 @@
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "Dashboard";
             this.Text = "Dashboard";
+            this.Load += new System.EventHandler(this.Dashboard_Load);
             this.pMenu.ResumeLayout(false);
             this.pTitle.ResumeLayout(false);
             this.pTitle.PerformLayout();

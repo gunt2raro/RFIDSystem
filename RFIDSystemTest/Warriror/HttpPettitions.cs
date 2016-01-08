@@ -37,7 +37,7 @@ namespace RFIDSystemTest.Warriror
         /// <param name="action"></param>
         /// <param name="req_data"></param>
         /// <returns></returns>
-        public static T JSONHttpPettition<T, U>(  HttpMethod method, string action, U req_data ) {
+        public static List< T > JSONHttpPettition<T, U>(  HttpMethod method, string action, U req_data ) {
             try
             {
                 //Init request
@@ -62,14 +62,14 @@ namespace RFIDSystemTest.Warriror
                         throw new Exception( String.Format( "Server error (HTTP {0}: {1}).", response.StatusCode, response.StatusDescription ) );
                     }
                     //Return of the serialized object
-                    return JsonConvert.DeserializeObject< T >( new StreamReader(response.GetResponseStream() ).ReadToEnd() ) ;
+                    return JsonConvert.DeserializeObject<List<T>>( new StreamReader(response.GetResponseStream() ).ReadToEnd() ) ;
                 }//End of response use
             }
             catch (Exception e)
             {
                 // Manage the exceptions
                 Console.WriteLine(e.Message);
-                return default(T);
+                return default( List<T> );
             }
         }//End of HttpPettition function
 

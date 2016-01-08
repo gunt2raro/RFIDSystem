@@ -12,7 +12,7 @@ namespace RFIDSystemTest.Warriror
     public static class Data
     {    
     }//End of Data class
-
+    
     public enum HttpMethod
     {
         GET,

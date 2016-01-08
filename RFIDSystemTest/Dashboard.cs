@@ -56,6 +56,10 @@ namespace RFIDSystemTest
             this.bKits.Text = MenuResource_en.bKits;
         }//End of setLabels_Buttons
 
+        private void Dashboard_Load(object sender, EventArgs e)
+        {
+            
+        }
     }//End of Dashboard class
 
 }//End of the name space

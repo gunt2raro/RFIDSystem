@@ -65,12 +65,48 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Business\Implementations\Competitors\AuthenticationRepository.cs" />
+    <Compile Include="Business\Implementations\Competitors\CompetitorRepository.cs" />
+    <Compile Include="Business\Implementations\Competitors\RegisterRepository.cs" />
+    <Compile Include="Business\Implementations\Competitors\TimeRegRepository.cs" />
+    <Compile Include="Business\Implementations\Events\CategoryRepository.cs" />
+    <Compile Include="Business\Implementations\Events\CompetitionRepository.cs" />
+    <Compile Include="Business\Implementations\Events\CompetitionTypeRepository.cs" />
+    <Compile Include="Business\Implementations\Events\EventRepository.cs" />
+    <Compile Include="Business\Implementations\States\KitStateRepository.cs" />
+    <Compile Include="Business\Implementations\States\RegisterStateRepository.cs" />
+    <Compile Include="Business\Implementations\Users\RolRepository.cs" />
+    <Compile Include="Business\Implementations\Users\UserRepository.cs" />
+    <Compile Include="Business\Interfaces\Competitors\IAuthenticationRepository.cs" />
+    <Compile Include="Business\Interfaces\Competitors\ICompetitorRepository.cs" />
+    <Compile Include="Business\Interfaces\Competitors\IRegisterRepository.cs" />
+    <Compile Include="Business\Interfaces\Competitors\ITimeRegRepository.cs" />
+    <Compile Include="Business\Interfaces\Events\ICategoryRepository.cs" />
+    <Compile Include="Business\Interfaces\Events\ICompetitionRepository.cs" />
+    <Compile Include="Business\Interfaces\Events\ICompetitionTypeRepository.cs" />
+    <Compile Include="Business\Interfaces\Events\IEventRepository.cs" />
+    <Compile Include="Business\Interfaces\States\IKitStateRepository.cs" />
+    <Compile Include="Business\Interfaces\States\IRegisterStateRepository.cs" />
+    <Compile Include="Business\Interfaces\Users\IRolRepository.cs" />
+    <Compile Include="Business\Interfaces\Users\IUserRepository.cs" />
     <Compile Include="Dashboard.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Dashboard.Designer.cs">
       <DependentUpon>Dashboard.cs</DependentUpon>
     </Compile>
+    <Compile Include="Data\Competitors\Authentication.cs" />
+    <Compile Include="Data\Competitors\Competitor.cs" />
+    <Compile Include="Data\Competitors\Register.cs" />
+    <Compile Include="Data\Competitors\TimeReg.cs" />
+    <Compile Include="Data\Events\Category.cs" />
+    <Compile Include="Data\Events\Competition.cs" />
+    <Compile Include="Data\Events\CompetitionType.cs" />
+    <Compile Include="Data\Events\Event.cs" />
+    <Compile Include="Data\States\KitState.cs" />
+    <Compile Include="Data\States\RegisterState.cs" />
+    <Compile Include="Data\Users\Rol.cs" />
+    <Compile Include="Data\Users\User.cs" />
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -231,8 +267,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Controllers\" />
-    <Folder Include="Data\" />
     <Folder Include="Helpers\" />
   </ItemGroup>
   <ItemGroup>

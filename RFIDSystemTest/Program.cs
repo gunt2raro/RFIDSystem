@@ -16,7 +16,7 @@ namespace RFIDSystemTest
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Login());
+            Application.Run(new Dashboard());
         }//End of main method
 
     }//End of Program class
