@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace RFIDSystemTest.Business.Implementations.Users
 {
-    class UserService : IUserService
+    public class UserService : IUserService
     {
     }// End of UserRepository class
 }

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace RFIDSystemTest.Business.Interfaces.States
 {
-    interface IRegisterStateService
+    public interface IRegisterStateService
     {
-    }
+    }// End fo IRegisterStateService interface
 }

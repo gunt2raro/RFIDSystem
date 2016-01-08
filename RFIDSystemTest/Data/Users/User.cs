@@ -6,10 +6,8 @@ using System.Threading.Tasks;
 
 namespace RFIDSystemTest.Data
 {
-    /// <summary>
-    /// 
-    /// </summary>
-    class User
+    
+    public class User
     {
     }// End of user model class
 }

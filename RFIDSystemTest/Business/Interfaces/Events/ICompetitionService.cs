@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace RFIDSystemTest.Business.Interfaces.Events
 {
-    interface ICompetitionService
+    public interface ICompetitionService
     {
-    }
+    }//End of ICompetitionService interface
 }

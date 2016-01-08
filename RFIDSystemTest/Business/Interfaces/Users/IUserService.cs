@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace RFIDSystemTest.Business.Interfaces
 {
-    interface IUserService
+    public interface IUserService
     {
-    }
+    }// End of IUserService interface
 }

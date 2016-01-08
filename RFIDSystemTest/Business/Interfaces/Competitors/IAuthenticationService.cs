@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace RFIDSystemTest.Business.Interfaces.Competitors
 {
-    interface IAuthenticationService
+    public interface IAuthenticationService
     {
-    }
+    }// End of IAuthentication Service interface
 }

@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace RFIDSystemTest.Business.Implementations.Events
 {
-    class CategoryService : ICategoryService
+    public class CategoryService : ICategoryService
     {
     }// End of CategoryRepository class
 }

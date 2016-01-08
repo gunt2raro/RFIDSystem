@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace RFIDSystemTest.Business.Implementations.States
 {
-    class KitStateService : IKitStateService
+    public class KitStateService : IKitStateService
     {
     }// End of KitStateRepository class
 }
