@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace RFIDSystemTest.Business.Implementations.Events
 {
-    class CategoryRepository : ICategoryRepository
+    class EventService : IEventService
     {
-    }// End of CategoryRepository class
+    }// End of EventRepository class
 }

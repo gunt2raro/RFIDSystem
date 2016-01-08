@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace RFIDSystemTest.Business.Interfaces.Competitors
 {
-    interface ICompetitorRepository
+    interface IRegisterService
     {
     }
 }

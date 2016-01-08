@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace RFIDSystemTest.Business.Implementations.Competitors
 {
-    class AuthenticationRepository : IAuthenticationRepository
+    class AuthenticationService : IAuthenticationService
     {
     }// End of Authentication Repository class
 }

@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace RFIDSystemTest.Business.Interfaces
+namespace RFIDSystemTest.Business.Interfaces.Events
 {
-    interface IUserRepository
+    interface ICompetitionService
     {
     }
 }

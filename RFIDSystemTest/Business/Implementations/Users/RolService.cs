@@ -1,4 +1,4 @@
-﻿using RFIDSystemTest.Business.Interfaces;
+﻿using RFIDSystemTest.Business.Interfaces.Users;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace RFIDSystemTest.Business.Implementations.Users
 {
-    class UserRepository : IUserRepository
+    class RolService : IRolService
     {
-    }// End of UserRepository class
+    }// End of RolRepository class
 }

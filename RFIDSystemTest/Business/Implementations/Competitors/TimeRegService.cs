@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace RFIDSystemTest.Business.Implementations.Competitors
 {
-    class CompetitorRepository : ICompetitorRepository
+    class TimeRegService : ITimeRegService
     {
-    }// End of Competitor Repository class
+    }// End of Time Reg Repository class
 }
