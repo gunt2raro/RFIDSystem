@@ -6,6 +6,10 @@ using System.Threading.Tasks;
 
 namespace RFIDSystemTest.Business.Interfaces
 {
+    /// <summary>
+    /// Interface User service
+    /// Method Reference : /Cronometraje/Sistema/UML.doc > Users
+    /// </summary>
     public interface IUserService
     {
     }// End of IUserService interface

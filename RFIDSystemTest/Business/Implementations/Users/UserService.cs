@@ -7,6 +7,10 @@ using System.Threading.Tasks;
 
 namespace RFIDSystemTest.Business.Implementations.Users
 {
+    /// <summary>
+    /// Implementation User service
+    /// Method Reference :/Cronometraje/Sistema/UML.doc > Users
+    /// </summary>
     public class UserService : IUserService
     {
     }// End of UserRepository class
