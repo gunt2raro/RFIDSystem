@@ -14,6 +14,7 @@ namespace RFIDSystemTest.Business.Interfaces.Competitors
     /// </summary>
     public interface ICompetitorService
     {
+        List<Competitor> getAll( UserSystem user_log );
         Competitor getById(int competitor_id, UserSystem user_log);
         Competitor getByName(string name, UserSystem user_log);
         Competitor getBySecondName(string second_name, UserSystem user_log);

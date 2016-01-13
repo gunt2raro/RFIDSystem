@@ -1,6 +1,6 @@
-﻿namespace RFIDSystemTest.Views
+﻿namespace RFIDSystemTest.Views.Events
 {
-    partial class CompetenceControl
+    partial class MenuCompetition
     {
         /// <summary> 
         /// Required designer variable.

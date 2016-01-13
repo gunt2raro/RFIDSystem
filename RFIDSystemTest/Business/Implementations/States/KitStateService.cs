@@ -6,6 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using RFIDSystemTest.Data.States;
 using RFIDSystemTest.Data.Users;
+using RFIDSystemTest.Warriror;
 
 namespace RFIDSystemTest.Business.Implementations.States
 {
@@ -15,6 +16,12 @@ namespace RFIDSystemTest.Business.Implementations.States
     /// </summary>
     public class KitStateService : IKitStateService
     {
+        private IHttpService http_service;
+
+        public KitStateService( IHttpService http_service ) {
+            this.http_service = http_service;
+        }// End of Constructor function
+        
         /// <summary>
         /// Add kit state
         /// </summary>
@@ -36,6 +43,16 @@ namespace RFIDSystemTest.Business.Implementations.States
         {
             throw new NotImplementedException();
         }// End of deleteKitState function
+
+        /// <summary>
+        /// Get all
+        /// </summary>
+        /// <param name="user_log"></param>
+        /// <returns></returns>
+        public List<KitState> getAll(UserSystem user_log)
+        {
+            return this.http_service.JSONHttpPettitionList<KitState>( HttpMethod.GET, this.GetType().Name.ToLower().Replace( "service", "" ), null );
+        }// End of getAll function
 
         /// <summary>
         /// Get by id

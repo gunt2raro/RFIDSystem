@@ -13,6 +13,7 @@ namespace RFIDSystemTest.Business.Interfaces.Users
     /// </summary>
     public interface IRolService
     {
+        List<Rol> getAll( UserSystem user_log );
         Rol getById( int rol_id, UserSystem user_log );
         Rol getByName( string name, UserSystem user_log );
         List<Rol> getByValue( int value, UserSystem user_log );

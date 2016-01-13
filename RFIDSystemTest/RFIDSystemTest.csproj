@@ -12,6 +12,7 @@
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
     <PublishUrl>publish\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Disk</InstallFrom>
@@ -24,7 +25,6 @@
     <MapFileExtensions>true</MapFileExtensions>
     <ApplicationRevision>0</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
-    <IsWebBootstrapper>false</IsWebBootstrapper>
     <UseApplicationTrust>false</UseApplicationTrust>
     <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
@@ -48,12 +48,78 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Microsoft.AspNet.Scaffolding.12.0, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=x86" />
+    <Reference Include="Microsoft.AspNet.Scaffolding.EntityFramework.12.0, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=x86" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="Newtonsoft.Json, Version=7.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <HintPath>..\packages\Newtonsoft.Json.7.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="Ninject, Version=3.2.0.0, Culture=neutral, PublicKeyToken=c7192dc5380945e7, processorArchitecture=MSIL">
+      <HintPath>..\packages\Ninject.3.2.2.0\lib\net45-full\Ninject.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Ninject.Web.Common, Version=3.2.0.0, Culture=neutral, PublicKeyToken=c7192dc5380945e7, processorArchitecture=MSIL">
+      <HintPath>..\packages\Ninject.Web.Common.3.2.3.0\lib\net45-full\Ninject.Web.Common.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Ninject.Web.Mvc, Version=3.2.0.0, Culture=neutral, PublicKeyToken=c7192dc5380945e7, processorArchitecture=MSIL">
+      <HintPath>..\packages\Ninject.MVC5.3.2.1.0\lib\net45-full\Ninject.Web.Mvc.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Ninject.Web.WebApi, Version=3.2.0.0, Culture=neutral, PublicKeyToken=c7192dc5380945e7, processorArchitecture=MSIL">
+      <HintPath>..\packages\Ninject.Web.WebApi.3.2.4.0\lib\net45-full\Ninject.Web.WebApi.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Ninject.Web.WebApi.WebHost, Version=3.2.0.0, Culture=neutral, PublicKeyToken=c7192dc5380945e7, processorArchitecture=MSIL">
+      <HintPath>..\packages\Ninject.Web.WebApi.WebHost.3.2.4.0\lib\net45-full\Ninject.Web.WebApi.WebHost.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System" />
+    <Reference Include="System.configuration" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Net" />
+    <Reference Include="System.Net.Http.Formatting, Version=5.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.5.0.0\lib\net45\System.Net.Http.Formatting.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.Helpers.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Http, Version=5.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Core.5.0.0\lib\net45\System.Web.Http.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Http.WebHost, Version=5.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.WebHost.5.0.0\lib\net45\System.Web.Http.WebHost.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.2.3\lib\net45\System.Web.Mvc.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.2.3\lib\net45\System.Web.Razor.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -63,32 +129,45 @@
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
+    <Reference Include="WebActivatorEx, Version=2.0.0.0, Culture=neutral, PublicKeyToken=7b26dc2a43f6a0d4, processorArchitecture=MSIL">
+      <HintPath>..\packages\WebActivatorEx.2.0\lib\net40\WebActivatorEx.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Business\Implementations\Competitors\AuthenticationRepository.cs" />
-    <Compile Include="Business\Implementations\Competitors\CompetitorRepository.cs" />
-    <Compile Include="Business\Implementations\Competitors\RegisterRepository.cs" />
-    <Compile Include="Business\Implementations\Competitors\TimeRegRepository.cs" />
-    <Compile Include="Business\Implementations\Events\CategoryRepository.cs" />
-    <Compile Include="Business\Implementations\Events\CompetitionRepository.cs" />
-    <Compile Include="Business\Implementations\Events\CompetitionTypeRepository.cs" />
-    <Compile Include="Business\Implementations\Events\EventRepository.cs" />
-    <Compile Include="Business\Implementations\States\KitStateRepository.cs" />
-    <Compile Include="Business\Implementations\States\RegisterStateRepository.cs" />
-    <Compile Include="Business\Implementations\Users\RolRepository.cs" />
-    <Compile Include="Business\Implementations\Users\UserRepository.cs" />
-    <Compile Include="Business\Interfaces\Competitors\IAuthenticationRepository.cs" />
-    <Compile Include="Business\Interfaces\Competitors\ICompetitorRepository.cs" />
-    <Compile Include="Business\Interfaces\Competitors\IRegisterRepository.cs" />
-    <Compile Include="Business\Interfaces\Competitors\ITimeRegRepository.cs" />
-    <Compile Include="Business\Interfaces\Events\ICategoryRepository.cs" />
-    <Compile Include="Business\Interfaces\Events\ICompetitionRepository.cs" />
-    <Compile Include="Business\Interfaces\Events\ICompetitionTypeRepository.cs" />
-    <Compile Include="Business\Interfaces\Events\IEventRepository.cs" />
-    <Compile Include="Business\Interfaces\States\IKitStateRepository.cs" />
-    <Compile Include="Business\Interfaces\States\IRegisterStateRepository.cs" />
-    <Compile Include="Business\Interfaces\Users\IRolRepository.cs" />
-    <Compile Include="Business\Interfaces\Users\IUserRepository.cs" />
+    <Compile Include="App_Start\NinjectBindings.cs" />
+    <Compile Include="Business\Implementations\Competitors\AuthenticationService.cs" />
+    <Compile Include="Business\Implementations\Competitors\CompetitorService.cs" />
+    <Compile Include="Business\Implementations\Competitors\RegisterService.cs" />
+    <Compile Include="Business\Implementations\Competitors\TimeRegService.cs" />
+    <Compile Include="Business\Implementations\Events\CategoryService.cs" />
+    <Compile Include="Business\Implementations\Events\CompetitionService.cs" />
+    <Compile Include="Business\Implementations\Events\CompetitionTypeService.cs" />
+    <Compile Include="Business\Implementations\Events\EventService.cs" />
+    <Compile Include="Business\Implementations\States\KitStateService.cs" />
+    <Compile Include="Business\Implementations\States\RegisterStateService.cs" />
+    <Compile Include="Business\Implementations\Users\RolService.cs" />
+    <Compile Include="Business\Implementations\Users\UserService.cs" />
+    <Compile Include="Business\Implementations\Users\UserSystemService.cs" />
+    <Compile Include="Business\Interfaces\Competitors\IAuthenticationService.cs" />
+    <Compile Include="Business\Interfaces\Competitors\ICompetitorService.cs" />
+    <Compile Include="Business\Interfaces\Competitors\IRegisterService.cs" />
+    <Compile Include="Business\Interfaces\Competitors\ITimeRegService.cs" />
+    <Compile Include="Business\Interfaces\Events\ICategoryService.cs" />
+    <Compile Include="Business\Interfaces\Events\ICompetitionService.cs" />
+    <Compile Include="Business\Interfaces\Events\ICompetitionTypeService.cs" />
+    <Compile Include="Business\Interfaces\Events\IEventService.cs" />
+    <Compile Include="Business\Interfaces\States\IKitStateService.cs" />
+    <Compile Include="Business\Interfaces\States\IRegisterStateService.cs" />
+    <Compile Include="Business\Interfaces\Users\IRolService.cs" />
+    <Compile Include="Business\Interfaces\Users\IUserService.cs" />
+    <Compile Include="Business\Interfaces\Users\IUserSystemService.cs" />
+    <Compile Include="Controllers\CategoryController.cs" />
+    <Compile Include="Controllers\CompetitionController.cs" />
+    <Compile Include="Controllers\CompetitorController.cs" />
+    <Compile Include="Controllers\KitController.cs" />
+    <Compile Include="Controllers\ProfileController.cs" />
+    <Compile Include="Controllers\SettingsController.cs" />
     <Compile Include="Dashboard.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -107,6 +186,7 @@
     <Compile Include="Data\States\RegisterState.cs" />
     <Compile Include="Data\Users\Rol.cs" />
     <Compile Include="Data\Users\User.cs" />
+    <Compile Include="Data\Users\UserSystem.cs" />
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -160,44 +240,99 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>UserResource.resx</DependentUpon>
     </Compile>
-    <Compile Include="Views\CategoryControl.cs">
+    <Compile Include="Views\Categories\CategoryControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Views\CategoryControl.Designer.cs">
+    <Compile Include="Views\Categories\CategoryControl.Designer.cs">
       <DependentUpon>CategoryControl.cs</DependentUpon>
     </Compile>
-    <Compile Include="Views\CompetenceControl.cs">
+    <Compile Include="Views\Competitors\NewCompetitor.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Views\CompetenceControl.Designer.cs">
-      <DependentUpon>CompetenceControl.cs</DependentUpon>
+    <Compile Include="Views\Competitors\NewCompetitor.Designer.cs">
+      <DependentUpon>NewCompetitor.cs</DependentUpon>
     </Compile>
-    <Compile Include="Views\CompetitorControl.cs">
+    <Compile Include="Views\Competitors\List.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Views\CompetitorControl.Designer.cs">
+    <Compile Include="Views\Competitors\List.Designer.cs">
+      <DependentUpon>List.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Competitors\Menu.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\Competitors\Menu.Designer.cs">
+      <DependentUpon>Menu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Competitors\SearchCompetitor.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\Competitors\SearchCompetitor.Designer.cs">
+      <DependentUpon>SearchCompetitor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Events\CompetitionControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\Events\CompetitionControl.Designer.cs">
+      <DependentUpon>CompetitionControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Competitors\CompetitorControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\Competitors\CompetitorControl.Designer.cs">
       <DependentUpon>CompetitorControl.cs</DependentUpon>
     </Compile>
-    <Compile Include="Views\KitControl.cs">
+    <Compile Include="Views\Events\EventControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Views\KitControl.Designer.cs">
+    <Compile Include="Views\Events\EventControl.Designer.cs">
+      <DependentUpon>EventControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Events\ListCompetition.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\Events\ListCompetition.Designer.cs">
+      <DependentUpon>ListCompetition.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Events\ListEvent.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\Events\ListEvent.Designer.cs">
+      <DependentUpon>ListEvent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Events\MenuCompetition.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\Events\MenuCompetition.Designer.cs">
+      <DependentUpon>MenuCompetition.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Events\MenuEvent.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\Events\MenuEvent.Designer.cs">
+      <DependentUpon>MenuEvent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\General\KitControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\General\KitControl.Designer.cs">
       <DependentUpon>KitControl.cs</DependentUpon>
     </Compile>
-    <Compile Include="Views\ProfileControl.cs">
+    <Compile Include="Views\General\ProfileControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Views\ProfileControl.Designer.cs">
+    <Compile Include="Views\General\ProfileControl.Designer.cs">
       <DependentUpon>ProfileControl.cs</DependentUpon>
     </Compile>
-    <Compile Include="Views\SettingsControl.cs">
+    <Compile Include="Views\General\SettingsControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Views\SettingsControl.Designer.cs">
+    <Compile Include="Views\General\SettingsControl.Designer.cs">
       <DependentUpon>SettingsControl.cs</DependentUpon>
     </Compile>
     <Compile Include="Warriror\Data.cs" />
-    <Compile Include="Warriror\HttpPettitions.cs" />
+    <Compile Include="Warriror\HttpService.cs" />
+    <Compile Include="Warriror\IHttpService.cs" />
     <EmbeddedResource Include="Dashboard.resx">
       <DependentUpon>Dashboard.cs</DependentUpon>
     </EmbeddedResource>
@@ -249,7 +384,34 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>UserResource.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="Views\ProfileControl.resx">
+    <EmbeddedResource Include="Views\Competitors\NewCompetitor.resx">
+      <DependentUpon>NewCompetitor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Competitors\CompetitorControl.resx">
+      <DependentUpon>CompetitorControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Competitors\List.resx">
+      <DependentUpon>List.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Competitors\Menu.resx">
+      <DependentUpon>Menu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Competitors\SearchCompetitor.resx">
+      <DependentUpon>SearchCompetitor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Events\EventControl.resx">
+      <DependentUpon>EventControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Events\ListCompetition.resx">
+      <DependentUpon>ListCompetition.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Events\ListEvent.resx">
+      <DependentUpon>ListEvent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Events\MenuEvent.resx">
+      <DependentUpon>MenuEvent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\General\ProfileControl.resx">
       <DependentUpon>ProfileControl.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
@@ -268,6 +430,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Helpers\" />
+    <Folder Include="Views\States\" />
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.5.2">
@@ -280,6 +443,27 @@
       <ProductName>.NET Framework 3.5 SP1</ProductName>
       <Install>false</Install>
     </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\Images\add182.png" />
+    <Content Include="Resources\Images\binary10.png" />
+    <Content Include="Resources\Images\businessman233.png" />
+    <Content Include="Resources\Images\cancel19.png" />
+    <Content Include="Resources\Images\cloud383.png" />
+    <Content Include="Resources\Images\folder283.png" />
+    <Content Include="Resources\Images\global45.png" />
+    <Content Include="Resources\Images\house34.png" />
+    <Content Include="Resources\Images\house58.png" />
+    <Content Include="Resources\Images\load.png" />
+    <Content Include="Resources\Images\menu48.png" />
+    <Content Include="Resources\Images\operator4.png" />
+    <Content Include="Resources\Images\refresh57.png" />
+    <Content Include="Resources\Images\register.png" />
+    <Content Include="Resources\Images\rounded54.png" />
+    <Content Include="Resources\Images\schoolboy2.png" />
+    <Content Include="Resources\Images\stopwatch6.png" />
+    <Content Include="Resources\Images\three115.png" />
+    <Content Include="Resources\Images\trash.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

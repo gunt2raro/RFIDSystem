@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace RFIDSystemTest.Views
 {
-    public partial class CompetitorControl : UserControl
+    public partial class CompetitionControl : UserControl
     {
-        public CompetitorControl()
+        public CompetitionControl()
         {
             InitializeComponent();
         }

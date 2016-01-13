@@ -1,6 +1,6 @@
-﻿namespace RFIDSystemTest.Views
+﻿namespace RFIDSystemTest.Views.Events
 {
-    partial class CompetitorControl
+    partial class ListCompetition
     {
         /// <summary> 
         /// Required designer variable.
@@ -28,8 +28,16 @@
         /// </summary>
         private void InitializeComponent()
         {
-            components = new System.ComponentModel.Container();
+            this.SuspendLayout();
+            // 
+            // ListCompetition
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Name = "ListCompetition";
+            this.Size = new System.Drawing.Size(1220, 735);
+            this.ResumeLayout(false);
+
         }
 
         #endregion

@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using RFIDSystemTest.Data.Users;
+using RFIDSystemTest.Warriror;
 
 namespace RFIDSystemTest.Business.Implementations.Users
 {
@@ -14,6 +15,16 @@ namespace RFIDSystemTest.Business.Implementations.Users
     /// </summary>
     public class RolService : IRolService
     {
+        private IHttpService http_service;
+
+        /// <summary>
+        /// Constructor
+        /// </summary>
+        /// <param name="http_service"></param>
+        public RolService( IHttpService http_service ) {
+            this.http_service = http_service;
+        }// End of Constructor
+        
         /// <summary>
         /// Add rol
         /// </summary>
@@ -35,6 +46,16 @@ namespace RFIDSystemTest.Business.Implementations.Users
         {
             throw new NotImplementedException();
         }// End of deleteRol function
+
+        /// <summary>
+        /// Get all
+        /// </summary>
+        /// <param name="user_log"></param>
+        /// <returns></returns>
+        public List<Rol> getAll(UserSystem user_log)
+        {
+            return this.http_service.JSONHttpPettitionList<Rol>( HttpMethod.GET, this.GetType().Name.ToLower().Replace( "service", "" ), null );
+        }// End of getAll function 
 
         /// <summary>
         /// Get by id

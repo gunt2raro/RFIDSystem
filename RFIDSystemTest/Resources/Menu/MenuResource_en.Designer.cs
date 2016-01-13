@@ -70,20 +70,20 @@ namespace RFIDSystemTest.Resources.Menu {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Competitions.
-        /// </summary>
-        public static string bCompetitions {
-            get {
-                return ResourceManager.GetString("bCompetitions", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to Competitors.
         /// </summary>
         public static string bCompetitors {
             get {
                 return ResourceManager.GetString("bCompetitors", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Events.
+        /// </summary>
+        public static string bEvents {
+            get {
+                return ResourceManager.GetString("bEvents", resourceCulture);
             }
         }
         

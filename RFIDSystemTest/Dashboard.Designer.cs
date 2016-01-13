@@ -28,12 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Dashboard));
             this.pMenu = new System.Windows.Forms.Panel();
             this.bSettings = new System.Windows.Forms.Button();
             this.bKits = new System.Windows.Forms.Button();
             this.bCategories = new System.Windows.Forms.Button();
             this.bCompetitors = new System.Windows.Forms.Button();
-            this.bCompetitions = new System.Windows.Forms.Button();
+            this.bEvents = new System.Windows.Forms.Button();
             this.bProfile = new System.Windows.Forms.Button();
             this.pContent = new System.Windows.Forms.Panel();
             this.pTitle = new System.Windows.Forms.Panel();
@@ -59,7 +60,7 @@
             this.pMenu.Controls.Add(this.bKits);
             this.pMenu.Controls.Add(this.bCategories);
             this.pMenu.Controls.Add(this.bCompetitors);
-            this.pMenu.Controls.Add(this.bCompetitions);
+            this.pMenu.Controls.Add(this.bEvents);
             this.pMenu.Controls.Add(this.bProfile);
             this.pMenu.Location = new System.Drawing.Point(12, 99);
             this.pMenu.Name = "pMenu";
@@ -69,6 +70,8 @@
             // bSettings
             // 
             this.bSettings.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bSettings.Image = ((System.Drawing.Image)(resources.GetObject("bSettings.Image")));
+            this.bSettings.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
             this.bSettings.Location = new System.Drawing.Point(19, 487);
             this.bSettings.Name = "bSettings";
             this.bSettings.Size = new System.Drawing.Size(394, 63);
@@ -99,22 +102,26 @@
             // bCompetitors
             // 
             this.bCompetitors.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bCompetitors.Image = ((System.Drawing.Image)(resources.GetObject("bCompetitors.Image")));
+            this.bCompetitors.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
             this.bCompetitors.Location = new System.Drawing.Point(19, 208);
             this.bCompetitors.Name = "bCompetitors";
             this.bCompetitors.Size = new System.Drawing.Size(394, 63);
             this.bCompetitors.TabIndex = 2;
             this.bCompetitors.Text = "Competitors";
             this.bCompetitors.UseVisualStyleBackColor = true;
+            this.bCompetitors.Click += new System.EventHandler(this.bCompetitors_Click);
             // 
-            // bCompetitions
+            // bEvents
             // 
-            this.bCompetitions.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bCompetitions.Location = new System.Drawing.Point(19, 114);
-            this.bCompetitions.Name = "bCompetitions";
-            this.bCompetitions.Size = new System.Drawing.Size(394, 63);
-            this.bCompetitions.TabIndex = 1;
-            this.bCompetitions.Text = "Competitions";
-            this.bCompetitions.UseVisualStyleBackColor = true;
+            this.bEvents.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bEvents.Location = new System.Drawing.Point(19, 114);
+            this.bEvents.Name = "bEvents";
+            this.bEvents.Size = new System.Drawing.Size(394, 63);
+            this.bEvents.TabIndex = 1;
+            this.bEvents.Text = "Events";
+            this.bEvents.UseVisualStyleBackColor = true;
+            this.bEvents.Click += new System.EventHandler(this.bEvents_Click);
             // 
             // bProfile
             // 
@@ -129,6 +136,7 @@
             // 
             // pContent
             // 
+            this.pContent.AutoScroll = true;
             this.pContent.Location = new System.Drawing.Point(500, 223);
             this.pContent.Name = "pContent";
             this.pContent.Size = new System.Drawing.Size(1457, 754);
@@ -269,7 +277,7 @@
         private System.Windows.Forms.Button bKits;
         private System.Windows.Forms.Button bCategories;
         private System.Windows.Forms.Button bCompetitors;
-        private System.Windows.Forms.Button bCompetitions;
+        private System.Windows.Forms.Button bEvents;
         private System.Windows.Forms.Button bProfile;
     }
 }

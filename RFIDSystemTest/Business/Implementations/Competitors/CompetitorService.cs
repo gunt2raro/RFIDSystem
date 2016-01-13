@@ -6,6 +6,8 @@ using System.Text;
 using System.Threading.Tasks;
 using RFIDSystemTest.Data.Competitors;
 using RFIDSystemTest.Data.Users;
+using RFIDSystemTest.Warriror;
+using Newtonsoft.Json;
 
 namespace RFIDSystemTest.Business.Implementations.Competitors
 {
@@ -15,6 +17,16 @@ namespace RFIDSystemTest.Business.Implementations.Competitors
     /// </summary>
     public class CompetitorService : ICompetitorService
     {
+        private IHttpService http_service;
+
+        /// <summary>
+        /// Constructor
+        /// </summary>
+        /// <param name="http_service"></param>
+        public CompetitorService( IHttpService http_service ) {
+            this.http_service = http_service;
+        }// End of Constructor function
+
         /// <summary>
         /// Add competitor
         /// </summary>
@@ -23,7 +35,7 @@ namespace RFIDSystemTest.Business.Implementations.Competitors
         /// <returns></returns>
         public Competitor addCompetitor(Competitor competitor, UserSystem user_log)
         {
-            throw new NotImplementedException();
+            return http_service.JSONHttpPettitionObject<Competitor>( HttpMethod.POST, this.GetType().Name.ToLower().Replace( "service", "/" ), JsonConvert.SerializeObject( competitor ));
         }// End of addCompetitor function
 
         /// <summary>
@@ -36,6 +48,11 @@ namespace RFIDSystemTest.Business.Implementations.Competitors
         {
             throw new NotImplementedException();
         }// End of deleteCompetitor function
+
+        public List<Competitor> getAll(UserSystem user_log)
+        {
+            return http_service.JSONHttpPettitionList<Competitor>( HttpMethod.GET, this.GetType().Name.ToLower().Replace( "service", "" ), null );
+        }// End of getAll function
 
         /// <summary>
         /// Get by birth date

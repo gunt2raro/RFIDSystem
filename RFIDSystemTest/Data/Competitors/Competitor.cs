@@ -23,7 +23,7 @@ namespace RFIDSystemTest.Data.Competitors
         public int zip_code { get; set; }
         public string address { get; set; }
         public string email { get; set; }
-        public User user { get; set; }
+        public int user { get; set; }
 
         public DateTime timestamp { get; set; }
         public DateTime updated { get; set; }

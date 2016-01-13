@@ -117,22 +117,4 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="bCategories" xml:space="preserve">
-    <value>Categories</value>
-  </data>
-  <data name="bCompetitors" xml:space="preserve">
-    <value>Competitors</value>
-  </data>
-  <data name="bEvents" xml:space="preserve">
-    <value>Events</value>
-  </data>
-  <data name="bKits" xml:space="preserve">
-    <value>Kits</value>
-  </data>
-  <data name="bProfile" xml:space="preserve">
-    <value>Profile</value>
-  </data>
-  <data name="bSettings" xml:space="preserve">
-    <value>Settings</value>
-  </data>
 </root>
