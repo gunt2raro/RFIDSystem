@@ -23,7 +23,7 @@ namespace RFIDSystemTest.Business.Implementations.Users
         /// <param name="http_service"></param>
         public RolService( IHttpService http_service ) {
             this.http_service = http_service;
-        }// End of Constructor
+        }// End of Constructor function
         
         /// <summary>
         /// Add rol

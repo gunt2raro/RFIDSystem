@@ -1,7 +1,9 @@
 ﻿using Ninject;
 using RFIDSystemTest.Business.Implementations.Competitors;
+using RFIDSystemTest.Business.Implementations.Events;
 using RFIDSystemTest.Business.Implementations.States;
 using RFIDSystemTest.Business.Interfaces.Competitors;
+using RFIDSystemTest.Business.Interfaces.Events;
 using RFIDSystemTest.Business.Interfaces.States;
 using RFIDSystemTest.Data.States;
 using RFIDSystemTest.Resources.Menu;
@@ -26,7 +28,8 @@ namespace RFIDSystemTest
 
         public IKitStateService kit_state_service;
         public ICompetitorService competitor_service;
-        
+        public IEventService event_service;
+
         /// <summary>
         /// Constructor
         /// </summary>
@@ -34,6 +37,7 @@ namespace RFIDSystemTest
         {
             InitializeComponent( );// Init components
             setLabels_Buttons( );// Set the label
+            WindowState = FormWindowState.Maximized;
         }//End of dashboard constructor
 
         /// <summary>
@@ -66,7 +70,9 @@ namespace RFIDSystemTest
         /// <param name="e"></param>
         private void Dashboard_Load(object sender, EventArgs e)
         {
-
+            // Apparience stuff
+            WindowState = FormWindowState.Maximized;
+            // Injection stuff
             IKernel _Kernal = new StandardKernel();
             _Kernal.Load(Assembly.GetExecutingAssembly());
 
@@ -74,6 +80,7 @@ namespace RFIDSystemTest
 
             this.kit_state_service = new KitStateService(http_s);
             this.competitor_service = new CompetitorService(http_s);
+            this.event_service = new EventService(http_s);
 
         }// End of dashboard_load function
 
@@ -108,12 +115,22 @@ namespace RFIDSystemTest
         /// <param name="e"></param>
         private void bEvents_Click(object sender, EventArgs e)
         {
-            EventControl event_control = new EventControl();
+            EventControl event_control = new EventControl( event_service );
 
             pContent.Controls.Clear();
             pContent.Controls.Add( event_control );
 
         }// End of bEvents_Click function
+
+        /// <summary>
+        /// Button settings click
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void bSettings_Click(object sender, EventArgs e)
+        {
+
+        }// End of bSettings_Click function
 
     }//End of Dashboard class
 

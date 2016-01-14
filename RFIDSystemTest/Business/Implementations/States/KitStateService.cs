@@ -18,6 +18,10 @@ namespace RFIDSystemTest.Business.Implementations.States
     {
         private IHttpService http_service;
 
+        /// <summary>
+        /// Constructor
+        /// </summary>
+        /// <param name="http_service"></param>
         public KitStateService( IHttpService http_service ) {
             this.http_service = http_service;
         }// End of Constructor function

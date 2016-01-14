@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 using RFIDSystemTest.Data.Competitors;
 using RFIDSystemTest.Data.Events;
 using RFIDSystemTest.Data.Users;
+using RFIDSystemTest.Warriror;
 
 namespace RFIDSystemTest.Business.Implementations.Events
 {
@@ -16,6 +17,16 @@ namespace RFIDSystemTest.Business.Implementations.Events
     /// </summary>
     public class CompetitionService : ICompetitionService
     {
+        public IHttpService http_service;
+
+        /// <summary>
+        /// Constructor
+        /// </summary>
+        public CompetitionService(IHttpService http_service)
+        {
+            this.http_service = http_service;
+        }// End of Constructor function
+
         /// <summary>
         /// Add competition
         /// </summary>

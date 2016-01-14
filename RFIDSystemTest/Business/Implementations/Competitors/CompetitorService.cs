@@ -49,6 +49,11 @@ namespace RFIDSystemTest.Business.Implementations.Competitors
             throw new NotImplementedException();
         }// End of deleteCompetitor function
 
+        /// <summary>
+        /// Get all
+        /// </summary>
+        /// <param name="user_log"></param>
+        /// <returns></returns>
         public List<Competitor> getAll(UserSystem user_log)
         {
             return http_service.JSONHttpPettitionList<Competitor>( HttpMethod.GET, this.GetType().Name.ToLower().Replace( "service", "" ), null );

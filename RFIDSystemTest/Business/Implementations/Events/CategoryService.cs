@@ -6,6 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using RFIDSystemTest.Data.Events;
 using RFIDSystemTest.Data.Users;
+using RFIDSystemTest.Warriror;
 
 namespace RFIDSystemTest.Business.Implementations.Events
 {
@@ -15,6 +16,16 @@ namespace RFIDSystemTest.Business.Implementations.Events
     /// </summary>
     public class CategoryService : ICategoryService
     {
+        public IHttpService http_service;
+
+        /// <summary>
+        /// Constructor
+        /// </summary>
+        public CategoryService(IHttpService http_service)
+        {
+            this.http_service = http_service;
+        }// End of Constructor function
+
         /// <summary>
         /// Add category
         /// </summary>

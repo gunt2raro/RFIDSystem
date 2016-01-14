@@ -6,6 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using RFIDSystemTest.Data.Competitors;
 using RFIDSystemTest.Data.Users;
+using RFIDSystemTest.Warriror;
 
 namespace RFIDSystemTest.Business.Implementations.Competitors
 {
@@ -15,6 +16,15 @@ namespace RFIDSystemTest.Business.Implementations.Competitors
     /// </summary>
     public class AuthenticationService : IAuthenticationService
     {
+        public IHttpService http_service;
+
+        /// <summary>
+        /// Constructor
+        /// </summary>
+        public AuthenticationService(IHttpService http_service) {
+            this.http_service = http_service;
+        }// End of Constructor function
+
         /// <summary>
         /// Add authentication
         /// </summary>

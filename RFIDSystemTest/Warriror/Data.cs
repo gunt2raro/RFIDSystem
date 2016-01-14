@@ -5,14 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace RFIDSystemTest.Warriror
-{
-    /// <summary>
-    /// Data class
-    /// </summary>
-    public static class Data
-    {    
-    }//End of Data class
-    
+{ 
     public enum HttpMethod
     {
         GET,

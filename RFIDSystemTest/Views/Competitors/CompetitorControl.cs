@@ -15,7 +15,7 @@ namespace RFIDSystemTest.Views
 {
     public partial class CompetitorControl : UserControl
     {
-        private ICompetitorService competitor_service;
+        public ICompetitorService competitor_service;
         public List list_competitors_panel;
         public Competitors.Menu menu_competitors_panel;
         public NewCompetitor add_competitors_panel;
@@ -46,9 +46,12 @@ namespace RFIDSystemTest.Views
         /// <param name="e"></param>
         private void CompetitorControl_Load(object sender, EventArgs e)
         {
-            this.Controls.Clear();
+
+            Controls.Clear();
             Controls.Add(menu_competitors_panel);
+
         }// End of CompetitorControl_Load function
 
-    }
+    }// End of Competitor Control class
+
 }

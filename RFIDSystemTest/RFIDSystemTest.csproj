@@ -162,12 +162,6 @@
     <Compile Include="Business\Interfaces\Users\IRolService.cs" />
     <Compile Include="Business\Interfaces\Users\IUserService.cs" />
     <Compile Include="Business\Interfaces\Users\IUserSystemService.cs" />
-    <Compile Include="Controllers\CategoryController.cs" />
-    <Compile Include="Controllers\CompetitionController.cs" />
-    <Compile Include="Controllers\CompetitorController.cs" />
-    <Compile Include="Controllers\KitController.cs" />
-    <Compile Include="Controllers\ProfileController.cs" />
-    <Compile Include="Controllers\SettingsController.cs" />
     <Compile Include="Dashboard.cs">
       <SubType>Form</SubType>
     </Compile>

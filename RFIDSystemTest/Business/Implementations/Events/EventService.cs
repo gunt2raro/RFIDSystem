@@ -6,6 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using RFIDSystemTest.Data.Events;
 using RFIDSystemTest.Data.Users;
+using RFIDSystemTest.Warriror;
 
 namespace RFIDSystemTest.Business.Implementations.Events
 {
@@ -15,6 +16,16 @@ namespace RFIDSystemTest.Business.Implementations.Events
     /// </summary>
     public class EventService : IEventService
     {
+        public IHttpService http_service;
+
+        /// <summary>
+        /// Constructor
+        /// </summary>
+        /// <param name="http_service"></param>
+        public EventService( IHttpService http_service ) {
+            this.http_service = http_service;
+        }// End of Constructor function
+
         /// <summary>
         /// Add event
         /// </summary>

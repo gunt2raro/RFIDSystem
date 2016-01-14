@@ -20,8 +20,6 @@ namespace RFIDSystemTest
         static void Main()
         {
 
-            
-
             Application.EnableVisualStyles();
 
             Application.SetCompatibleTextRenderingDefault(false);

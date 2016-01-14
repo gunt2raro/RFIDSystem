@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using RFIDSystemTest.Business.Interfaces.Events;
 
 namespace RFIDSystemTest.Views.Events
 {
@@ -14,16 +15,21 @@ namespace RFIDSystemTest.Views.Events
     {
         public ListEvent list_event_control;
         public MenuEvent menu_event_control;
+        public IEventService event_service;
 
         /// <summary>
         /// Constructor
         /// </summary>
-        public EventControl()
+        public EventControl( IEventService event_service )
         {
+
             InitializeComponent();
+
+            this.event_service = event_service;
 
             list_event_control = new ListEvent( this );
             menu_event_control = new MenuEvent( this );
+
         }// End of Constructor function
 
         /// <summary>

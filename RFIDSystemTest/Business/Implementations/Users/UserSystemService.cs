@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using RFIDSystemTest.Data.Users;
+using RFIDSystemTest.Warriror;
 
 namespace RFIDSystemTest.Business.Implementations.Users
 {
@@ -14,6 +15,17 @@ namespace RFIDSystemTest.Business.Implementations.Users
     /// </summary>
     public class UserSystemService : IUserSystemService
     {
+        private IHttpService http_service;
+
+        /// <summary>
+        /// Constructor
+        /// </summary>
+        /// <param name="http_service"></param>
+        public UserSystemService(IHttpService http_service)
+        {
+            this.http_service = http_service;
+        }// End of Constructor function
+
         /// <summary>
         /// Delete user
         /// </summary>

@@ -18,8 +18,8 @@ namespace RFIDSystemTest.Views.Competitors
 {
     public partial class NewCompetitor : UserControl
     {
+
         public CompetitorControl competitor_control;
-        public ICompetitorService competitor_service;
 
         /// <summary>
         /// Constructor
@@ -60,7 +60,8 @@ namespace RFIDSystemTest.Views.Competitors
             c.country = this.txtCountry.Text;
             c.birth_date = this.dtBirthDate.Value.Date;
             c.email = this.txtEmail.Text;
-            
+            c.zip_code = int.Parse( this.txtZipCode.Text );
+
             return c;
 
         }// End of createObject function
@@ -73,7 +74,7 @@ namespace RFIDSystemTest.Views.Competitors
         private void bAdd_Click(object sender, EventArgs e)
         {
 
-            this.competitor_service.addCompetitor( createObject(), null );
+            this.competitor_control.competitor_service.addCompetitor( createObject(), null );
 
         }// End of bAdd_Click function
 
@@ -84,13 +85,7 @@ namespace RFIDSystemTest.Views.Competitors
         /// <param name="e"></param>
         private void NewCompetitor_Load(object sender, EventArgs e)
         {
-            IKernel _Kernal = new StandardKernel();
-            _Kernal.Load(Assembly.GetExecutingAssembly());
-
-            IHttpService http_s = _Kernal.Get<HttpService>();
-
-            this.competitor_service = new CompetitorService(http_s);
-
+            
         }// End of NewCompetitor_Load function
     }
 }
