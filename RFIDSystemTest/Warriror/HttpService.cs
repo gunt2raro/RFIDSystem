@@ -135,9 +135,11 @@ namespace RFIDSystemTest.Warriror
                     if (response.StatusCode != HttpStatusCode.OK)
                     {
                         throw new Exception(String.Format("Server error ( HTTP {0}: {1} ).", response.StatusCode, response.StatusDescription));
+                    } else if (response.StatusCode != HttpStatusCode.Created) {
+                        //Return of the serialized object
+                        return JsonConvert.DeserializeObject<T>(new StreamReader(response.GetResponseStream()).ReadToEnd());
                     }
-                    //Return of the serialized object
-                    return JsonConvert.DeserializeObject<T>(new StreamReader(response.GetResponseStream()).ReadToEnd());
+                    return default( T );
                 }//End of response use
             }
             catch (Exception e)

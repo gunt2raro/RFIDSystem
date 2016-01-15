@@ -8,6 +8,7 @@ using RFIDSystemTest.Data.Competitors;
 using RFIDSystemTest.Data.Users;
 using RFIDSystemTest.Warriror;
 using Newtonsoft.Json;
+using RFIDSystemTest.Business.Adapters;
 
 namespace RFIDSystemTest.Business.Implementations.Competitors
 {
@@ -35,7 +36,7 @@ namespace RFIDSystemTest.Business.Implementations.Competitors
         /// <returns></returns>
         public Competitor addCompetitor(Competitor competitor, UserSystem user_log)
         {
-            return http_service.JSONHttpPettitionObject<Competitor>( HttpMethod.POST, this.GetType().Name.ToLower().Replace( "service", "/" ), JsonConvert.SerializeObject( competitor ));
+            return http_service.JSONHttpPettitionObject<Competitor>( HttpMethod.POST, this.GetType().Name.ToLower().Replace( "service", "/" ), JsonConvert.SerializeObject( CompetitorAdapter.ObjectToDTO( competitor ) ) );
         }// End of addCompetitor function
 
         /// <summary>

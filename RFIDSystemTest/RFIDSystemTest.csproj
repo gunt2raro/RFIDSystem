@@ -136,6 +136,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\NinjectBindings.cs" />
+    <Compile Include="Business\Adapters\CompetitorAdapter.cs" />
+    <Compile Include="Business\DTO\CompetitorDTO.cs" />
     <Compile Include="Business\Implementations\Competitors\AuthenticationService.cs" />
     <Compile Include="Business\Implementations\Competitors\CompetitorService.cs" />
     <Compile Include="Business\Implementations\Competitors\RegisterService.cs" />

@@ -53,14 +53,15 @@ namespace RFIDSystemTest.Views.Competitors
 
             Competitor c = new Competitor();
 
-            c.name = this.txtName.Text;
-            c.second_name = this.txtSecondName.Text;
-            c.city = this.txtCity.Text;
-            c.state = this.txtState.Text;
-            c.country = this.txtCountry.Text;
-            c.birth_date = this.dtBirthDate.Value.Date;
-            c.email = this.txtEmail.Text;
-            c.zip_code = int.Parse( this.txtZipCode.Text );
+            c.name = txtName.Text;
+            c.second_name = txtSecondName.Text;
+            c.city = txtCity.Text;
+            c.state = txtState.Text;
+            c.country = txtCountry.Text;
+            c.birth_date = dtBirthDate.Value.Date;
+            c.email = txtEmail.Text;
+            c.zip_code = int.Parse( txtZipCode.Text );
+            c.address = txtAddress.Text;
 
             return c;
 
@@ -74,7 +75,7 @@ namespace RFIDSystemTest.Views.Competitors
         private void bAdd_Click(object sender, EventArgs e)
         {
 
-            this.competitor_control.competitor_service.addCompetitor( createObject(), null );
+            competitor_control.competitor_service.addCompetitor( createObject(), null );
 
         }// End of bAdd_Click function
 
