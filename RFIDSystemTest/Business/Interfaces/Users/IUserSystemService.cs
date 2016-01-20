@@ -20,7 +20,7 @@ namespace RFIDSystemTest.Business.Interfaces.Users
         UserSystem getById( int user_id, UserSystem user_log );
         UserSystem getByUserName( string user_name, UserSystem user_log );
         UserSystem getByEmail( string email, UserSystem user_log );
-        List<UserSystem> getByRol( Rol rol, UserSystem user_log );
+        IList<UserSystem> getByRol( Rol rol, UserSystem user_log );
 
     }// End of IUserSystemService interface
 }

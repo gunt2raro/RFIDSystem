@@ -72,15 +72,13 @@ namespace RFIDSystemTest
         {
             // Apparience stuff
             WindowState = FormWindowState.Maximized;
+
             // Injection stuff
-            IKernel _Kernal = new StandardKernel();
-            _Kernal.Load(Assembly.GetExecutingAssembly());
-
-            IHttpService http_s = _Kernal.Get<HttpService>();
-
-            this.kit_state_service = new KitStateService(http_s);
-            this.competitor_service = new CompetitorService(http_s);
-            this.event_service = new EventService(http_s);
+            Injection.kernel.Load(Assembly.GetExecutingAssembly());
+            // Init services
+            kit_state_service = Injection.kernel.Get<KitStateService>();
+            competitor_service = Injection.kernel.Get<CompetitorService>();
+            event_service = Injection.kernel.Get<EventService>();
 
         }// End of dashboard_load function
 

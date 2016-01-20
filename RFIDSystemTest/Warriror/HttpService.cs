@@ -41,18 +41,18 @@ namespace RFIDSystemTest.Warriror
         /// <param name="model"></param>
         /// <param name="req_data"></param>
         /// <returns></returns>
-        public List< T > JSONHttpPettitionList<T>(  HttpMethod method, string model, string req_data ) {
+        public IList< T > JSONHttpPettitionList<T>(  HttpMethod method, string model, string req_data ) {
 
             try
             {
                 //Init request
                 HttpWebRequest request = WebRequest.Create(CreateUrl(model)) as HttpWebRequest;
                 //Get data serialized
-                var data = Encoding.ASCII.GetBytes("");
+                var data = Encoding.UTF8.GetBytes("");
                 //Validate req_data
                 if (req_data != null)
                 {
-                    data = Encoding.ASCII.GetBytes(req_data);
+                    data = Encoding.UTF8.GetBytes(req_data);
                 }
                 //Request configuration
                 request.Headers["Authorization"] = GetAuthenticationString();
@@ -77,7 +77,7 @@ namespace RFIDSystemTest.Warriror
                         throw new Exception( String.Format( "Server error ( HTTP {0}: {1} ).", response.StatusCode, response.StatusDescription ) );
                     }
                     //Get the serialized object on a dictionary
-                    Dictionary<string, List<T>> data_Var = JsonConvert.DeserializeObject<Dictionary< string, List<T> >>(new StreamReader(response.GetResponseStream()).ReadToEnd());
+                    Dictionary< string, List< T > > data_Var = JsonConvert.DeserializeObject<Dictionary< string, List< T > > >(new StreamReader(response.GetResponseStream()).ReadToEnd());
                     //Return data
                     return data_Var["data"];
                 }//End of response use
@@ -106,13 +106,13 @@ namespace RFIDSystemTest.Warriror
                 //Init request
                 HttpWebRequest request = WebRequest.Create(CreateUrl(model)) as HttpWebRequest;
                 //Request configuration
-                var data = Encoding.ASCII.GetBytes("");
+                var data = Encoding.UTF8.GetBytes("");
                 //Validate req_data
                 if (req_data != null)
                 {
-                    data = Encoding.ASCII.GetBytes(req_data);
+                    data = Encoding.UTF8.GetBytes(req_data);
                 }
-                //Request configuration
+                // Request configuration
                 request.Headers["Authorization"] = GetAuthenticationString();
                 // Requested Method
                 request.Method = method.ToString();
@@ -122,22 +122,40 @@ namespace RFIDSystemTest.Warriror
                 if (data.Length > 0)
                 {
                     request.ContentLength = data.Length;
-                    //Stream the data to the request
+                    // Stream the data to the request
                     using (var stream = request.GetRequestStream())
                     {
                         stream.Write(data, 0, data.Length);
-                    }//End of stream use
+                    }// End of stream use
                 }
                 // Get response
                 using (HttpWebResponse response = request.GetResponse() as HttpWebResponse)
                 {
-                    //Verify if it is a right pettition
+                    // Verify if it is a right pettition
                     if (response.StatusCode != HttpStatusCode.OK)
                     {
                         throw new Exception(String.Format("Server error ( HTTP {0}: {1} ).", response.StatusCode, response.StatusDescription));
-                    } else if (response.StatusCode != HttpStatusCode.Created) {
-                        //Return of the serialized object
+                    }
+                    else if (response.StatusCode == HttpStatusCode.OK && method == HttpMethod.GET)
+                    {
+                        //Get the serialized object on a dictionary
+                        Dictionary<string, T> data_Var = JsonConvert.DeserializeObject<Dictionary<string, T>>(new StreamReader(response.GetResponseStream()).ReadToEnd());
+                        //Return data
+                        return data_Var["data"];
+                    }
+                    else if (response.StatusCode == HttpStatusCode.Created && method == HttpMethod.POST)
+                    {
+                        // Return of the serialized object
                         return JsonConvert.DeserializeObject<T>(new StreamReader(response.GetResponseStream()).ReadToEnd());
+                    }
+                    else if ( response.StatusCode == HttpStatusCode.OK && method == HttpMethod.PUT)
+                    {
+                        // Return of the serialized object
+                        return JsonConvert.DeserializeObject<T>(new StreamReader(response.GetResponseStream()).ReadToEnd());
+                    }
+                    else if (response.StatusCode == HttpStatusCode.NoContent && method == HttpMethod.DELETE)
+                    {
+                        // Object deleted
                     }
                     return default( T );
                 }//End of response use

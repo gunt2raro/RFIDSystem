@@ -22,7 +22,7 @@ namespace RFIDSystemTest.Resources {
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "4.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    internal class CompetitorResource {
+    public class CompetitorResource {
         
         private static global::System.Resources.ResourceManager resourceMan;
         
@@ -36,7 +36,7 @@ namespace RFIDSystemTest.Resources {
         ///   Returns the cached ResourceManager instance used by this class.
         /// </summary>
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        internal static global::System.Resources.ResourceManager ResourceManager {
+        public static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
                     global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("RFIDSystemTest.Resources.CompetitorResource", typeof(CompetitorResource).Assembly);
@@ -51,12 +51,156 @@ namespace RFIDSystemTest.Resources {
         ///   resource lookups using this strongly typed resource class.
         /// </summary>
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        internal static global::System.Globalization.CultureInfo Culture {
+        public static global::System.Globalization.CultureInfo Culture {
             get {
                 return resourceCulture;
             }
             set {
                 resourceCulture = value;
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Address.
+        /// </summary>
+        public static string address {
+            get {
+                return ResourceManager.GetString("address", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Save and Register.
+        /// </summary>
+        public static string bAdd {
+            get {
+                return ResourceManager.GetString("bAdd", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Cancel.
+        /// </summary>
+        public static string bCancel {
+            get {
+                return ResourceManager.GetString("bCancel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Edit.
+        /// </summary>
+        public static string bEdit {
+            get {
+                return ResourceManager.GetString("bEdit", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to .
+        /// </summary>
+        public static string bEnable {
+            get {
+                return ResourceManager.GetString("bEnable", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Birth Date.
+        /// </summary>
+        public static string birth_date {
+            get {
+                return ResourceManager.GetString("birth_date", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Update.
+        /// </summary>
+        public static string bUpdate {
+            get {
+                return ResourceManager.GetString("bUpdate", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to City.
+        /// </summary>
+        public static string city {
+            get {
+                return ResourceManager.GetString("city", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Country.
+        /// </summary>
+        public static string country {
+            get {
+                return ResourceManager.GetString("country", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to E-mail.
+        /// </summary>
+        public static string email {
+            get {
+                return ResourceManager.GetString("email", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Name.
+        /// </summary>
+        public static string name {
+            get {
+                return ResourceManager.GetString("name", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Second Name.
+        /// </summary>
+        public static string second_name {
+            get {
+                return ResourceManager.GetString("second_name", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to State.
+        /// </summary>
+        public static string state {
+            get {
+                return ResourceManager.GetString("state", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Created At.
+        /// </summary>
+        public static string timestamp {
+            get {
+                return ResourceManager.GetString("timestamp", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Updated At.
+        /// </summary>
+        public static string updated {
+            get {
+                return ResourceManager.GetString("updated", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Zip Code.
+        /// </summary>
+        public static string zip_code {
+            get {
+                return ResourceManager.GetString("zip_code", resourceCulture);
             }
         }
     }

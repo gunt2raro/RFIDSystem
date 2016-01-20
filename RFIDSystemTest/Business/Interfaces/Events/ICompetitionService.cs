@@ -18,8 +18,8 @@ namespace RFIDSystemTest.Business.Interfaces.Events
         Competition getById(int competition_id, UserSystem user_log);
         Competition getByName(string name, UserSystem user_log);
         Competition getByDate(DateTime date, UserSystem user_log);
-        List<Category> getCategoriesById(int competition_id, UserSystem user_log);
-        List<Competitor> getCompetitorsById(int competition_id, UserSystem user_log);
+        IList<Category> getCategoriesById(int competition_id, UserSystem user_log);
+        IList<Competitor> getCompetitorsById(int competition_id, UserSystem user_log);
         Competition addCompetition(Competition competition, UserSystem user_log);
         Competition updateCompetition(Competition competition, UserSystem user_log);
         bool deleteCompetition(Competition competition, UserSystem user_log);

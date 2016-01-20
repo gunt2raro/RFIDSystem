@@ -140,6 +140,7 @@
             // 
             this.dtBirthDate.CustomFormat = "yyyy-dd-MM";
             this.dtBirthDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtBirthDate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dtBirthDate.Location = new System.Drawing.Point(275, 253);
             this.dtBirthDate.Name = "dtBirthDate";
             this.dtBirthDate.Size = new System.Drawing.Size(325, 35);

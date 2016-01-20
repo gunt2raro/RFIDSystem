@@ -16,10 +16,11 @@ namespace RFIDSystemTest.Views
     public partial class CompetitorControl : UserControl
     {
         public ICompetitorService competitor_service;
-        public List list_competitors_panel;
         public Competitors.Menu menu_competitors_panel;
+        public List list_competitors_panel;
         public NewCompetitor add_competitors_panel;
         public SearchCompetitor search_competitor_panel;
+        public DetailCompetitor detail_competitor_panel;
 
         /// <summary>
         /// Competitor Control constructor
@@ -36,6 +37,7 @@ namespace RFIDSystemTest.Views
             menu_competitors_panel = new Competitors.Menu( this );
             add_competitors_panel = new NewCompetitor( this );
             search_competitor_panel = new SearchCompetitor( this );
+            detail_competitor_panel = new DetailCompetitor( this );
 
         }// End of CompetitorControl constructor
 

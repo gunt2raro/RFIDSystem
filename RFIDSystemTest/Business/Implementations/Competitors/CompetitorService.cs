@@ -36,7 +36,14 @@ namespace RFIDSystemTest.Business.Implementations.Competitors
         /// <returns></returns>
         public Competitor addCompetitor(Competitor competitor, UserSystem user_log)
         {
-            return http_service.JSONHttpPettitionObject<Competitor>( HttpMethod.POST, this.GetType().Name.ToLower().Replace( "service", "/" ), JsonConvert.SerializeObject( CompetitorAdapter.ObjectToDTO( competitor ) ) );
+            return http_service.JSONHttpPettitionObject<Competitor>( 
+                HttpMethod.POST, 
+                GetType().Name.ToLower().Replace( 
+                    TWords.SERVICE, 
+                    TWords.SLASH ), 
+                JsonConvert.SerializeObject( 
+                    CompetitorAdapter.ObjectToDTO( 
+                        competitor ) ) );
         }// End of addCompetitor function
 
         /// <summary>
@@ -55,9 +62,14 @@ namespace RFIDSystemTest.Business.Implementations.Competitors
         /// </summary>
         /// <param name="user_log"></param>
         /// <returns></returns>
-        public List<Competitor> getAll(UserSystem user_log)
+        public IList<Competitor> getAll(UserSystem user_log)
         {
-            return http_service.JSONHttpPettitionList<Competitor>( HttpMethod.GET, this.GetType().Name.ToLower().Replace( "service", "" ), null );
+            return http_service.JSONHttpPettitionList<Competitor>( 
+                HttpMethod.GET, 
+                GetType().Name.ToLower().Replace(
+                    TWords.SERVICE, 
+                    TWords.EMPTY), 
+                null );
         }// End of getAll function
 
         /// <summary>
@@ -66,7 +78,7 @@ namespace RFIDSystemTest.Business.Implementations.Competitors
         /// <param name="birth_date"></param>
         /// <param name="user_log"></param>
         /// <returns></returns>
-        public List<Competitor> getByBirthDate(DateTime birth_date, UserSystem user_log)
+        public IList<Competitor> getByBirthDate(DateTime birth_date, UserSystem user_log)
         {
             throw new NotImplementedException();
         }// End of getByBirthDate function
@@ -77,7 +89,7 @@ namespace RFIDSystemTest.Business.Implementations.Competitors
         /// <param name="city"></param>
         /// <param name="user_log"></param>
         /// <returns></returns>
-        public List<Competitor> getByCity(string city, UserSystem user_log)
+        public IList<Competitor> getByCity(string city, UserSystem user_log)
         {
             throw new NotImplementedException();
         }// End of getByCity function
@@ -88,7 +100,7 @@ namespace RFIDSystemTest.Business.Implementations.Competitors
         /// <param name="country"></param>
         /// <param name="user_log"></param>
         /// <returns></returns>
-        public List<Competitor> getByCountry(string country, UserSystem user_log)
+        public IList<Competitor> getByCountry(string country, UserSystem user_log)
         {
             throw new NotImplementedException();
         }// End of getByCountry function
@@ -101,7 +113,14 @@ namespace RFIDSystemTest.Business.Implementations.Competitors
         /// <returns></returns>
         public Competitor getById(int competitor_id, UserSystem user_log)
         {
-            throw new NotImplementedException();
+            return http_service.JSONHttpPettitionObject<Competitor>(
+                HttpMethod.GET, 
+                GetType().Name.ToLower().Replace(
+                    TWords.SERVICE, 
+                    String.Format( 
+                        TWords.ONEPARAM, 
+                        competitor_id ) ), 
+                null );
         }// End of getById function
 
         /// <summary>
@@ -132,7 +151,7 @@ namespace RFIDSystemTest.Business.Implementations.Competitors
         /// <param name="state"></param>
         /// <param name="user_log"></param>
         /// <returns></returns>
-        public List<Competitor> getByState(string state, UserSystem user_log)
+        public IList<Competitor> getByState(string state, UserSystem user_log)
         {
             throw new NotImplementedException();
         }// End of getByState function
@@ -143,7 +162,7 @@ namespace RFIDSystemTest.Business.Implementations.Competitors
         /// <param name="user"></param>
         /// <param name="user_log"></param>
         /// <returns></returns>
-        public List<Competitor> getByUser(UserSystem user, UserSystem user_log)
+        public IList<Competitor> getByUser(UserSystem user, UserSystem user_log)
         {
             throw new NotImplementedException();
         }// End of getByUser function
@@ -154,7 +173,7 @@ namespace RFIDSystemTest.Business.Implementations.Competitors
         /// <param name="zip_code"></param>
         /// <param name="user_log"></param>
         /// <returns></returns>
-        public List<Competitor> getByZipCode(int zip_code, UserSystem user_log)
+        public IList<Competitor> getByZipCode(int zip_code, UserSystem user_log)
         {
             throw new NotImplementedException();
         }// End of getByZipCode function
@@ -167,7 +186,15 @@ namespace RFIDSystemTest.Business.Implementations.Competitors
         /// <returns></returns>
         public Competitor updateCompetitor(Competitor competitor, UserSystem user_log)
         {
-            throw new NotImplementedException();
+            return http_service.JSONHttpPettitionObject<Competitor>(
+                HttpMethod.PUT, 
+                GetType().Name.ToLower().Replace(
+                    TWords.SERVICE, 
+                    String.Format(
+                        TWords.ONEPARAM, 
+                        competitor.id)),
+                JsonConvert.SerializeObject( 
+                    CompetitorAdapter.ObjectToDTO( competitor ) ) );
         }// End of updateCompetitor function
 
     }// End of Competitor Repository class

@@ -54,7 +54,7 @@ namespace RFIDSystemTest.Business.Implementations.Events
         /// <param name="age"></param>
         /// <param name="user_log"></param>
         /// <returns></returns>
-        public List<Category> getByAge(int age, UserSystem user_log)
+        public IList<Category> getByAge(int age, UserSystem user_log)
         {
             throw new NotImplementedException();
         }// End of getByAge function

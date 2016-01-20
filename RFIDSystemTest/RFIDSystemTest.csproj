@@ -137,7 +137,9 @@
   <ItemGroup>
     <Compile Include="App_Start\NinjectBindings.cs" />
     <Compile Include="Business\Adapters\CompetitorAdapter.cs" />
+    <Compile Include="Business\Adapters\EventAdapter.cs" />
     <Compile Include="Business\DTO\CompetitorDTO.cs" />
+    <Compile Include="Business\DTO\EventDTO.cs" />
     <Compile Include="Business\Implementations\Competitors\AuthenticationService.cs" />
     <Compile Include="Business\Implementations\Competitors\CompetitorService.cs" />
     <Compile Include="Business\Implementations\Competitors\RegisterService.cs" />
@@ -183,6 +185,7 @@
     <Compile Include="Data\Users\Rol.cs" />
     <Compile Include="Data\Users\User.cs" />
     <Compile Include="Data\Users\UserSystem.cs" />
+    <Compile Include="Helpers\ControlHelper.cs" />
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -205,6 +208,11 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>CompetitorResource.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\ErrorResource.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ErrorResource.resx</DependentUpon>
     </Compile>
     <Compile Include="Resources\KitResource.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -231,16 +239,32 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>SettingsResource.resx</DependentUpon>
     </Compile>
+    <Compile Include="Resources\SuccessResource.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SuccessResource.resx</DependentUpon>
+    </Compile>
     <Compile Include="Resources\UserResource.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>UserResource.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\WarningResource.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>WarningResource.resx</DependentUpon>
     </Compile>
     <Compile Include="Views\Categories\CategoryControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="Views\Categories\CategoryControl.Designer.cs">
       <DependentUpon>CategoryControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Competitors\DetailCompetitor.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\Competitors\DetailCompetitor.Designer.cs">
+      <DependentUpon>DetailCompetitor.cs</DependentUpon>
     </Compile>
     <Compile Include="Views\Competitors\NewCompetitor.cs">
       <SubType>UserControl</SubType>
@@ -353,8 +377,12 @@
       <LastGenOutput>CompetenceResource.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="Resources\CompetitorResource.resx">
-      <Generator>ResXFileCodeGenerator</Generator>
+      <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>CompetitorResource.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\ErrorResource.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>ErrorResource.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="Resources\KitResource.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -376,9 +404,20 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>SettingsResource.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <EmbeddedResource Include="Resources\SuccessResource.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>SuccessResource.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Include="Resources\UserResource.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>UserResource.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\WarningResource.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>WarningResource.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Competitors\DetailCompetitor.resx">
+      <DependentUpon>DetailCompetitor.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\Competitors\NewCompetitor.resx">
       <DependentUpon>NewCompetitor.cs</DependentUpon>
@@ -425,7 +464,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Helpers\" />
     <Folder Include="Views\States\" />
   </ItemGroup>
   <ItemGroup>

@@ -13,7 +13,7 @@ namespace RFIDSystemTest.Warriror
     {
         string CreateUrl(string model);
         string GetAuthenticationString();
-        List<T> JSONHttpPettitionList<T>(HttpMethod method, string model, string req_data);
+        IList<T> JSONHttpPettitionList<T>(HttpMethod method, string model, string req_data);
         T JSONHttpPettitionObject<T>(HttpMethod method, string model, string req_data);
         string Base64Encode(string plainText);
         string Base64Decode(string base64EncodedData);

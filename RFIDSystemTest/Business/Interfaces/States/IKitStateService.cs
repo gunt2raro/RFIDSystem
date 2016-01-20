@@ -14,7 +14,7 @@ namespace RFIDSystemTest.Business.Interfaces.States
     /// </summary>
     public interface IKitStateService
     {
-        List<KitState> getAll( UserSystem user_log );
+        IList<KitState> getAll( UserSystem user_log );
         KitState getById( int kit_state_id, UserSystem user_log );
         KitState getByName( int kit_state_name, UserSystem user_log );
         KitState addKitState( KitState kit_state, UserSystem user_log );

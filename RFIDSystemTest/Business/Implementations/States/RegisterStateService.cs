@@ -53,7 +53,7 @@ namespace RFIDSystemTest.Business.Implementations.States
         /// </summary>
         /// <param name="user_log"></param>
         /// <returns></returns>
-        public List<RegisterState> getAll(UserSystem user_log)
+        public IList<RegisterState> getAll(UserSystem user_log)
         {
             return this.http_service.JSONHttpPettitionList<RegisterState>(HttpMethod.GET, this.GetType().Name.ToLower().Replace("service", ""), null);
         }// End of getAll function

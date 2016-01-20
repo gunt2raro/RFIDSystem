@@ -14,7 +14,7 @@ namespace RFIDSystemTest.Business.Interfaces.States
     /// </summary>
     public interface IRegisterStateService
     {
-        List<RegisterState> getAll( UserSystem user_log );
+        IList<RegisterState> getAll( UserSystem user_log );
         RegisterState getById( int register_state_id, UserSystem user_log );
         RegisterState getByName( string name, UserSystem user_log );
         RegisterState addRegisterState( RegisterState register_state, UserSystem user_log );

@@ -11,13 +11,20 @@ using System.Threading.Tasks;
 
 namespace RFIDSystemTest.App_Start
 {
+    /// <summary>
+    /// Ninject Bindings
+    /// </summary>
     public class NinjectBindings : Ninject.Modules.NinjectModule
     {
+        /// <summary>
+        /// Load the bindings
+        /// </summary>
         public override void Load()
         {
             Bind<IHttpService>().To<HttpService>();
             Bind<IKitStateService>().To<KitStateService>();
             Bind<ICompetitorService>().To<CompetitorService>();
-        }
-    }
+        }// End of Load function
+
+    }// End of NinjectBindings class
 }

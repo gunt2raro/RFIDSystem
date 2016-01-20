@@ -88,7 +88,7 @@ namespace RFIDSystemTest.Business.Implementations.Events
         /// <param name="competition_id"></param>
         /// <param name="user_log"></param>
         /// <returns></returns>
-        public List<Category> getCategoriesById(int competition_id, UserSystem user_log)
+        public IList<Category> getCategoriesById(int competition_id, UserSystem user_log)
         {
             throw new NotImplementedException();
         }// End of getCategoriesById function
@@ -99,7 +99,7 @@ namespace RFIDSystemTest.Business.Implementations.Events
         /// <param name="competition_id"></param>
         /// <param name="user_log"></param>
         /// <returns></returns>
-        public List<Competitor> getCompetitorsById(int competition_id, UserSystem user_log)
+        public IList<Competitor> getCompetitorsById(int competition_id, UserSystem user_log)
         {
             throw new NotImplementedException();
         }// End of getCompetitorsById function

@@ -65,7 +65,7 @@ namespace RFIDSystemTest.Business.Implementations.Users
         /// <param name="rol"></param>
         /// <param name="user_log"></param>
         /// <returns></returns>
-        public List<UserSystem> getByRol(Rol rol, UserSystem user_log)
+        public IList<UserSystem> getByRol(Rol rol, UserSystem user_log)
         {
             throw new NotImplementedException();
         }// End of getByRol function

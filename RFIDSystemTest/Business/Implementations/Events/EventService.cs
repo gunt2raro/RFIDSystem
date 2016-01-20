@@ -7,6 +7,8 @@ using System.Threading.Tasks;
 using RFIDSystemTest.Data.Events;
 using RFIDSystemTest.Data.Users;
 using RFIDSystemTest.Warriror;
+using Newtonsoft.Json;
+using RFIDSystemTest.Business.Adapters;
 
 namespace RFIDSystemTest.Business.Implementations.Events
 {
@@ -34,7 +36,14 @@ namespace RFIDSystemTest.Business.Implementations.Events
         /// <returns></returns>
         public Event addEvent(Event event_o, UserSystem user_log)
         {
-            throw new NotImplementedException();
+            return http_service.JSONHttpPettitionObject<Event>(
+                HttpMethod.POST, 
+                GetType().Name.ToLower().Replace(
+                    TWords.SERVICE, 
+                    TWords.SLASH), 
+                JsonConvert.SerializeObject(
+                    EventAdapter.ObjectToDTO(
+                        event_o)));
         }// End of addEvent function
 
         /// <summary>
@@ -49,12 +58,27 @@ namespace RFIDSystemTest.Business.Implementations.Events
         }// End of deleteEvent function
 
         /// <summary>
+        /// Get all
+        /// </summary>
+        /// <param name="user_log"> for authentication stuff </param>
+        /// <returns></returns>
+        public IList<Event> getAll(UserSystem user_log)
+        {
+            return http_service.JSONHttpPettitionList<Event>(
+                HttpMethod.GET,
+                GetType().Name.ToLower().Replace(
+                    TWords.SERVICE,
+                    TWords.EMPTY),
+                null);
+        }// End of getAll function
+
+        /// <summary>
         /// Get by data
         /// </summary>
         /// <param name="date"></param>
         /// <param name="user_log"></param>
         /// <returns></returns>
-        public List<Event> getByDate(DateTime date, UserSystem user_log)
+        public IList<Event> getByDate(DateTime date, UserSystem user_log)
         {
             throw new NotImplementedException();
         }// End of getByDate function
@@ -76,7 +100,7 @@ namespace RFIDSystemTest.Business.Implementations.Events
         /// <param name="event_id"></param>
         /// <param name="user_log"></param>
         /// <returns></returns>
-        public List<Competition> getCompetitionsById(int event_id, UserSystem user_log)
+        public IList<Competition> getCompetitionsById(int event_id, UserSystem user_log)
         {
             throw new NotImplementedException();
         }// End of getCompetitionsById function

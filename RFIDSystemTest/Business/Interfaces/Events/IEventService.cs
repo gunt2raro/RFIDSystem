@@ -15,8 +15,9 @@ namespace RFIDSystemTest.Business.Interfaces.Events
     public interface IEventService
     {
         Event getById(int event_id, UserSystem user_log);
-        List<Event> getByDate(DateTime date, UserSystem user_log);
-        List<Competition> getCompetitionsById(int event_id, UserSystem user_log);
+        IList<Event> getAll( UserSystem user_log);
+        IList<Event> getByDate(DateTime date, UserSystem user_log);
+        IList<Competition> getCompetitionsById(int event_id, UserSystem user_log);
         Event addEvent(Event event_o, UserSystem user_log);
         Event updateEvent(Event event_o, UserSystem user_log);
         bool deleteEvent(Event event_o, UserSystem user_log);

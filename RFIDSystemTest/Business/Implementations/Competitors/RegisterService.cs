@@ -121,7 +121,7 @@ namespace RFIDSystemTest.Business.Implementations.Competitors
         /// <param name="competition"></param>
         /// <param name="user_log"></param>
         /// <returns></returns>
-        public List<Register> getRegistersByCompetition(Competition competition, UserSystem user_log)
+        public IList<Register> getRegistersByCompetition(Competition competition, UserSystem user_log)
         {
             throw new NotImplementedException();
         }// End of getRegistersByCompetition function
@@ -132,7 +132,7 @@ namespace RFIDSystemTest.Business.Implementations.Competitors
         /// <param name="competitor_num"></param>
         /// <param name="user_log"></param>
         /// <returns></returns>
-        public List<Register> getRegistersByCompetitorNum(int competitor_num, UserSystem user_log)
+        public IList<Register> getRegistersByCompetitorNum(int competitor_num, UserSystem user_log)
         {
             throw new NotImplementedException();
         }// End of getRegistersByCompetitorNum function

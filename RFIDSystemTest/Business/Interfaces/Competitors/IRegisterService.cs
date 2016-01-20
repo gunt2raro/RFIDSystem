@@ -21,8 +21,8 @@ namespace RFIDSystemTest.Business.Interfaces.Competitors
         Register getByCompetitionNum(int competitor_num, UserSystem user_log);
         Register getByDate(DateTime date, UserSystem user_log);
         Register getByUser(UserSystem user, UserSystem user_log);
-        List<Register> getRegistersByCompetition(Competition competition, UserSystem user_log);
-        List<Register> getRegistersByCompetitorNum(int competitor_num, UserSystem user_log);
+        IList<Register> getRegistersByCompetition(Competition competition, UserSystem user_log);
+        IList<Register> getRegistersByCompetitorNum(int competitor_num, UserSystem user_log);
         Register addRegister(Register register, UserSystem user_log);
         Register updateRegister(Register register, UserSystem user_log);
         bool deleteRegister(Register register, UserSystem user_log);

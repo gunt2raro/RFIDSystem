@@ -13,9 +13,14 @@ using Ninject;
 using RFIDSystemTest.Warriror;
 using RFIDSystemTest.Business.Implementations.Competitors;
 using System.Reflection;
+using RFIDSystemTest.Helpers;
+using RFIDSystemTest.Resources;
 
 namespace RFIDSystemTest.Views.Competitors
 {
+    /// <summary>
+    /// New competitor control
+    /// </summary>
     public partial class NewCompetitor : UserControl
     {
 
@@ -30,7 +35,7 @@ namespace RFIDSystemTest.Views.Competitors
             InitializeComponent();
 
             this.competitor_control = competitor_control;
-
+            
         }// End of Constructor function
 
         /// <summary>
@@ -40,8 +45,7 @@ namespace RFIDSystemTest.Views.Competitors
         /// <param name="e"></param>
         private void bCancel_Click(object sender, EventArgs e)
         {
-            competitor_control.Controls.Clear();
-            competitor_control.Controls.Add( competitor_control.menu_competitors_panel );
+            ControlHelper.LoadControlOnControl( competitor_control, competitor_control.menu_competitors_panel );
         }// End of bCancel_Click function
 
         /// <summary>
@@ -86,7 +90,38 @@ namespace RFIDSystemTest.Views.Competitors
         /// <param name="e"></param>
         private void NewCompetitor_Load(object sender, EventArgs e)
         {
-            
+
+            lName.Text = CompetitorResource.name;
+            lSecondName.Text = CompetitorResource.second_name;
+            lEmail.Text = CompetitorResource.email;
+            lAddress.Text = CompetitorResource.address;
+            lCity.Text = CompetitorResource.city;
+            lCountry.Text = CompetitorResource.country;
+            lState.Text = CompetitorResource.state;
+            lBirthDate.Text = CompetitorResource.birth_date;
+            lZipCode.Text = CompetitorResource.zip_code;
+
+            bAdd.Text = CompetitorResource.bAdd;
+            bCancel.Text = CompetitorResource.bCancel;
+
         }// End of NewCompetitor_Load function
+
+        /// <summary>
+        /// Clean Fields
+        /// </summary>
+        public void cleanFields()
+        {
+            foreach (Control c in Controls)
+            {
+                if (c.GetType() == typeof(TextBox))
+                {
+                    c.ResetText();
+                }
+                else if (c.GetType() == typeof(DateTimePicker))
+                {
+                    c.ResetText();
+                }
+            }
+        }// End of Clean Field function
     }
 }

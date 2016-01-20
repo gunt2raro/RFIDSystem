@@ -16,7 +16,7 @@ namespace RFIDSystemTest.Business.Interfaces.Events
     {
         Category getById(int category_id, UserSystem user_log);
         Category getByName(string name, UserSystem user_log);
-        List<Category> getByAge(int age, UserSystem user_log);
+        IList<Category> getByAge(int age, UserSystem user_log);
         Category getByColor(string color, UserSystem user_log);
         Category addCategory(Category category, UserSystem user_log);
         Category updateCategory(Category category, UserSystem user_log);

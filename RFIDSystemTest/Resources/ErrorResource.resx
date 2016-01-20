@@ -117,52 +117,13 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="address" xml:space="preserve">
-    <value>Address</value>
+  <data name="AddingError" xml:space="preserve">
+    <value>There was an error adding the {0}</value>
   </data>
-  <data name="bAdd" xml:space="preserve">
-    <value>Save and Register</value>
+  <data name="DeleteError" xml:space="preserve">
+    <value>There was an error deleting the {0}</value>
   </data>
-  <data name="bCancel" xml:space="preserve">
-    <value>Cancel</value>
-  </data>
-  <data name="bEdit" xml:space="preserve">
-    <value>Edit</value>
-  </data>
-  <data name="bEnable" xml:space="preserve">
-    <value />
-  </data>
-  <data name="birth_date" xml:space="preserve">
-    <value>Birth Date</value>
-  </data>
-  <data name="bUpdate" xml:space="preserve">
-    <value>Update</value>
-  </data>
-  <data name="city" xml:space="preserve">
-    <value>City</value>
-  </data>
-  <data name="country" xml:space="preserve">
-    <value>Country</value>
-  </data>
-  <data name="email" xml:space="preserve">
-    <value>E-mail</value>
-  </data>
-  <data name="name" xml:space="preserve">
-    <value>Name</value>
-  </data>
-  <data name="second_name" xml:space="preserve">
-    <value>Second Name</value>
-  </data>
-  <data name="state" xml:space="preserve">
-    <value>State</value>
-  </data>
-  <data name="timestamp" xml:space="preserve">
-    <value>Created At</value>
-  </data>
-  <data name="updated" xml:space="preserve">
-    <value>Updated At</value>
-  </data>
-  <data name="zip_code" xml:space="preserve">
-    <value>Zip Code</value>
+  <data name="UpgradingError" xml:space="preserve">
+    <value>There was an error upgrading the {0}</value>
   </data>
 </root>

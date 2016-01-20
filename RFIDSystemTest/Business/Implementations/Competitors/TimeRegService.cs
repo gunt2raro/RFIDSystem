@@ -55,7 +55,7 @@ namespace RFIDSystemTest.Business.Implementations.Competitors
         /// <param name="competition"></param>
         /// <param name="user_log"></param>
         /// <returns></returns>
-        public List<TimeReg> getByCompetition(Competition competition, UserSystem user_log)
+        public IList<TimeReg> getByCompetition(Competition competition, UserSystem user_log)
         {
             throw new NotImplementedException();
         }// End of getByCompetition function
@@ -66,7 +66,7 @@ namespace RFIDSystemTest.Business.Implementations.Competitors
         /// <param name="date"></param>
         /// <param name="user_log"></param>
         /// <returns></returns>
-        public List<TimeReg> getByDate(DateTime date, UserSystem user_log)
+        public IList<TimeReg> getByDate(DateTime date, UserSystem user_log)
         {
             throw new NotImplementedException();
         }// End of getByDate function
@@ -88,7 +88,7 @@ namespace RFIDSystemTest.Business.Implementations.Competitors
         /// <param name="register"></param>
         /// <param name="user_log"></param>
         /// <returns></returns>
-        public List<TimeReg> getByRegister(Register register, UserSystem user_log)
+        public IList<TimeReg> getByRegister(Register register, UserSystem user_log)
         {
             throw new NotImplementedException();
         }// End of getByRegister function

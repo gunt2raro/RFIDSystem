@@ -52,7 +52,7 @@ namespace RFIDSystemTest.Business.Implementations.Users
         /// </summary>
         /// <param name="user_log"></param>
         /// <returns></returns>
-        public List<Rol> getAll(UserSystem user_log)
+        public IList<Rol> getAll(UserSystem user_log)
         {
             return this.http_service.JSONHttpPettitionList<Rol>( HttpMethod.GET, this.GetType().Name.ToLower().Replace( "service", "" ), null );
         }// End of getAll function 
@@ -85,7 +85,7 @@ namespace RFIDSystemTest.Business.Implementations.Users
         /// <param name="value"></param>
         /// <param name="user_log"></param>
         /// <returns></returns>
-        public List<Rol> getByValue(int value, UserSystem user_log)
+        public IList<Rol> getByValue(int value, UserSystem user_log)
         {
             throw new NotImplementedException();
         }// End of getByValue function
