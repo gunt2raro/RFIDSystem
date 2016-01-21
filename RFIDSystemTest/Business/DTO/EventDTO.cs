@@ -20,8 +20,5 @@ namespace RFIDSystemTest.Business.DTO
         public string date_limit { get; set; }
         public int competitors_limit { get; set; }
 
-        public string timestamp { get; set; }
-        public string updated { get; set; }
-
     }// End of Event DTO class
 }

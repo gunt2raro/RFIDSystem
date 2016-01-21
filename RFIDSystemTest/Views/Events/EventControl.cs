@@ -15,8 +15,11 @@ namespace RFIDSystemTest.Views.Events
     {
         public ListEvent list_event_control;
         public MenuEvent menu_event_control;
-        public IEventService event_service;
+        public NewEvent new_event_control;
+        public DetailEvent detail_event_control;
 
+        public IEventService event_service;
+        
         /// <summary>
         /// Constructor
         /// </summary>
@@ -29,6 +32,10 @@ namespace RFIDSystemTest.Views.Events
 
             list_event_control = new ListEvent( this );
             menu_event_control = new MenuEvent( this );
+            new_event_control = new NewEvent( this );
+            detail_event_control = new DetailEvent( this );
+
+            this.AutoScaleMode = AutoScaleMode.Inherit;
 
         }// End of Constructor function
 
@@ -39,8 +46,11 @@ namespace RFIDSystemTest.Views.Events
         /// <param name="e"></param>
         private void EventControl_Load(object sender, EventArgs e)
         {
+
             Controls.Clear();
             Controls.Add( menu_event_control );
+
         }// End of EventControl_Load function
-    }
+
+    }// End of Event Control class
 }

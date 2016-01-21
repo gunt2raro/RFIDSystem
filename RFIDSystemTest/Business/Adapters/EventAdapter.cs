@@ -23,15 +23,13 @@ namespace RFIDSystemTest.Business.Adapters
         {
             EventDTO dto = new EventDTO();
 
-            dto.date_finish = DataConvert.DateTimeToJsonString( event_o.date_finish );
-            dto.date_start = DataConvert.DateTimeToJsonString( event_o.date_start );
-            dto.date_limit = DataConvert.DateTimeToJsonString( event_o.date_limit );
+            dto.date_finish = DataConvert.DateTimeToJsonStringWithTime( event_o.date_finish );
+            dto.date_start = DataConvert.DateTimeToJsonStringWithTime( event_o.date_start );
+            dto.date_limit = DataConvert.DateTimeToJsonStringWithTime( event_o.date_limit );
             dto.competitors_limit = event_o.competitors_limit;
             dto.description = event_o.description;
             dto.image_url = event_o.image_url;
             dto.name = event_o.name;
-            dto.timestamp = DataConvert.DateTimeToJsonString( event_o.timestamp );
-            dto.updated = DataConvert.DateTimeToJsonString( event_o.updated );
             
             return dto;
 

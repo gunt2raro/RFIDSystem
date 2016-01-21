@@ -302,6 +302,12 @@
     <Compile Include="Views\Competitors\CompetitorControl.Designer.cs">
       <DependentUpon>CompetitorControl.cs</DependentUpon>
     </Compile>
+    <Compile Include="Views\Events\DetailEvent.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\Events\DetailEvent.Designer.cs">
+      <DependentUpon>DetailEvent.cs</DependentUpon>
+    </Compile>
     <Compile Include="Views\Events\EventControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -331,6 +337,12 @@
     </Compile>
     <Compile Include="Views\Events\MenuEvent.Designer.cs">
       <DependentUpon>MenuEvent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Events\NewEvent.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\Events\NewEvent.Designer.cs">
+      <DependentUpon>NewEvent.cs</DependentUpon>
     </Compile>
     <Compile Include="Views\General\KitControl.cs">
       <SubType>UserControl</SubType>
@@ -434,6 +446,9 @@
     <EmbeddedResource Include="Views\Competitors\SearchCompetitor.resx">
       <DependentUpon>SearchCompetitor.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Views\Events\DetailEvent.resx">
+      <DependentUpon>DetailEvent.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Views\Events\EventControl.resx">
       <DependentUpon>EventControl.cs</DependentUpon>
     </EmbeddedResource>
@@ -445,6 +460,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Views\Events\MenuEvent.resx">
       <DependentUpon>MenuEvent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Events\NewEvent.resx">
+      <DependentUpon>NewEvent.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\General\ProfileControl.resx">
       <DependentUpon>ProfileControl.cs</DependentUpon>

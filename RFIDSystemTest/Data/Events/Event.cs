@@ -23,8 +23,5 @@ namespace RFIDSystemTest.Data.Events
         public DateTime date_limit { get; set; }
         public int competitors_limit  { get; set; }
 
-        public DateTime timestamp { get; set; }
-        public DateTime updated { get; set; }
-
     }// End of Event class
 }

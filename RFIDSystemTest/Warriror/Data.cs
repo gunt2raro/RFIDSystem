@@ -41,6 +41,16 @@ namespace RFIDSystemTest.Warriror
 
         }// End of Date Time To Json String function
 
+        /// <summary>
+        /// Date time to json string with time
+        /// </summary>
+        /// <returns></returns>
+        public static string DateTimeToJsonStringWithTime( DateTime dt ) {
+
+            return dt.ToString("yyyy-MM-ddThh:mm:ssZ");
+
+        }// End of DateTime to json string function
+
     }// End of DataConvert class
     
     /// <summary>

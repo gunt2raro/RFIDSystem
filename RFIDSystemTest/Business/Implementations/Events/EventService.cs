@@ -91,7 +91,14 @@ namespace RFIDSystemTest.Business.Implementations.Events
         /// <returns></returns>
         public Event getById(int event_id, UserSystem user_log)
         {
-            throw new NotImplementedException();
+            return http_service.JSONHttpPettitionObject<Event>(
+                HttpMethod.GET,
+                GetType().Name.ToLower().Replace(
+                    TWords.SERVICE,
+                    String.Format(
+                        TWords.ONEPARAM,
+                        event_id)),
+                null);
         }// End of getById function
 
         /// <summary>
