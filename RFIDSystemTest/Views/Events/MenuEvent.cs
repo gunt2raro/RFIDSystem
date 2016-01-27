@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using RFIDSystemTest.Helpers;
+using RFIDSystemTest.Warriror;
 
 namespace RFIDSystemTest.Views.Events
 {
@@ -38,8 +39,42 @@ namespace RFIDSystemTest.Views.Events
         private void bList_Click(object sender, EventArgs e)
         {
             ControlHelper.LoadControlOnControl( event_control, event_control.list_event_control );
-            event_control.list_event_control.loadData();
         }// End of bList_Click function
+
+        /// <summary>
+        /// Menu Event Load
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void MenuEvent_Load(object sender, EventArgs e)
+        {
+            ThemeShit();
+        }// End of MenuEvent_Load function
+
+        /// <summary>
+        /// Theme shit
+        /// </summary>
+        public void ThemeShit()
+        {
+            ThemeDark.ResponsiveDesign(this, Parent.Parent, 1, 1 );
+            ThemeDark.SetButtonsTheme( this );
+            ThemeDark.ButtonsResponsiveWidth(bList, this, .8);
+            ThemeDark.ButtonsResponsiveWidth(bNew, this, .8);
+            ThemeDark.ButtonsResponsiveWidth(bSearch, this, .8);
+            ThemeDark.ButtonsResponsiveWidth(bMore, this, .8);
+            
+        }// End of Theme Shit function
+
+        /// <summary>
+        /// Button new click
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void bNew_Click(object sender, EventArgs e)
+        {
+            ControlHelper.LoadControlOnControl( event_control, event_control.new_event_control );
+            event_control.new_event_control.cleanFields();
+        }// End of bNew_Click function
 
     }// End of Menu Event control class
 }

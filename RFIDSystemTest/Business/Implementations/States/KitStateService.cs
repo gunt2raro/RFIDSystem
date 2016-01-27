@@ -7,6 +7,8 @@ using System.Threading.Tasks;
 using RFIDSystemTest.Data.States;
 using RFIDSystemTest.Data.Users;
 using RFIDSystemTest.Warriror;
+using RFIDSystemTest.Business.Adapters;
+using Newtonsoft.Json;
 
 namespace RFIDSystemTest.Business.Implementations.States
 {
@@ -34,7 +36,14 @@ namespace RFIDSystemTest.Business.Implementations.States
         /// <returns></returns>
         public KitState addKitState(KitState kit_state, UserSystem user_log)
         {
-            throw new NotImplementedException();
+            return http_service.JSONHttpPettitionObject<KitState>(
+                HttpMethod.POST,
+                GetType().Name.ToLower().Replace(
+                    TWords.SERVICE,
+                    TWords.SLASH),
+                JsonConvert.SerializeObject(
+                    KitStateAdapter.ObjectToDTO(
+                        kit_state)));
         }// End of addKitState function
 
         /// <summary>
@@ -55,7 +64,12 @@ namespace RFIDSystemTest.Business.Implementations.States
         /// <returns></returns>
         public IList<KitState> getAll(UserSystem user_log)
         {
-            return this.http_service.JSONHttpPettitionList<KitState>( HttpMethod.GET, this.GetType().Name.ToLower().Replace( "service", "" ), null );
+            return http_service.JSONHttpPettitionList<KitState>(
+                HttpMethod.GET,
+                GetType().Name.ToLower().Replace(
+                    TWords.SERVICE,
+                    TWords.EMPTY),
+                null);
         }// End of getAll function
 
         /// <summary>
@@ -77,7 +91,14 @@ namespace RFIDSystemTest.Business.Implementations.States
         /// <returns></returns>
         public KitState getByName(int kit_state_name, UserSystem user_log)
         {
-            throw new NotImplementedException();
+            return http_service.JSONHttpPettitionObject<KitState>(
+                HttpMethod.GET,
+                GetType().Name.ToLower().Replace(
+                    TWords.SERVICE,
+                    String.Format(
+                        TWords.ONEPARAM,
+                        kit_state_name)),
+                null);
         }// End of getByName function
 
         /// <summary>

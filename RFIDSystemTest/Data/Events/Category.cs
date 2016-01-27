@@ -14,7 +14,7 @@ namespace RFIDSystemTest.Data.Events
     {
         public int id { get; set; }
 
-        public User user { get; set; }
+        public int user { get; set; }
         public string name { get; set; }
         public string description { get; set; }
         public int age_1 { get; set; }

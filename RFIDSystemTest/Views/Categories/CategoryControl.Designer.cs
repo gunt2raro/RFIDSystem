@@ -28,8 +28,17 @@
         /// </summary>
         private void InitializeComponent()
         {
-            components = new System.ComponentModel.Container();
+            this.SuspendLayout();
+            // 
+            // CategoryControl
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Name = "CategoryControl";
+            this.Size = new System.Drawing.Size(1706, 1086);
+            this.Load += new System.EventHandler(this.CategoryControl_Load);
+            this.ResumeLayout(false);
+
         }
 
         #endregion

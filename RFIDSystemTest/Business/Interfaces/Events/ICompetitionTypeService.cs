@@ -14,6 +14,7 @@ namespace RFIDSystemTest.Business.Interfaces.Events
     /// </summary>
     public interface ICompetitionTypeService
     {
+        IList<CompetitionType> getAll( UserSystem user_log);
         CompetitionType getById(int competition_type_id, UserSystem user_log);
         CompetitionType getByName(int comeptition_name, UserSystem user_log);
         CompetitionType addCompetitionType(CompetitionType competition_type, UserSystem user_log);

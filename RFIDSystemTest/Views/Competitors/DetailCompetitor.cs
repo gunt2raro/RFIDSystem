@@ -10,26 +10,27 @@ using System.Windows.Forms;
 using RFIDSystemTest.Data.Competitors;
 using RFIDSystemTest.Helpers;
 using RFIDSystemTest.Resources;
+using RFIDSystemTest.Warriror;
 
 namespace RFIDSystemTest.Views.Competitors
 {
+    /// <summary>
+    /// Detail competitor control class
+    /// </summary>
     public partial class DetailCompetitor : UserControl
     {
         public CompetitorControl competitor_control;
         public Competitor competitor;
-
-        public object CompetitorHelper { get; private set; }
-
+        
         /// <summary>
         /// Constructor
         /// </summary>
         public DetailCompetitor( CompetitorControl competitor_control )
         {
-
+            // Default sftuff
             InitializeComponent();
-
+            // Load the competitor control from injection by const
             this.competitor_control = competitor_control;
-
         }// End of Constructor
 
         /// <summary>
@@ -39,8 +40,11 @@ namespace RFIDSystemTest.Views.Competitors
         /// <param name="e"></param>
         private void DetailCompetitor_Load(object sender, EventArgs e)
         {
+            // Theme Stuff
+            ThemeShit();
+            // Load data to fields
             loadData();
-
+            // Resources stuff
             bCancel.Text = CompetitorResource.bCancel;
             bUpdate.Text = CompetitorResource.bUpdate;
             bEnable.Text = CompetitorResource.bEnable;
@@ -143,6 +147,16 @@ namespace RFIDSystemTest.Views.Competitors
             }
 
         }// End of bEnable_click function
+
+        /// <summary>
+        /// Theme shit
+        /// </summary>
+        public void ThemeShit()
+        {
+            ThemeDark.ResponsiveDesign(this, Parent.Parent, 1, 1);
+            ThemeDark.SetButtonsTheme(this);
+            ThemeDark.SetLabelsTheme(this);
+        }// End of ThemeShit function
 
     }// End of Detail Competitor class
 }

@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using RFIDSystemTest.Helpers;
+using RFIDSystemTest.Warriror;
 
 namespace RFIDSystemTest.Views.Competitors
 {
@@ -36,7 +37,6 @@ namespace RFIDSystemTest.Views.Competitors
         private void bList_Click(object sender, EventArgs e)
         {
             ControlHelper.LoadControlOnControl(main_control, main_control.list_competitors_panel);
-            main_control.list_competitors_panel.loadData();
         }// End of bList_Click function
 
         /// <summary>
@@ -77,8 +77,20 @@ namespace RFIDSystemTest.Views.Competitors
         /// <param name="e"></param>
         private void Menu_Load(object sender, EventArgs e)
         {
-
+            ThemeShit();
         }// End of Menu_load function
+
+        /// <summary>
+        /// Theme shit
+        /// </summary>
+        public void ThemeShit() {
+            ThemeDark.ResponsiveDesign( this, Parent.Parent, 1, 1 );
+            ThemeDark.SetButtonsTheme( this );
+            ThemeDark.ButtonsResponsiveWidth(bList, this, .8);
+            ThemeDark.ButtonsResponsiveWidth(bNew, this, .8);
+            ThemeDark.ButtonsResponsiveWidth(bRegister, this, .8);
+            ThemeDark.ButtonsResponsiveWidth(bSearch, this, .8);
+        }// End of themeShit function
 
     }// End of Menu control class
 }

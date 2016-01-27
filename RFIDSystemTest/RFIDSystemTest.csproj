@@ -136,10 +136,26 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\NinjectBindings.cs" />
+    <Compile Include="Business\Adapters\AuthenticationAdapter.cs" />
+    <Compile Include="Business\Adapters\CategoryAdapter.cs" />
+    <Compile Include="Business\Adapters\CompetitionAdapter.cs" />
+    <Compile Include="Business\Adapters\CompetitionTypeAdapter.cs" />
     <Compile Include="Business\Adapters\CompetitorAdapter.cs" />
     <Compile Include="Business\Adapters\EventAdapter.cs" />
+    <Compile Include="Business\Adapters\KitStateAdapter.cs" />
+    <Compile Include="Business\Adapters\RegisterAdapter.cs" />
+    <Compile Include="Business\Adapters\RegisterStateAdapter.cs" />
+    <Compile Include="Business\Adapters\TimeRegAdapter.cs" />
+    <Compile Include="Business\DTO\AuthenticationDTO.cs" />
+    <Compile Include="Business\DTO\CategoryDTO.cs" />
+    <Compile Include="Business\DTO\CompetitionDTO.cs" />
+    <Compile Include="Business\DTO\CompetitionTypeDTO.cs" />
     <Compile Include="Business\DTO\CompetitorDTO.cs" />
     <Compile Include="Business\DTO\EventDTO.cs" />
+    <Compile Include="Business\DTO\KitStateDTO.cs" />
+    <Compile Include="Business\DTO\RegisterDTO.cs" />
+    <Compile Include="Business\DTO\RegisterStateDTO.cs" />
+    <Compile Include="Business\DTO\TimeRegDTO.cs" />
     <Compile Include="Business\Implementations\Competitors\AuthenticationService.cs" />
     <Compile Include="Business\Implementations\Competitors\CompetitorService.cs" />
     <Compile Include="Business\Implementations\Competitors\RegisterService.cs" />
@@ -199,10 +215,10 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>CategoryResource.resx</DependentUpon>
     </Compile>
-    <Compile Include="Resources\CompetenceResource.Designer.cs">
+    <Compile Include="Resources\CompetitionResource.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>CompetenceResource.resx</DependentUpon>
+      <DependentUpon>CompetitionResource.resx</DependentUpon>
     </Compile>
     <Compile Include="Resources\CompetitorResource.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -213,6 +229,16 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>ErrorResource.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\EventResource.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>EventResource.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\Http\HttpResources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>HttpResources.resx</DependentUpon>
     </Compile>
     <Compile Include="Resources\KitResource.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -260,6 +286,24 @@
     <Compile Include="Views\Categories\CategoryControl.Designer.cs">
       <DependentUpon>CategoryControl.cs</DependentUpon>
     </Compile>
+    <Compile Include="Views\Categories\ListCategory.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\Categories\ListCategory.Designer.cs">
+      <DependentUpon>ListCategory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Categories\MenuCategory.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\Categories\MenuCategory.Designer.cs">
+      <DependentUpon>MenuCategory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Categories\NewCategory.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\Categories\NewCategory.Designer.cs">
+      <DependentUpon>NewCategory.cs</DependentUpon>
+    </Compile>
     <Compile Include="Views\Competitors\DetailCompetitor.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -302,6 +346,12 @@
     <Compile Include="Views\Competitors\CompetitorControl.Designer.cs">
       <DependentUpon>CompetitorControl.cs</DependentUpon>
     </Compile>
+    <Compile Include="Views\Events\DetailCompetition.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\Events\DetailCompetition.Designer.cs">
+      <DependentUpon>DetailCompetition.cs</DependentUpon>
+    </Compile>
     <Compile Include="Views\Events\DetailEvent.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -338,6 +388,12 @@
     <Compile Include="Views\Events\MenuEvent.Designer.cs">
       <DependentUpon>MenuEvent.cs</DependentUpon>
     </Compile>
+    <Compile Include="Views\Events\NewCompetition.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\Events\NewCompetition.Designer.cs">
+      <DependentUpon>NewCompetition.cs</DependentUpon>
+    </Compile>
     <Compile Include="Views\Events\NewEvent.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -362,9 +418,27 @@
     <Compile Include="Views\General\SettingsControl.Designer.cs">
       <DependentUpon>SettingsControl.cs</DependentUpon>
     </Compile>
+    <Compile Include="Views\States\StateControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\States\StateControl.Designer.cs">
+      <DependentUpon>StateControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Timing\TimingControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\Timing\TimingControl.Designer.cs">
+      <DependentUpon>TimingControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\VO\CategoryVO.cs" />
+    <Compile Include="Views\VO\CompetitionVO.cs" />
+    <Compile Include="Views\VO\CompetitorVO.cs" />
+    <Compile Include="Views\VO\EventVO.cs" />
+    <Compile Include="Views\VO\KitStateVO.cs" />
     <Compile Include="Warriror\Data.cs" />
     <Compile Include="Warriror\HttpService.cs" />
     <Compile Include="Warriror\IHttpService.cs" />
+    <Compile Include="Warriror\ThemeDark.cs" />
     <EmbeddedResource Include="Dashboard.resx">
       <DependentUpon>Dashboard.cs</DependentUpon>
     </EmbeddedResource>
@@ -381,12 +455,12 @@
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
     <EmbeddedResource Include="Resources\CategoryResource.resx">
-      <Generator>ResXFileCodeGenerator</Generator>
+      <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>CategoryResource.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="Resources\CompetenceResource.resx">
+    <EmbeddedResource Include="Resources\CompetitionResource.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>CompetenceResource.Designer.cs</LastGenOutput>
+      <LastGenOutput>CompetitionResource.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="Resources\CompetitorResource.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
@@ -395,6 +469,14 @@
     <EmbeddedResource Include="Resources\ErrorResource.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>ErrorResource.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\EventResource.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>EventResource.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Http\HttpResources.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>HttpResources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="Resources\KitResource.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -428,6 +510,18 @@
       <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>WarningResource.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <EmbeddedResource Include="Views\Categories\CategoryControl.resx">
+      <DependentUpon>CategoryControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Categories\ListCategory.resx">
+      <DependentUpon>ListCategory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Categories\MenuCategory.resx">
+      <DependentUpon>MenuCategory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Categories\NewCategory.resx">
+      <DependentUpon>NewCategory.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Views\Competitors\DetailCompetitor.resx">
       <DependentUpon>DetailCompetitor.cs</DependentUpon>
     </EmbeddedResource>
@@ -446,6 +540,9 @@
     <EmbeddedResource Include="Views\Competitors\SearchCompetitor.resx">
       <DependentUpon>SearchCompetitor.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Views\Events\DetailCompetition.resx">
+      <DependentUpon>DetailCompetition.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Views\Events\DetailEvent.resx">
       <DependentUpon>DetailEvent.cs</DependentUpon>
     </EmbeddedResource>
@@ -461,11 +558,17 @@
     <EmbeddedResource Include="Views\Events\MenuEvent.resx">
       <DependentUpon>MenuEvent.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Views\Events\NewCompetition.resx">
+      <DependentUpon>NewCompetition.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Views\Events\NewEvent.resx">
       <DependentUpon>NewEvent.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\General\ProfileControl.resx">
       <DependentUpon>ProfileControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\States\StateControl.resx">
+      <DependentUpon>StateControl.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -481,9 +584,7 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Views\States\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.5.2">
       <Visible>False</Visible>

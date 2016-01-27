@@ -8,6 +8,8 @@ using RFIDSystemTest.Data.Competitors;
 using RFIDSystemTest.Data.Events;
 using RFIDSystemTest.Data.Users;
 using RFIDSystemTest.Warriror;
+using RFIDSystemTest.Business.Adapters;
+using Newtonsoft.Json;
 
 namespace RFIDSystemTest.Business.Implementations.Events
 {
@@ -35,7 +37,14 @@ namespace RFIDSystemTest.Business.Implementations.Events
         /// <returns></returns>
         public Competition addCompetition(Competition competition, UserSystem user_log)
         {
-            throw new NotImplementedException();
+            return http_service.JSONHttpPettitionObject<Competition>(
+                HttpMethod.POST,
+                GetType().Name.ToLower().Replace(
+                    TWords.SERVICE,
+                    TWords.SLASH),
+                JsonConvert.SerializeObject(
+                    CompetitionAdapter.ObjectToDTO(
+                        competition)));
         }// End of addCompetition function
 
         /// <summary>
@@ -48,6 +57,21 @@ namespace RFIDSystemTest.Business.Implementations.Events
         {
             throw new NotImplementedException();
         }// End of deleteCompetition function
+
+        /// <summary>
+        /// Get all
+        /// </summary>
+        /// <param name="user_log"></param>
+        /// <returns></returns>
+        public IList<Competition> getAll(UserSystem user_log)
+        {
+            return http_service.JSONHttpPettitionList<Competition>(
+                HttpMethod.GET,
+                GetType().Name.ToLower().Replace(
+                    TWords.SERVICE,
+                    TWords.EMPTY),
+                null);
+        }// End of getAll function
 
         /// <summary>
         /// Get by date
@@ -68,7 +92,14 @@ namespace RFIDSystemTest.Business.Implementations.Events
         /// <returns></returns>
         public Competition getById(int competition_id, UserSystem user_log)
         {
-            throw new NotImplementedException();
+            return http_service.JSONHttpPettitionObject<Competition>(
+                   HttpMethod.GET,
+                   GetType().Name.ToLower().Replace(
+                       TWords.SERVICE,
+                       String.Format(
+                           TWords.ONEPARAM,
+                           competition_id)),
+                   null);
         }// End of getById function
 
         /// <summary>
@@ -92,6 +123,21 @@ namespace RFIDSystemTest.Business.Implementations.Events
         {
             throw new NotImplementedException();
         }// End of getCategoriesById function
+
+        /// <summary>
+        /// Get competitions by event
+        /// </summary>
+        /// <param name="event_o"></param>
+        /// <param name="user_log"></param>
+        /// <returns></returns>
+        public IList<Competition> getCompetitionsByEvent(Event event_o, UserSystem user_log)
+        {
+            return http_service.JSONHttpPettitionList<Competition>( 
+                HttpMethod.GET, 
+                string.Format(
+                    "competition/byevent/?event_id={0}", event_o.id), 
+                null);
+        }// End of getCompetitionsByEvent function
 
         /// <summary>
         /// Get competitors by id

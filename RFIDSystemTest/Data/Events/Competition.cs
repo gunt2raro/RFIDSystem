@@ -14,16 +14,16 @@ namespace RFIDSystemTest.Data.Events
     {
         public int id { get; set; }
 
-        public User user { get; set; }
+        public int user { get; set; }
         public string name { get; set; }
         public string description { get; set; }
         public DateTime date_start { get; set; }
         public DateTime date_finish { get; set; }
         public string image_url { get; set; }
-        public List<Category> categories { get; set; }
-        public CompetitionType competition_type { get; set; }
+        public int [] categories { get; set; }
+        public int competition_type { get; set; }
         public int competitors_limit { get; set; }
-        public Event competition_event { get; set; }
+        public int competition_event { get; set; }
 
         public DateTime timestamp { get; set; }
         public DateTime updated { get; set; }

@@ -7,6 +7,8 @@ using System.Threading.Tasks;
 using RFIDSystemTest.Data.Events;
 using RFIDSystemTest.Data.Users;
 using RFIDSystemTest.Warriror;
+using RFIDSystemTest.Business.Adapters;
+using Newtonsoft.Json;
 
 namespace RFIDSystemTest.Business.Implementations.Events
 {
@@ -34,7 +36,14 @@ namespace RFIDSystemTest.Business.Implementations.Events
         /// <returns></returns>
         public Category addCategory(Category category, UserSystem user_log)
         {
-            throw new NotImplementedException();
+            return http_service.JSONHttpPettitionObject<Category>(
+                HttpMethod.POST,
+                GetType().Name.ToLower().Replace(
+                    TWords.SERVICE, 
+                    TWords.SLASH),
+                JsonConvert.SerializeObject(
+                    CategoryAdapter.ObjectToDTO(
+                        category ) ) );
         }// End of addCategory function
 
         /// <summary>
@@ -47,6 +56,21 @@ namespace RFIDSystemTest.Business.Implementations.Events
         {
             throw new NotImplementedException();
         }// End of deleteCategory function
+
+        /// <summary>
+        /// Get all
+        /// </summary>
+        /// <param name="user_log"></param>
+        /// <returns></returns>
+        public IList<Category> getAll(UserSystem user_log)
+        {
+            return http_service.JSONHttpPettitionList<Category>(
+                HttpMethod.GET,
+                GetType().Name.ToLower().Replace( 
+                    TWords.SERVICE, 
+                    TWords.EMPTY ), 
+                null);
+        }// End of getAll function
 
         /// <summary>
         /// Get by age
@@ -100,7 +124,16 @@ namespace RFIDSystemTest.Business.Implementations.Events
         /// <returns></returns>
         public Category updateCategory(Category category, UserSystem user_log)
         {
-            throw new NotImplementedException();
+            return http_service.JSONHttpPettitionObject<Category>(
+                HttpMethod.PUT,
+                GetType().Name.ToLower().Replace(
+                    TWords.SERVICE,
+                    string.Format(
+                        TWords.ONEPARAM,
+                        category.id)),
+                JsonConvert.SerializeObject(
+                    CategoryAdapter.ObjectToDTO(
+                        category)));
         }// End of updateCategory function
 
     }// End of CategoryRepository class

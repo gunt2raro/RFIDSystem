@@ -19,11 +19,15 @@ namespace RFIDSystemTest.Warriror
     /// The words
     /// </summary>
     public static class TWords {
+
         public static string SERVICE = "service";
+        public static string VARDATA = "data";
         public static string SLASH = "/";
         public static string ONEPARAM = "/{0}";
         public static string EMPTY = "";
+        
     }// End of TWords class
+    
 
     /// <summary>
     /// Data Convert
@@ -64,4 +68,10 @@ namespace RFIDSystemTest.Warriror
         DELETE
     }//End of http enum
 
+    public enum DataType {
+        JSON, 
+        xML,
+        HTML,
+        PLAIN
+    }// End of Data types
 }//End of namespace

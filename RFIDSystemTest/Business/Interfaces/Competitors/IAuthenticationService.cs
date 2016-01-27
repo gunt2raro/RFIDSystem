@@ -14,6 +14,7 @@ namespace RFIDSystemTest.Business.Interfaces.Competitors
     /// </summary>
     public interface IAuthenticationService
     {
+        IList<Authentication> getAll( UserSystem user_log );
         Authentication getById(int authentication_id, UserSystem user_log);
         Authentication getByCompetitor(Competitor competitor, UserSystem user_log);
         Authentication addAuthentication(Authentication authentication, UserSystem user_log);

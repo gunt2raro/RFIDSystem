@@ -7,6 +7,8 @@ using System.Threading.Tasks;
 using RFIDSystemTest.Data.Events;
 using RFIDSystemTest.Data.Users;
 using RFIDSystemTest.Warriror;
+using Newtonsoft.Json;
+using RFIDSystemTest.Business.Adapters;
 
 namespace RFIDSystemTest.Business.Implementations.Events
 {
@@ -34,7 +36,14 @@ namespace RFIDSystemTest.Business.Implementations.Events
         /// <returns></returns>
         public CompetitionType addCompetitionType(CompetitionType competition_type, UserSystem user_log)
         {
-            throw new NotImplementedException();
+            return http_service.JSONHttpPettitionObject<CompetitionType>(
+                HttpMethod.POST,
+                GetType().Name.ToLower().Replace(
+                    TWords.SERVICE,
+                    TWords.SLASH),
+                JsonConvert.SerializeObject(
+                    CompetitionTypeAdapter.ObjectToDTO(
+                        competition_type)));
         }// End of addCompetitionType function
 
         /// <summary>
@@ -49,6 +58,21 @@ namespace RFIDSystemTest.Business.Implementations.Events
         }// End of deleteCompetitionType function
 
         /// <summary>
+        /// Get all
+        /// </summary>
+        /// <param name="user_log"></param>
+        /// <returns></returns>
+        public IList<CompetitionType> getAll(UserSystem user_log)
+        {
+            return http_service.JSONHttpPettitionList<CompetitionType>(
+                HttpMethod.GET,
+                GetType().Name.ToLower().Replace(
+                    TWords.SERVICE,
+                    TWords.EMPTY),
+                null);
+        }// End of getAll function
+
+        /// <summary>
         /// Get by id
         /// </summary>
         /// <param name="competition_type_id"></param>
@@ -56,7 +80,14 @@ namespace RFIDSystemTest.Business.Implementations.Events
         /// <returns></returns>
         public CompetitionType getById(int competition_type_id, UserSystem user_log)
         {
-            throw new NotImplementedException();
+            return http_service.JSONHttpPettitionObject<CompetitionType>(
+                 HttpMethod.GET,
+                 GetType().Name.ToLower().Replace(
+                     TWords.SERVICE,
+                     String.Format(
+                         TWords.ONEPARAM,
+                         competition_type_id)),
+                 null);
         }// End of getById function
 
         /// <summary>

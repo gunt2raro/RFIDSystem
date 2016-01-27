@@ -91,6 +91,8 @@ namespace RFIDSystemTest.Views.Competitors
         private void NewCompetitor_Load(object sender, EventArgs e)
         {
 
+            ThemeShit();
+
             lName.Text = CompetitorResource.name;
             lSecondName.Text = CompetitorResource.second_name;
             lEmail.Text = CompetitorResource.email;
@@ -123,5 +125,16 @@ namespace RFIDSystemTest.Views.Competitors
                 }
             }
         }// End of Clean Field function
-    }
+
+        /// <summary>
+        /// Theme shit
+        /// </summary>
+        public void ThemeShit()
+        {
+            ThemeDark.ResponsiveDesign(this, Parent.Parent, 1, 1);
+            ThemeDark.SetButtonsTheme(this);
+            ThemeDark.SetLabelsTheme(this);
+        }// End of ThemeShit function
+
+    }// End of New Competitor control class
 }

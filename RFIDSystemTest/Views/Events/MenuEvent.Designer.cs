@@ -43,10 +43,10 @@
             this.bList.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bList.Image = ((System.Drawing.Image)(resources.GetObject("bList.Image")));
             this.bList.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.bList.Location = new System.Drawing.Point(114, 143);
-            this.bList.Margin = new System.Windows.Forms.Padding(6, 4, 6, 4);
+            this.bList.Location = new System.Drawing.Point(150, 150);
+            this.bList.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.bList.Name = "bList";
-            this.bList.Size = new System.Drawing.Size(1614, 172);
+            this.bList.Size = new System.Drawing.Size(1210, 150);
             this.bList.TabIndex = 19;
             this.bList.Text = "Events";
             this.bList.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -59,23 +59,24 @@
             this.bNew.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bNew.Image = ((System.Drawing.Image)(resources.GetObject("bNew.Image")));
             this.bNew.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.bNew.Location = new System.Drawing.Point(114, 349);
-            this.bNew.Margin = new System.Windows.Forms.Padding(6, 4, 6, 4);
+            this.bNew.Location = new System.Drawing.Point(150, 320);
+            this.bNew.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.bNew.Name = "bNew";
-            this.bNew.Size = new System.Drawing.Size(1614, 172);
+            this.bNew.Size = new System.Drawing.Size(1210, 150);
             this.bNew.TabIndex = 20;
             this.bNew.Text = "Add new event";
             this.bNew.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.bNew.UseVisualStyleBackColor = true;
+            this.bNew.Click += new System.EventHandler(this.bNew_Click);
             // 
             // bSearch
             // 
             this.bSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bSearch.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.bSearch.Location = new System.Drawing.Point(114, 562);
-            this.bSearch.Margin = new System.Windows.Forms.Padding(6, 4, 6, 4);
+            this.bSearch.Location = new System.Drawing.Point(150, 490);
+            this.bSearch.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.bSearch.Name = "bSearch";
-            this.bSearch.Size = new System.Drawing.Size(1614, 172);
+            this.bSearch.Size = new System.Drawing.Size(1210, 150);
             this.bSearch.TabIndex = 21;
             this.bSearch.Text = "Search";
             this.bSearch.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -84,39 +85,38 @@
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(114, 785);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(6, 4, 6, 4);
+            this.dataGridView1.Location = new System.Drawing.Point(150, 660);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowTemplate.Height = 28;
-            this.dataGridView1.Size = new System.Drawing.Size(1614, 316);
+            this.dataGridView1.Size = new System.Drawing.Size(1500, 300);
             this.dataGridView1.TabIndex = 22;
             // 
             // bMore
             // 
             this.bMore.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bMore.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.bMore.Location = new System.Drawing.Point(114, 1141);
-            this.bMore.Margin = new System.Windows.Forms.Padding(6, 4, 6, 4);
+            this.bMore.Location = new System.Drawing.Point(150, 980);
+            this.bMore.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.bMore.Name = "bMore";
-            this.bMore.Size = new System.Drawing.Size(1614, 89);
+            this.bMore.Size = new System.Drawing.Size(1210, 75);
             this.bMore.TabIndex = 23;
             this.bMore.Text = "More...";
             this.bMore.UseVisualStyleBackColor = true;
             // 
             // MenuEvent
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(16F, 31F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.AutoScroll = true;
-            this.AutoSize = true;
             this.Controls.Add(this.bMore);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.bSearch);
             this.Controls.Add(this.bNew);
             this.Controls.Add(this.bList);
-            this.Margin = new System.Windows.Forms.Padding(6, 4, 6, 4);
+            this.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.Name = "MenuEvent";
-            this.Size = new System.Drawing.Size(1882, 1354);
+            this.Size = new System.Drawing.Size(1412, 1092);
+            this.Load += new System.EventHandler(this.MenuEvent_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

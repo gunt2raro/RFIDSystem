@@ -54,7 +54,14 @@ namespace RFIDSystemTest.Business.Implementations.Competitors
         /// <returns></returns>
         public bool deleteCompetitor(Competitor competitor, UserSystem user_log)
         {
-            throw new NotImplementedException();
+            return http_service.JSONHttpPettitionObject<Competitor>(
+                HttpMethod.DELETE,
+                GetType().Name.ToLower().Replace(
+                    TWords.SERVICE,
+                    String.Format(
+                        TWords.ONEPARAM,
+                        competitor.id)),
+                null) == null ? true : false;
         }// End of deleteCompetitor function
 
         /// <summary>
@@ -190,7 +197,7 @@ namespace RFIDSystemTest.Business.Implementations.Competitors
                 HttpMethod.PUT, 
                 GetType().Name.ToLower().Replace(
                     TWords.SERVICE, 
-                    String.Format(
+                    string.Format(
                         TWords.ONEPARAM, 
                         competitor.id)),
                 JsonConvert.SerializeObject( 

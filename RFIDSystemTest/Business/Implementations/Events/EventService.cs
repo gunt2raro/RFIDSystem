@@ -120,7 +120,15 @@ namespace RFIDSystemTest.Business.Implementations.Events
         /// <returns></returns>
         public Event updateEvent(Event event_o, UserSystem user_log)
         {
-            throw new NotImplementedException();
+            return http_service.JSONHttpPettitionObject<Event>(
+                   HttpMethod.PUT,
+                   GetType().Name.ToLower().Replace(
+                       TWords.SERVICE,
+                       string.Format(
+                           TWords.ONEPARAM,
+                           event_o.id)),
+                   JsonConvert.SerializeObject(
+                       EventAdapter.ObjectToDTO(event_o)));
         }// End of updateEvent function
 
     }// End of EventRepository class

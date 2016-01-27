@@ -5,31 +5,19 @@ using RFIDSystemTest.Business.Implementations.States;
 using RFIDSystemTest.Business.Interfaces.Competitors;
 using RFIDSystemTest.Business.Interfaces.Events;
 using RFIDSystemTest.Business.Interfaces.States;
-using RFIDSystemTest.Data.States;
 using RFIDSystemTest.Resources.Menu;
 using RFIDSystemTest.Views;
 using RFIDSystemTest.Views.Events;
 using RFIDSystemTest.Warriror;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
 using System.Reflection;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace RFIDSystemTest
 {
     public partial class Dashboard : Form
     {
-
-        public IKitStateService kit_state_service;
-        public ICompetitorService competitor_service;
-        public IEventService event_service;
-
+        ///public ICompe
         /// <summary>
         /// Constructor
         /// </summary>
@@ -38,6 +26,7 @@ namespace RFIDSystemTest
             InitializeComponent( );// Init components
             setLabels_Buttons( );// Set the label
             WindowState = FormWindowState.Maximized;
+            Cursor.Current = Cursors.WaitCursor;
         }//End of dashboard constructor
 
         /// <summary>
@@ -71,15 +60,10 @@ namespace RFIDSystemTest
         private void Dashboard_Load(object sender, EventArgs e)
         {
             // Apparience stuff
-            WindowState = FormWindowState.Maximized;
-
+            ThemeShit();
             // Injection stuff
             Injection.kernel.Load(Assembly.GetExecutingAssembly());
-            // Init services
-            kit_state_service = Injection.kernel.Get<KitStateService>();
-            competitor_service = Injection.kernel.Get<CompetitorService>();
-            event_service = Injection.kernel.Get<EventService>();
-
+            
         }// End of dashboard_load function
 
         /// <summary>
@@ -90,7 +74,7 @@ namespace RFIDSystemTest
         private void bCompetitors_Click(object sender, EventArgs e)
         {
 
-            CompetitorControl competitor_control = new CompetitorControl( competitor_service );
+            CompetitorControl competitor_control = Injection.kernel.Get<CompetitorControl>();
             pContent.Controls.Clear();
             pContent.Controls.Add( competitor_control );
 
@@ -113,8 +97,7 @@ namespace RFIDSystemTest
         /// <param name="e"></param>
         private void bEvents_Click(object sender, EventArgs e)
         {
-            EventControl event_control = new EventControl( event_service );
-
+            EventControl event_control = Injection.kernel.Get<EventControl>( );
             pContent.Controls.Clear();
             pContent.Controls.Add( event_control );
 
@@ -130,6 +113,52 @@ namespace RFIDSystemTest
 
         }// End of bSettings_Click function
 
+        /// <summary>
+        /// Button categories click
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void bCategories_Click(object sender, EventArgs e)
+        {
+            CategoryControl category_control = Injection.kernel.Get<CategoryControl>();
+
+            pContent.Controls.Clear();
+            pContent.Controls.Add( category_control );
+
+        }// End of bCategories_Click function
+
+        /// <summary>
+        /// Button kits click
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void bKits_Click(object sender, EventArgs e)
+        {
+
+        }// End of bKits_Click function
+
+        /// <summary>
+        /// Theme shit
+        /// </summary>
+        public void ThemeShit() {
+            WindowState = FormWindowState.Maximized;
+            ThemeDark.SetBackgroundColor( this );
+            ThemeDark.SetBackgroundColor(pContent);
+            ThemeDark.SetButtonsTheme( this );
+            ThemeDark.ResponsiveDesign( pContent, this, .70, .75 );
+            ThemeDark.SetLabelsTheme(this);
+        }// End of ThemeShit function
+
+        /// <summary>
+        /// Dashboard Resize End
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void Dashboard_Resize_End(object sender, System.EventArgs e)
+        {
+            ThemeShit();
+        }// End of Dashboard_Resize_End function
+        
     }//End of Dashboard class
 
 }//End of the name space

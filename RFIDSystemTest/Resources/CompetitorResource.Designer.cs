@@ -97,7 +97,7 @@ namespace RFIDSystemTest.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to .
+        ///   Looks up a localized string similar to Edit.
         /// </summary>
         public static string bEnable {
             get {

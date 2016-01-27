@@ -22,7 +22,7 @@ namespace RFIDSystemTest.Resources {
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "4.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    internal class CategoryResource {
+    public class CategoryResource {
         
         private static global::System.Resources.ResourceManager resourceMan;
         
@@ -36,7 +36,7 @@ namespace RFIDSystemTest.Resources {
         ///   Returns the cached ResourceManager instance used by this class.
         /// </summary>
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        internal static global::System.Resources.ResourceManager ResourceManager {
+        public static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
                     global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("RFIDSystemTest.Resources.CategoryResource", typeof(CategoryResource).Assembly);
@@ -51,7 +51,7 @@ namespace RFIDSystemTest.Resources {
         ///   resource lookups using this strongly typed resource class.
         /// </summary>
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        internal static global::System.Globalization.CultureInfo Culture {
+        public static global::System.Globalization.CultureInfo Culture {
             get {
                 return resourceCulture;
             }
@@ -59,5 +59,132 @@ namespace RFIDSystemTest.Resources {
                 resourceCulture = value;
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Min Age.
+        /// </summary>
+        public static string age_1 {
+            get {
+                return ResourceManager.GetString("age_1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Max Age.
+        /// </summary>
+        public static string age_2 {
+            get {
+                return ResourceManager.GetString("age_2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Add category.
+        /// </summary>
+        public static string bAdd {
+            get {
+                return ResourceManager.GetString("bAdd", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Cancel.
+        /// </summary>
+        public static string bCancel {
+            get {
+                return ResourceManager.GetString("bCancel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Edit.
+        /// </summary>
+        public static string bEdit {
+            get {
+                return ResourceManager.GetString("bEdit", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Enable fields.
+        /// </summary>
+        public static string bEnable {
+            get {
+                return ResourceManager.GetString("bEnable", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to New Category.
+        /// </summary>
+        public static string bNew {
+            get {
+                return ResourceManager.GetString("bNew", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Return to menu.
+        /// </summary>
+        public static string bReturn {
+            get {
+                return ResourceManager.GetString("bReturn", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Update Category.
+        /// </summary>
+        public static string bUpdate {
+            get {
+                return ResourceManager.GetString("bUpdate", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Color Identifier.
+        /// </summary>
+        public static string color {
+            get {
+                return ResourceManager.GetString("color", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Description.
+        /// </summary>
+        public static string description {
+            get {
+                return ResourceManager.GetString("description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Id.
+        /// </summary>
+        public static string id {
+            get {
+                return ResourceManager.GetString("id", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Ages.
+        /// </summary>
+        public static string lAges {
+            get {
+                return ResourceManager.GetString("lAges", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to To.
+        /// </summary>
+        public static string lTo {
+            get {
+                return ResourceManager.GetString("lTo", resourceCulture);
+            }
+        }
+        
     }
 }

@@ -7,6 +7,8 @@ using System.Threading.Tasks;
 using RFIDSystemTest.Data.Competitors;
 using RFIDSystemTest.Data.Users;
 using RFIDSystemTest.Warriror;
+using RFIDSystemTest.Business.Adapters;
+using Newtonsoft.Json;
 
 namespace RFIDSystemTest.Business.Implementations.Competitors
 {
@@ -33,7 +35,14 @@ namespace RFIDSystemTest.Business.Implementations.Competitors
         /// <returns></returns>
         public Authentication addAuthentication(Authentication authentication, UserSystem user_log)
         {
-            throw new NotImplementedException();
+            return http_service.JSONHttpPettitionObject<Authentication>(
+                HttpMethod.POST,
+                GetType().Name.ToLower().Replace(
+                    TWords.SERVICE,
+                    TWords.SLASH),
+                JsonConvert.SerializeObject(
+                    AuthenticationAdapter.ObjectToDTO(
+                        authentication)));
         }// End of addAuthentication function
 
         /// <summary>
@@ -46,6 +55,21 @@ namespace RFIDSystemTest.Business.Implementations.Competitors
         {
             throw new NotImplementedException();
         }// End of deleteAuthentication function
+
+        /// <summary>
+        /// Get all
+        /// </summary>
+        /// <param name="user_log"></param>
+        /// <returns></returns>
+        public IList<Authentication> getAll(UserSystem user_log)
+        {
+            return http_service.JSONHttpPettitionList<Authentication>(
+                HttpMethod.GET,
+                GetType().Name.ToLower().Replace(
+                    TWords.SERVICE,
+                    TWords.EMPTY),
+                null);
+        }// End of getAll function
 
         /// <summary>
         /// Get by competitor
@@ -66,7 +90,14 @@ namespace RFIDSystemTest.Business.Implementations.Competitors
         /// <returns></returns>
         public Authentication getById(int authentication_id, UserSystem user_log)
         {
-            throw new NotImplementedException();
+            return http_service.JSONHttpPettitionObject<Authentication>(
+                HttpMethod.GET,
+                GetType().Name.ToLower().Replace(
+                    TWords.SERVICE,
+                    String.Format(
+                        TWords.ONEPARAM,
+                        authentication_id)),
+                null);
         }// End of getById function
 
         /// <summary>

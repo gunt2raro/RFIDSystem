@@ -15,6 +15,7 @@ namespace RFIDSystemTest.Business.Interfaces.Competitors
     /// </summary>
     public interface ITimeRegService
     {
+        IList<TimeReg> getAll(UserSystem user_log);
         TimeReg getById(int time_reg_id, UserSystem user_log);
         IList<TimeReg> getByRegister(Register register, UserSystem user_log);
         IList<TimeReg> getByDate(DateTime date, UserSystem user_log);

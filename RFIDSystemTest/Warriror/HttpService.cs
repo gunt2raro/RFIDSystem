@@ -5,6 +5,7 @@ using System.IO;
 using System.Net;
 using System.Text;
 using System.Configuration;
+using RFIDSystemTest.Resources.Http;
 
 namespace RFIDSystemTest.Warriror
 {
@@ -48,16 +49,16 @@ namespace RFIDSystemTest.Warriror
                 //Init request
                 HttpWebRequest request = WebRequest.Create(CreateUrl(model)) as HttpWebRequest;
                 //Get data serialized
-                var data = Encoding.UTF8.GetBytes("");
+                var data = Encoding.UTF8.GetBytes(TWords.EMPTY);
                 //Validate req_data
                 if (req_data != null)
                 {
                     data = Encoding.UTF8.GetBytes(req_data);
                 }
-                //Request configuration
-                request.Headers["Authorization"] = GetAuthenticationString();
+                // Request configuration
+                request.Headers[HttpResources.auth] = GetAuthenticationString();
                 request.Method = method.ToString();
-                request.ContentType = "application/json";
+                request.ContentType = HttpResources.app_json;
                 // if there is no data to send
                 if (data.Length > 0)
                 {
@@ -74,12 +75,12 @@ namespace RFIDSystemTest.Warriror
                     //Verify if it is a right pettition
                     if ( response.StatusCode != HttpStatusCode.OK )
                     {
-                        throw new Exception( String.Format( "Server error ( HTTP {0}: {1} ).", response.StatusCode, response.StatusDescription ) );
+                        throw new Exception( String.Format( HttpResources.server_error, response.StatusCode, response.StatusDescription ) );
                     }
                     //Get the serialized object on a dictionary
                     Dictionary< string, List< T > > data_Var = JsonConvert.DeserializeObject<Dictionary< string, List< T > > >(new StreamReader(response.GetResponseStream()).ReadToEnd());
                     //Return data
-                    return data_Var["data"];
+                    return data_Var[TWords.VARDATA];
                 }//End of response use
             }
             catch (Exception e)
@@ -99,25 +100,26 @@ namespace RFIDSystemTest.Warriror
         /// <param name="model"></param>
         /// <param name="req_data"></param>
         /// <returns></returns>
-        public T JSONHttpPettitionObject<T>(HttpMethod method, string model, string req_data) {
+        public T JSONHttpPettitionObject<T>(HttpMethod method, string model, string req_data)
+        {
 
             try
             {
                 //Init request
                 HttpWebRequest request = WebRequest.Create(CreateUrl(model)) as HttpWebRequest;
                 //Request configuration
-                var data = Encoding.UTF8.GetBytes("");
+                var data = Encoding.UTF8.GetBytes(TWords.EMPTY);
                 //Validate req_data
                 if (req_data != null)
                 {
                     data = Encoding.UTF8.GetBytes(req_data);
                 }
                 // Request configuration
-                request.Headers["Authorization"] = GetAuthenticationString();
+                request.Headers[HttpResources.auth] = GetAuthenticationString();
                 // Requested Method
                 request.Method = method.ToString();
                 // Data type
-                request.ContentType = "application/json";
+                request.ContentType = HttpResources.app_json;
                 // if there is no data to send
                 if (data.Length > 0)
                 {
@@ -132,16 +134,12 @@ namespace RFIDSystemTest.Warriror
                 using (HttpWebResponse response = request.GetResponse() as HttpWebResponse)
                 {
                     // Verify if it is a right pettition
-                    if (response.StatusCode != HttpStatusCode.OK)
-                    {
-                        throw new Exception(String.Format("Server error ( HTTP {0}: {1} ).", response.StatusCode, response.StatusDescription));
-                    }
-                    else if (response.StatusCode == HttpStatusCode.OK && method == HttpMethod.GET)
+                    if (response.StatusCode == HttpStatusCode.OK && method == HttpMethod.GET)
                     {
                         //Get the serialized object on a dictionary
                         Dictionary<string, T> data_Var = JsonConvert.DeserializeObject<Dictionary<string, T>>(new StreamReader(response.GetResponseStream()).ReadToEnd());
                         //Return data
-                        return data_Var["data"];
+                        return data_Var[TWords.VARDATA];
                     }
                     else if (response.StatusCode == HttpStatusCode.Created && method == HttpMethod.POST)
                     {
@@ -156,6 +154,10 @@ namespace RFIDSystemTest.Warriror
                     else if (response.StatusCode == HttpStatusCode.NoContent && method == HttpMethod.DELETE)
                     {
                         // Object deleted
+                    }
+                    else if (response.StatusCode != HttpStatusCode.OK)
+                    {
+                        throw new Exception(String.Format(HttpResources.server_error, response.StatusCode, response.StatusDescription));
                     }
                     return default( T );
                 }//End of response use

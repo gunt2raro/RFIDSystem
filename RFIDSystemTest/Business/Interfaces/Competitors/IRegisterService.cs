@@ -15,6 +15,7 @@ namespace RFIDSystemTest.Business.Interfaces.Competitors
     /// </summary>
     public interface IRegisterService
     {
+        IList<Register> getAll( UserSystem user_log );
         Register getById(int register_id, UserSystem user_log);
         Register getByCompetitor(Competitor competitor, UserSystem user_log);
         Register getByCategory(Category category, UserSystem user_log);

@@ -10,6 +10,8 @@ using System.Windows.Forms;
 using RFIDSystemTest.Helpers;
 using RFIDSystemTest.Resources;
 using RFIDSystemTest.Data.Events;
+using RFIDSystemTest.Views.VO;
+using RFIDSystemTest.Warriror;
 
 namespace RFIDSystemTest.Views.Events
 {
@@ -34,8 +36,16 @@ namespace RFIDSystemTest.Views.Events
         /// </summary>
         internal void loadData()
         {
-            dataEvents.DataSource = event_control.event_service.getAll(null);
-            dataEvents.Refresh();
+            
+            dataEvents.DataSource = event_control.event_service.getAll(null).Select(
+                o => new EventVO() {
+                    id = o.id,
+                    name = o.name,
+                    date_start = o.date_start,
+                    date_finish = o.date_finish,
+                    date_limit = o.date_limit,
+                    competitors_limit = o.competitors_limit }).ToList();
+
         }// End of loadData function
 
         /// <summary>
@@ -46,6 +56,13 @@ namespace RFIDSystemTest.Views.Events
         private void ListEvent_Load(object sender, EventArgs e)
         {
             loadData();
+
+            ThemeShit();
+
+            bNew.Text = EventResource.bNew;
+            bEdit.Text = EventResource.bEdit;
+            bReturn.Text = EventResource.bReturn;
+
         }// End of ListEvent_Load function
 
         /// <summary>
@@ -92,9 +109,62 @@ namespace RFIDSystemTest.Views.Events
         /// <param name="e"></param>
         private void bReturn_Click(object sender, EventArgs e)
         {
-            ControlHelper.LoadControlOnControl( event_control, event_control.list_event_control );
-            event_control.list_event_control.loadData();
+            ControlHelper.LoadControlOnControl( event_control, event_control.menu_event_control );
         }// End of bReturn Click function
+
+        /// <summary>
+        /// theme shit
+        /// </summary>
+        public void ThemeShit()
+        {
+            ThemeDark.ResponsiveDesign( this, Parent.Parent, 1, 1 );
+            ThemeDark.SetButtonsTheme(this);
+            ThemeDark.SetDataGridViewResponsiveWidth(dataEvents, this, .8);
+            ThemeDark.SetDataGridViewResponsiveHeight(dataEvents, this, .5);
+        }// end of ThemeShit function
+
+        /// <summary>
+        /// TxtSearch text changed
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void txtSearch_TextChanged(object sender, EventArgs e)
+        {
+
+        }// End of txtSearch_TextChanged function
+
+        /// <summary>
+        /// Button search click
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void bSearch_Click(object sender, EventArgs e)
+        {
+            string query = txtSearch.Text;
+
+            if (query != TWords.EMPTY && query != " ")
+            {
+                IEnumerable<Event> events_o = from event_o in event_control.event_service.getAll(null).ToList() where event_o.name.Contains(query) select event_o;
+                dataEvents.DataSource = events_o.Select(
+                    o => new EventVO()
+                    {
+                        id = o.id,
+                        name = o.name,
+                        date_start = o.date_start,
+                        date_finish = o.date_finish,
+                        date_limit = o.date_limit,
+                        competitors_limit = o.competitors_limit
+                    }).ToList();
+            }
+            else if (query == "")
+            {
+                loadData();
+            }
+            else
+            {
+                ControlHelper.WarningBox("Need to put something on the search box first!!");
+            }
+        }// End of bSearch_Click function
 
     }// End of ListEvent control class
 }

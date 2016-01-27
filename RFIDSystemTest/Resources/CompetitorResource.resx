@@ -130,7 +130,7 @@
     <value>Edit</value>
   </data>
   <data name="bEnable" xml:space="preserve">
-    <value />
+    <value>Edit</value>
   </data>
   <data name="birth_date" xml:space="preserve">
     <value>Birth Date</value>

@@ -8,6 +8,8 @@ using RFIDSystemTest.Data.Competitors;
 using RFIDSystemTest.Data.Events;
 using RFIDSystemTest.Data.Users;
 using RFIDSystemTest.Warriror;
+using RFIDSystemTest.Business.Adapters;
+using Newtonsoft.Json;
 
 namespace RFIDSystemTest.Business.Implementations.Competitors
 {
@@ -35,7 +37,14 @@ namespace RFIDSystemTest.Business.Implementations.Competitors
         /// <returns></returns>
         public TimeReg addTimeReg(TimeReg time_reg, UserSystem user_log)
         {
-            throw new NotImplementedException();
+            return http_service.JSONHttpPettitionObject<TimeReg>(
+                   HttpMethod.POST,
+                   GetType().Name.ToLower().Replace(
+                       TWords.SERVICE,
+                       TWords.SLASH),
+                   JsonConvert.SerializeObject(
+                       TimeRegAdapter.ObjectToDTO(
+                           time_reg)));
         }// End of addTimeReg function
 
         /// <summary>
@@ -48,6 +57,21 @@ namespace RFIDSystemTest.Business.Implementations.Competitors
         {
             throw new NotImplementedException();
         }// End of deleteTimeReg function
+
+        /// <summary>
+        /// Get all
+        /// </summary>
+        /// <param name="user_log"></param>
+        /// <returns></returns>
+        public IList<TimeReg> getAll(UserSystem user_log)
+        {
+            return http_service.JSONHttpPettitionList<TimeReg>(
+                HttpMethod.GET,
+                GetType().Name.ToLower().Replace(
+                    TWords.SERVICE,
+                    TWords.EMPTY),
+                null);
+        }// End of getAll function
 
         /// <summary>
         /// Get by competition
@@ -79,7 +103,14 @@ namespace RFIDSystemTest.Business.Implementations.Competitors
         /// <returns></returns>
         public TimeReg getById(int time_reg_id, UserSystem user_log)
         {
-            throw new NotImplementedException();
+            return http_service.JSONHttpPettitionObject<TimeReg>(
+                HttpMethod.GET,
+                GetType().Name.ToLower().Replace(
+                    TWords.SERVICE,
+                    String.Format(
+                        TWords.ONEPARAM,
+                        time_reg_id)),
+                null);
         }// End of getById function
 
         /// <summary>

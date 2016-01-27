@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DetailEvent));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.lIdDescription = new System.Windows.Forms.Label();
             this.lId = new System.Windows.Forms.Label();
             this.lName = new System.Windows.Forms.Label();
@@ -47,17 +48,22 @@
             this.bUpdate = new System.Windows.Forms.Button();
             this.bDelete = new System.Windows.Forms.Button();
             this.bEnable = new System.Windows.Forms.Button();
+            this.dataCompetitions = new System.Windows.Forms.DataGridView();
+            this.bEdit = new System.Windows.Forms.Button();
+            this.bAdd = new System.Windows.Forms.Button();
+            this.panel1 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.nudCompetitorsLimit)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataCompetitions)).BeginInit();
             this.SuspendLayout();
             // 
             // lIdDescription
             // 
             this.lIdDescription.AutoSize = true;
             this.lIdDescription.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lIdDescription.Location = new System.Drawing.Point(291, 175);
-            this.lIdDescription.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.lIdDescription.Location = new System.Drawing.Point(233, 210);
+            this.lIdDescription.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lIdDescription.Name = "lIdDescription";
-            this.lIdDescription.Size = new System.Drawing.Size(262, 46);
+            this.lIdDescription.Size = new System.Drawing.Size(210, 37);
             this.lIdDescription.TabIndex = 57;
             this.lIdDescription.Text = "lIdDescription";
             // 
@@ -65,10 +71,10 @@
             // 
             this.lId.AutoSize = true;
             this.lId.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lId.Location = new System.Drawing.Point(183, 175);
-            this.lId.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.lId.Location = new System.Drawing.Point(152, 210);
+            this.lId.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lId.Name = "lId";
-            this.lId.Size = new System.Drawing.Size(61, 46);
+            this.lId.Size = new System.Drawing.Size(50, 37);
             this.lId.TabIndex = 56;
             this.lId.Text = "lId";
             // 
@@ -76,10 +82,10 @@
             // 
             this.lName.AutoSize = true;
             this.lName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lName.Location = new System.Drawing.Point(103, 257);
-            this.lName.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.lName.Location = new System.Drawing.Point(92, 272);
+            this.lName.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lName.Name = "lName";
-            this.lName.Size = new System.Drawing.Size(135, 46);
+            this.lName.Size = new System.Drawing.Size(110, 37);
             this.lName.TabIndex = 55;
             this.lName.Text = "lName";
             // 
@@ -87,20 +93,20 @@
             // 
             this.txtName.Enabled = false;
             this.txtName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtName.Location = new System.Drawing.Point(300, 248);
-            this.txtName.Margin = new System.Windows.Forms.Padding(5);
+            this.txtName.Location = new System.Drawing.Point(240, 269);
+            this.txtName.Margin = new System.Windows.Forms.Padding(4);
             this.txtName.Name = "txtName";
-            this.txtName.Size = new System.Drawing.Size(575, 53);
+            this.txtName.Size = new System.Drawing.Size(845, 44);
             this.txtName.TabIndex = 54;
             // 
             // lDescription
             // 
             this.lDescription.AutoSize = true;
             this.lDescription.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lDescription.Location = new System.Drawing.Point(14, 339);
-            this.lDescription.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.lDescription.Location = new System.Drawing.Point(25, 342);
+            this.lDescription.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lDescription.Name = "lDescription";
-            this.lDescription.Size = new System.Drawing.Size(230, 46);
+            this.lDescription.Size = new System.Drawing.Size(184, 37);
             this.lDescription.TabIndex = 59;
             this.lDescription.Text = "lDescription";
             // 
@@ -108,21 +114,21 @@
             // 
             this.txtDescription.Enabled = false;
             this.txtDescription.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDescription.Location = new System.Drawing.Point(300, 332);
-            this.txtDescription.Margin = new System.Windows.Forms.Padding(5);
+            this.txtDescription.Location = new System.Drawing.Point(240, 337);
+            this.txtDescription.Margin = new System.Windows.Forms.Padding(4);
             this.txtDescription.Multiline = true;
             this.txtDescription.Name = "txtDescription";
-            this.txtDescription.Size = new System.Drawing.Size(575, 149);
+            this.txtDescription.Size = new System.Drawing.Size(432, 203);
             this.txtDescription.TabIndex = 58;
             // 
             // lDateStart
             // 
             this.lDateStart.AutoSize = true;
             this.lDateStart.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lDateStart.Location = new System.Drawing.Point(291, 499);
-            this.lDateStart.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.lDateStart.Location = new System.Drawing.Point(234, 549);
+            this.lDateStart.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lDateStart.Name = "lDateStart";
-            this.lDateStart.Size = new System.Drawing.Size(197, 46);
+            this.lDateStart.Size = new System.Drawing.Size(159, 37);
             this.lDateStart.TabIndex = 61;
             this.lDateStart.Text = "lDateStart";
             // 
@@ -132,20 +138,20 @@
             this.dtDateStart.Enabled = false;
             this.dtDateStart.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtDateStart.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtDateStart.Location = new System.Drawing.Point(299, 562);
-            this.dtDateStart.Margin = new System.Windows.Forms.Padding(5);
+            this.dtDateStart.Location = new System.Drawing.Point(240, 600);
+            this.dtDateStart.Margin = new System.Windows.Forms.Padding(4);
             this.dtDateStart.Name = "dtDateStart";
-            this.dtDateStart.Size = new System.Drawing.Size(575, 53);
+            this.dtDateStart.Size = new System.Drawing.Size(386, 44);
             this.dtDateStart.TabIndex = 60;
             // 
             // lDateFinish
             // 
             this.lDateFinish.AutoSize = true;
             this.lDateFinish.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lDateFinish.Location = new System.Drawing.Point(926, 499);
-            this.lDateFinish.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.lDateFinish.Location = new System.Drawing.Point(708, 549);
+            this.lDateFinish.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lDateFinish.Name = "lDateFinish";
-            this.lDateFinish.Size = new System.Drawing.Size(219, 46);
+            this.lDateFinish.Size = new System.Drawing.Size(177, 37);
             this.lDateFinish.TabIndex = 63;
             this.lDateFinish.Text = "lDateFinish";
             // 
@@ -155,20 +161,20 @@
             this.dtDateFinish.Enabled = false;
             this.dtDateFinish.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtDateFinish.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtDateFinish.Location = new System.Drawing.Point(934, 562);
-            this.dtDateFinish.Margin = new System.Windows.Forms.Padding(5);
+            this.dtDateFinish.Location = new System.Drawing.Point(714, 600);
+            this.dtDateFinish.Margin = new System.Windows.Forms.Padding(4);
             this.dtDateFinish.Name = "dtDateFinish";
-            this.dtDateFinish.Size = new System.Drawing.Size(575, 53);
+            this.dtDateFinish.Size = new System.Drawing.Size(371, 44);
             this.dtDateFinish.TabIndex = 62;
             // 
             // lDateLimit
             // 
             this.lDateLimit.AutoSize = true;
             this.lDateLimit.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lDateLimit.Location = new System.Drawing.Point(926, 339);
-            this.lDateLimit.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.lDateLimit.Location = new System.Drawing.Point(709, 449);
+            this.lDateLimit.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lDateLimit.Name = "lDateLimit";
-            this.lDateLimit.Size = new System.Drawing.Size(197, 46);
+            this.lDateLimit.Size = new System.Drawing.Size(159, 37);
             this.lDateLimit.TabIndex = 65;
             this.lDateLimit.Text = "lDateLimit";
             // 
@@ -178,10 +184,10 @@
             this.dtDateLimit.Enabled = false;
             this.dtDateLimit.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtDateLimit.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtDateLimit.Location = new System.Drawing.Point(934, 410);
-            this.dtDateLimit.Margin = new System.Windows.Forms.Padding(5);
+            this.dtDateLimit.Location = new System.Drawing.Point(714, 496);
+            this.dtDateLimit.Margin = new System.Windows.Forms.Padding(4);
             this.dtDateLimit.Name = "dtDateLimit";
-            this.dtDateLimit.Size = new System.Drawing.Size(575, 53);
+            this.dtDateLimit.Size = new System.Drawing.Size(371, 44);
             this.dtDateLimit.TabIndex = 64;
             // 
             // nudCompetitorsLimit
@@ -192,14 +198,15 @@
             0,
             0,
             0});
-            this.nudCompetitorsLimit.Location = new System.Drawing.Point(934, 248);
+            this.nudCompetitorsLimit.Location = new System.Drawing.Point(716, 388);
+            this.nudCompetitorsLimit.Margin = new System.Windows.Forms.Padding(2);
             this.nudCompetitorsLimit.Maximum = new decimal(new int[] {
             2000,
             0,
             0,
             0});
             this.nudCompetitorsLimit.Name = "nudCompetitorsLimit";
-            this.nudCompetitorsLimit.Size = new System.Drawing.Size(167, 53);
+            this.nudCompetitorsLimit.Size = new System.Drawing.Size(125, 44);
             this.nudCompetitorsLimit.TabIndex = 66;
             this.nudCompetitorsLimit.Tag = "";
             // 
@@ -207,20 +214,20 @@
             // 
             this.lCompetitorsLimit.AutoSize = true;
             this.lCompetitorsLimit.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lCompetitorsLimit.Location = new System.Drawing.Point(926, 175);
-            this.lCompetitorsLimit.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.lCompetitorsLimit.Location = new System.Drawing.Point(707, 337);
+            this.lCompetitorsLimit.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lCompetitorsLimit.Name = "lCompetitorsLimit";
-            this.lCompetitorsLimit.Size = new System.Drawing.Size(329, 46);
+            this.lCompetitorsLimit.Size = new System.Drawing.Size(265, 37);
             this.lCompetitorsLimit.TabIndex = 67;
             this.lCompetitorsLimit.Text = "lCompetitorsLimit";
             // 
             // bCancel
             // 
             this.bCancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bCancel.Location = new System.Drawing.Point(111, 718);
-            this.bCancel.Margin = new System.Windows.Forms.Padding(5);
+            this.bCancel.Location = new System.Drawing.Point(99, 718);
+            this.bCancel.Margin = new System.Windows.Forms.Padding(4);
             this.bCancel.Name = "bCancel";
-            this.bCancel.Size = new System.Drawing.Size(388, 108);
+            this.bCancel.Size = new System.Drawing.Size(291, 87);
             this.bCancel.TabIndex = 69;
             this.bCancel.Text = "bCancel";
             this.bCancel.UseVisualStyleBackColor = true;
@@ -229,10 +236,10 @@
             // bUpdate
             // 
             this.bUpdate.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bUpdate.Location = new System.Drawing.Point(1121, 718);
-            this.bUpdate.Margin = new System.Windows.Forms.Padding(5);
+            this.bUpdate.Location = new System.Drawing.Point(794, 718);
+            this.bUpdate.Margin = new System.Windows.Forms.Padding(4);
             this.bUpdate.Name = "bUpdate";
-            this.bUpdate.Size = new System.Drawing.Size(388, 108);
+            this.bUpdate.Size = new System.Drawing.Size(291, 87);
             this.bUpdate.TabIndex = 68;
             this.bUpdate.Text = "bUpdate";
             this.bUpdate.UseVisualStyleBackColor = true;
@@ -242,10 +249,10 @@
             // 
             this.bDelete.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bDelete.Image = ((System.Drawing.Image)(resources.GetObject("bDelete.Image")));
-            this.bDelete.Location = new System.Drawing.Point(1413, 36);
-            this.bDelete.Margin = new System.Windows.Forms.Padding(5);
+            this.bDelete.Location = new System.Drawing.Point(829, 102);
+            this.bDelete.Margin = new System.Windows.Forms.Padding(4);
             this.bDelete.Name = "bDelete";
-            this.bDelete.Size = new System.Drawing.Size(165, 113);
+            this.bDelete.Size = new System.Drawing.Size(124, 91);
             this.bDelete.TabIndex = 71;
             this.bDelete.UseVisualStyleBackColor = true;
             // 
@@ -253,18 +260,81 @@
             // 
             this.bEnable.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bEnable.Image = ((System.Drawing.Image)(resources.GetObject("bEnable.Image")));
-            this.bEnable.Location = new System.Drawing.Point(1589, 36);
-            this.bEnable.Margin = new System.Windows.Forms.Padding(5);
+            this.bEnable.Location = new System.Drawing.Point(961, 102);
+            this.bEnable.Margin = new System.Windows.Forms.Padding(4);
             this.bEnable.Name = "bEnable";
-            this.bEnable.Size = new System.Drawing.Size(165, 113);
+            this.bEnable.Size = new System.Drawing.Size(124, 91);
             this.bEnable.TabIndex = 70;
             this.bEnable.UseVisualStyleBackColor = true;
             this.bEnable.Click += new System.EventHandler(this.bEnable_Click);
             // 
+            // dataCompetitions
+            // 
+            this.dataCompetitions.AllowUserToOrderColumns = true;
+            this.dataCompetitions.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataCompetitions.BackgroundColor = System.Drawing.Color.White;
+            this.dataCompetitions.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.dataCompetitions.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.Desktop;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataCompetitions.DefaultCellStyle = dataGridViewCellStyle3;
+            this.dataCompetitions.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
+            this.dataCompetitions.GridColor = System.Drawing.Color.AliceBlue;
+            this.dataCompetitions.Location = new System.Drawing.Point(1227, 229);
+            this.dataCompetitions.Margin = new System.Windows.Forms.Padding(4);
+            this.dataCompetitions.MultiSelect = false;
+            this.dataCompetitions.Name = "dataCompetitions";
+            this.dataCompetitions.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Sunken;
+            this.dataCompetitions.RowTemplate.Height = 28;
+            this.dataCompetitions.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dataCompetitions.Size = new System.Drawing.Size(536, 576);
+            this.dataCompetitions.TabIndex = 72;
+            // 
+            // bEdit
+            // 
+            this.bEdit.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bEdit.Location = new System.Drawing.Point(1227, 102);
+            this.bEdit.Margin = new System.Windows.Forms.Padding(4);
+            this.bEdit.Name = "bEdit";
+            this.bEdit.Size = new System.Drawing.Size(252, 87);
+            this.bEdit.TabIndex = 73;
+            this.bEdit.Text = "bEdit";
+            this.bEdit.UseVisualStyleBackColor = true;
+            this.bEdit.Click += new System.EventHandler(this.bEdit_Click);
+            // 
+            // bAdd
+            // 
+            this.bAdd.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bAdd.Location = new System.Drawing.Point(1511, 102);
+            this.bAdd.Margin = new System.Windows.Forms.Padding(4);
+            this.bAdd.Name = "bAdd";
+            this.bAdd.Size = new System.Drawing.Size(252, 87);
+            this.bAdd.TabIndex = 74;
+            this.bAdd.Text = "bAdd";
+            this.bAdd.UseVisualStyleBackColor = true;
+            this.bAdd.Click += new System.EventHandler(this.bAdd_Click);
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(83)))), ((int)(((byte)(113)))), ((int)(((byte)(139)))));
+            this.panel1.Location = new System.Drawing.Point(1137, 102);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(42, 703);
+            this.panel1.TabIndex = 75;
+            // 
             // DetailEvent
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(16F, 31F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.bAdd);
+            this.Controls.Add(this.bEdit);
+            this.Controls.Add(this.dataCompetitions);
             this.Controls.Add(this.bDelete);
             this.Controls.Add(this.bEnable);
             this.Controls.Add(this.bCancel);
@@ -283,10 +353,12 @@
             this.Controls.Add(this.lId);
             this.Controls.Add(this.lName);
             this.Controls.Add(this.txtName);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "DetailEvent";
-            this.Size = new System.Drawing.Size(1795, 949);
+            this.Size = new System.Drawing.Size(1841, 829);
             this.Load += new System.EventHandler(this.DetailEvent_Load);
             ((System.ComponentModel.ISupportInitialize)(this.nudCompetitorsLimit)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataCompetitions)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -312,5 +384,9 @@
         private System.Windows.Forms.Button bUpdate;
         private System.Windows.Forms.Button bDelete;
         private System.Windows.Forms.Button bEnable;
+        private System.Windows.Forms.DataGridView dataCompetitions;
+        private System.Windows.Forms.Button bEdit;
+        private System.Windows.Forms.Button bAdd;
+        private System.Windows.Forms.Panel panel1;
     }
 }

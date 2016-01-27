@@ -49,6 +49,11 @@ namespace RFIDSystemTest.Business.Implementations.Competitors
             throw new NotImplementedException();
         }// End of deleteRegister function
 
+        public IList<Register> getAll(UserSystem user_log)
+        {
+            throw new NotImplementedException();
+        }
+
         /// <summary>
         /// Get by category
         /// </summary>
