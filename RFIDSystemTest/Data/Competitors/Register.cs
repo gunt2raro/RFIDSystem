@@ -16,13 +16,13 @@ namespace RFIDSystemTest.Data.Competitors
     {
         public int id { get; set; }
 
-        public Competitor competitor { get; set; }
-        public Competition competition { get; set; }
-        public Category category { get; set; }
+        public int competitor { get; set; }
+        public int competition { get; set; }
+        public int category { get; set; }
         public int competitor_num { get; set; }
-        public User user { get; set; }
-        public RegisterState register_state { get; set; }
-        public KitState kit_state { get; set; }
+        public int user { get; set; }
+        public int register_state { get; set; }
+        public int kit_state { get; set; }
 
         public DateTime timestamp { get; set; }
         public DateTime updated { get; set; }

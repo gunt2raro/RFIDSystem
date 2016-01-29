@@ -260,6 +260,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>ProfileResource.resx</DependentUpon>
     </Compile>
+    <Compile Include="Resources\RegisterResource.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RegisterResource.resx</DependentUpon>
+    </Compile>
     <Compile Include="Resources\SettingsResource.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -327,6 +332,12 @@
     </Compile>
     <Compile Include="Views\Competitors\Menu.Designer.cs">
       <DependentUpon>Menu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Competitors\NewRegister.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\Competitors\NewRegister.Designer.cs">
+      <DependentUpon>NewRegister.cs</DependentUpon>
     </Compile>
     <Compile Include="Views\Competitors\SearchCompetitor.cs">
       <SubType>UserControl</SubType>
@@ -432,6 +443,7 @@
     </Compile>
     <Compile Include="Views\VO\CategoryVO.cs" />
     <Compile Include="Views\VO\CompetitionVO.cs" />
+    <Compile Include="Views\VO\CompetitorRegisterVO.cs" />
     <Compile Include="Views\VO\CompetitorVO.cs" />
     <Compile Include="Views\VO\EventVO.cs" />
     <Compile Include="Views\VO\KitStateVO.cs" />
@@ -494,6 +506,10 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>ProfileResource.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <EmbeddedResource Include="Resources\RegisterResource.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>RegisterResource.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Include="Resources\SettingsResource.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>SettingsResource.Designer.cs</LastGenOutput>
@@ -536,6 +552,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Views\Competitors\Menu.resx">
       <DependentUpon>Menu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Competitors\NewRegister.resx">
+      <DependentUpon>NewRegister.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\Competitors\SearchCompetitor.resx">
       <DependentUpon>SearchCompetitor.cs</DependentUpon>

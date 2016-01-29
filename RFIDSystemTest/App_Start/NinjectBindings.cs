@@ -26,12 +26,13 @@ namespace RFIDSystemTest.App_Start
         {
             Bind<IHttpService>().To<HttpService>();
             Bind<IKitStateService>().To<KitStateService>();
+            Bind<IRegisterStateService>().To<RegisterStateService>();
             Bind<ICompetitorService>().To<CompetitorService>();
             Bind<IEventService>().To<EventService>();
             Bind<ICompetitionService>().To<CompetitionService>();
             Bind<ICompetitionTypeService>().To<CompetitionTypeService>();
             Bind<ICategoryService>().To<CategoryService>();
-
+            Bind<IRegisterService>().To<RegisterService>();
         }// End of Load function
 
     }// End of NinjectBindings class

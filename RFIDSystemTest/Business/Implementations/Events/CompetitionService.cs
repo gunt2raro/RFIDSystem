@@ -121,7 +121,11 @@ namespace RFIDSystemTest.Business.Implementations.Events
         /// <returns></returns>
         public IList<Category> getCategoriesById(int competition_id, UserSystem user_log)
         {
-            throw new NotImplementedException();
+            return http_service.JSONHttpPettitionList<Category>(
+                HttpMethod.GET,
+                string.Format(
+                    "competition/categories/?competition_id={0}", competition_id),
+                null);
         }// End of getCategoriesById function
 
         /// <summary>

@@ -55,14 +55,14 @@ namespace RFIDSystemTest.Views.Events
         /// <param name="e"></param>
         private void ListEvent_Load(object sender, EventArgs e)
         {
+            // Load data
             loadData();
-
+            // Theme shit
             ThemeShit();
-
+            // Load resources
             bNew.Text = EventResource.bNew;
             bEdit.Text = EventResource.bEdit;
             bReturn.Text = EventResource.bReturn;
-
         }// End of ListEvent_Load function
 
         /// <summary>

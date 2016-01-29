@@ -8,6 +8,8 @@ using RFIDSystemTest.Data.Competitors;
 using RFIDSystemTest.Data.Events;
 using RFIDSystemTest.Data.Users;
 using RFIDSystemTest.Warriror;
+using Newtonsoft.Json;
+using RFIDSystemTest.Business.Adapters;
 
 namespace RFIDSystemTest.Business.Implementations.Competitors
 {
@@ -35,7 +37,14 @@ namespace RFIDSystemTest.Business.Implementations.Competitors
         /// <returns></returns>
         public Register addRegister(Register register, UserSystem user_log)
         {
-            throw new NotImplementedException();
+            return http_service.JSONHttpPettitionObject<Register>(
+                   HttpMethod.POST,
+                   GetType().Name.ToLower().Replace(
+                       TWords.SERVICE,
+                       TWords.SLASH),
+                   JsonConvert.SerializeObject(
+                       RegisterAdapter.ObjectToDTO(
+                           register)));
         }// End of addRegister function
 
         /// <summary>
@@ -49,10 +58,15 @@ namespace RFIDSystemTest.Business.Implementations.Competitors
             throw new NotImplementedException();
         }// End of deleteRegister function
 
+        /// <summary>
+        /// Get all
+        /// </summary>
+        /// <param name="user_log"></param>
+        /// <returns></returns>
         public IList<Register> getAll(UserSystem user_log)
         {
             throw new NotImplementedException();
-        }
+        }// End of getAll function
 
         /// <summary>
         /// Get by category
