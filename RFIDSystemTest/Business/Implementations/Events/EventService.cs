@@ -9,6 +9,7 @@ using RFIDSystemTest.Data.Users;
 using RFIDSystemTest.Warriror;
 using Newtonsoft.Json;
 using RFIDSystemTest.Business.Adapters;
+using System.Drawing;
 
 namespace RFIDSystemTest.Business.Implementations.Events
 {
@@ -113,6 +114,23 @@ namespace RFIDSystemTest.Business.Implementations.Events
         }// End of getCompetitionsById function
 
         /// <summary>
+        /// Image to event
+        /// Sends the image to the server and shit
+        /// </summary>
+        /// <param name="event_o"></param>
+        /// <param name="img"></param>
+        /// <param name="user_log"></param>
+        /// <returns></returns>
+        public Event ImageToEvent(Event event_o, Image img, UserSystem user_log)
+        {
+            return http_service.JSONHttpPettitionObject<Event>( 
+                HttpMethod.PUT, 
+                string.Format( 
+                    "event/image/{0}", 
+                    event_o.id ), JsonConvert.SerializeObject(DataConvert.ImageToByte(img)));
+        }// End of ImageToEvent function
+
+        /// <summary>
         /// Update event
         /// </summary>
         /// <param name="event_o"></param>
@@ -131,5 +149,6 @@ namespace RFIDSystemTest.Business.Implementations.Events
                        EventAdapter.ObjectToDTO(event_o)));
         }// End of updateEvent function
 
+        
     }// End of EventRepository class
 }

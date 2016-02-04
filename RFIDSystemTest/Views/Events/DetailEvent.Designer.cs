@@ -53,15 +53,18 @@
             this.bAdd = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.bRegiter = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.bImage = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.nudCompetitorsLimit)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataCompetitions)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // lIdDescription
             // 
             this.lIdDescription.AutoSize = true;
             this.lIdDescription.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lIdDescription.Location = new System.Drawing.Point(233, 210);
+            this.lIdDescription.Location = new System.Drawing.Point(233, 532);
             this.lIdDescription.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lIdDescription.Name = "lIdDescription";
             this.lIdDescription.Size = new System.Drawing.Size(210, 37);
@@ -72,7 +75,7 @@
             // 
             this.lId.AutoSize = true;
             this.lId.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lId.Location = new System.Drawing.Point(152, 210);
+            this.lId.Location = new System.Drawing.Point(152, 532);
             this.lId.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lId.Name = "lId";
             this.lId.Size = new System.Drawing.Size(50, 37);
@@ -83,7 +86,7 @@
             // 
             this.lName.AutoSize = true;
             this.lName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lName.Location = new System.Drawing.Point(92, 272);
+            this.lName.Location = new System.Drawing.Point(92, 594);
             this.lName.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lName.Name = "lName";
             this.lName.Size = new System.Drawing.Size(110, 37);
@@ -94,7 +97,7 @@
             // 
             this.txtName.Enabled = false;
             this.txtName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtName.Location = new System.Drawing.Point(240, 269);
+            this.txtName.Location = new System.Drawing.Point(240, 591);
             this.txtName.Margin = new System.Windows.Forms.Padding(4);
             this.txtName.Name = "txtName";
             this.txtName.Size = new System.Drawing.Size(845, 44);
@@ -104,7 +107,7 @@
             // 
             this.lDescription.AutoSize = true;
             this.lDescription.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lDescription.Location = new System.Drawing.Point(25, 342);
+            this.lDescription.Location = new System.Drawing.Point(25, 664);
             this.lDescription.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lDescription.Name = "lDescription";
             this.lDescription.Size = new System.Drawing.Size(184, 37);
@@ -115,7 +118,7 @@
             // 
             this.txtDescription.Enabled = false;
             this.txtDescription.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDescription.Location = new System.Drawing.Point(240, 337);
+            this.txtDescription.Location = new System.Drawing.Point(240, 659);
             this.txtDescription.Margin = new System.Windows.Forms.Padding(4);
             this.txtDescription.Multiline = true;
             this.txtDescription.Name = "txtDescription";
@@ -126,7 +129,7 @@
             // 
             this.lDateStart.AutoSize = true;
             this.lDateStart.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lDateStart.Location = new System.Drawing.Point(234, 549);
+            this.lDateStart.Location = new System.Drawing.Point(234, 871);
             this.lDateStart.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lDateStart.Name = "lDateStart";
             this.lDateStart.Size = new System.Drawing.Size(159, 37);
@@ -135,11 +138,11 @@
             // 
             // dtDateStart
             // 
-            this.dtDateStart.CustomFormat = "MM/dd/yyyy hh:mm:ss";
+            this.dtDateStart.CustomFormat = "MM/dd/yyyy HH:mm:ss";
             this.dtDateStart.Enabled = false;
             this.dtDateStart.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtDateStart.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtDateStart.Location = new System.Drawing.Point(240, 600);
+            this.dtDateStart.Location = new System.Drawing.Point(240, 922);
             this.dtDateStart.Margin = new System.Windows.Forms.Padding(4);
             this.dtDateStart.Name = "dtDateStart";
             this.dtDateStart.Size = new System.Drawing.Size(386, 44);
@@ -149,7 +152,7 @@
             // 
             this.lDateFinish.AutoSize = true;
             this.lDateFinish.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lDateFinish.Location = new System.Drawing.Point(708, 549);
+            this.lDateFinish.Location = new System.Drawing.Point(708, 871);
             this.lDateFinish.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lDateFinish.Name = "lDateFinish";
             this.lDateFinish.Size = new System.Drawing.Size(177, 37);
@@ -158,11 +161,11 @@
             // 
             // dtDateFinish
             // 
-            this.dtDateFinish.CustomFormat = "MM/dd/yyyy hh:mm:ss";
+            this.dtDateFinish.CustomFormat = "MM/dd/yyyy HH:mm:ss";
             this.dtDateFinish.Enabled = false;
             this.dtDateFinish.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtDateFinish.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtDateFinish.Location = new System.Drawing.Point(714, 600);
+            this.dtDateFinish.Location = new System.Drawing.Point(714, 922);
             this.dtDateFinish.Margin = new System.Windows.Forms.Padding(4);
             this.dtDateFinish.Name = "dtDateFinish";
             this.dtDateFinish.Size = new System.Drawing.Size(371, 44);
@@ -172,7 +175,7 @@
             // 
             this.lDateLimit.AutoSize = true;
             this.lDateLimit.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lDateLimit.Location = new System.Drawing.Point(709, 449);
+            this.lDateLimit.Location = new System.Drawing.Point(709, 771);
             this.lDateLimit.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lDateLimit.Name = "lDateLimit";
             this.lDateLimit.Size = new System.Drawing.Size(159, 37);
@@ -181,11 +184,11 @@
             // 
             // dtDateLimit
             // 
-            this.dtDateLimit.CustomFormat = "MM/dd/yyyy hh:mm:ss";
+            this.dtDateLimit.CustomFormat = "MM/dd/yyyy HH:mm:ss";
             this.dtDateLimit.Enabled = false;
             this.dtDateLimit.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtDateLimit.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtDateLimit.Location = new System.Drawing.Point(714, 496);
+            this.dtDateLimit.Location = new System.Drawing.Point(714, 818);
             this.dtDateLimit.Margin = new System.Windows.Forms.Padding(4);
             this.dtDateLimit.Name = "dtDateLimit";
             this.dtDateLimit.Size = new System.Drawing.Size(371, 44);
@@ -199,7 +202,7 @@
             0,
             0,
             0});
-            this.nudCompetitorsLimit.Location = new System.Drawing.Point(716, 388);
+            this.nudCompetitorsLimit.Location = new System.Drawing.Point(716, 710);
             this.nudCompetitorsLimit.Margin = new System.Windows.Forms.Padding(2);
             this.nudCompetitorsLimit.Maximum = new decimal(new int[] {
             2000,
@@ -215,7 +218,7 @@
             // 
             this.lCompetitorsLimit.AutoSize = true;
             this.lCompetitorsLimit.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lCompetitorsLimit.Location = new System.Drawing.Point(707, 337);
+            this.lCompetitorsLimit.Location = new System.Drawing.Point(707, 659);
             this.lCompetitorsLimit.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lCompetitorsLimit.Name = "lCompetitorsLimit";
             this.lCompetitorsLimit.Size = new System.Drawing.Size(265, 37);
@@ -225,7 +228,7 @@
             // bCancel
             // 
             this.bCancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bCancel.Location = new System.Drawing.Point(99, 718);
+            this.bCancel.Location = new System.Drawing.Point(99, 995);
             this.bCancel.Margin = new System.Windows.Forms.Padding(4);
             this.bCancel.Name = "bCancel";
             this.bCancel.Size = new System.Drawing.Size(291, 87);
@@ -237,7 +240,7 @@
             // bUpdate
             // 
             this.bUpdate.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bUpdate.Location = new System.Drawing.Point(794, 718);
+            this.bUpdate.Location = new System.Drawing.Point(794, 995);
             this.bUpdate.Margin = new System.Windows.Forms.Padding(4);
             this.bUpdate.Name = "bUpdate";
             this.bUpdate.Size = new System.Drawing.Size(291, 87);
@@ -293,7 +296,7 @@
             this.dataCompetitions.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Sunken;
             this.dataCompetitions.RowTemplate.Height = 28;
             this.dataCompetitions.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataCompetitions.Size = new System.Drawing.Size(536, 576);
+            this.dataCompetitions.Size = new System.Drawing.Size(536, 853);
             this.dataCompetitions.TabIndex = 72;
             // 
             // bEdit
@@ -325,7 +328,7 @@
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(83)))), ((int)(((byte)(113)))), ((int)(((byte)(139)))));
             this.panel1.Location = new System.Drawing.Point(1137, 102);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(42, 703);
+            this.panel1.Size = new System.Drawing.Size(42, 980);
             this.panel1.TabIndex = 75;
             // 
             // bRegiter
@@ -340,10 +343,31 @@
             this.bRegiter.UseVisualStyleBackColor = true;
             this.bRegiter.Click += new System.EventHandler(this.bRegiter_Click);
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Location = new System.Drawing.Point(241, 102);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(549, 395);
+            this.pictureBox1.TabIndex = 92;
+            this.pictureBox1.TabStop = false;
+            // 
+            // bImage
+            // 
+            this.bImage.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bImage.Location = new System.Drawing.Point(829, 434);
+            this.bImage.Margin = new System.Windows.Forms.Padding(4);
+            this.bImage.Name = "bImage";
+            this.bImage.Size = new System.Drawing.Size(256, 63);
+            this.bImage.TabIndex = 91;
+            this.bImage.Text = "Image";
+            this.bImage.UseVisualStyleBackColor = true;
+            // 
             // DetailEvent
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.bImage);
             this.Controls.Add(this.bRegiter);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.bAdd);
@@ -369,10 +393,11 @@
             this.Controls.Add(this.txtName);
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "DetailEvent";
-            this.Size = new System.Drawing.Size(1841, 829);
+            this.Size = new System.Drawing.Size(1841, 1142);
             this.Load += new System.EventHandler(this.DetailEvent_Load);
             ((System.ComponentModel.ISupportInitialize)(this.nudCompetitorsLimit)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataCompetitions)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -403,5 +428,7 @@
         private System.Windows.Forms.Button bAdd;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button bRegiter;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Button bImage;
     }
 }

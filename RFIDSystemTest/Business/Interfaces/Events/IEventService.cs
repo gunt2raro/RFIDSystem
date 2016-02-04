@@ -2,6 +2,7 @@
 using RFIDSystemTest.Data.Users;
 using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -21,6 +22,7 @@ namespace RFIDSystemTest.Business.Interfaces.Events
         Event addEvent(Event event_o, UserSystem user_log);
         Event updateEvent(Event event_o, UserSystem user_log);
         bool deleteEvent(Event event_o, UserSystem user_log);
+        Event ImageToEvent( Event event_o, Image img, UserSystem user_log );
 
     }// End of IEventService interface
 }

@@ -42,16 +42,20 @@
             this.txtDescription = new System.Windows.Forms.TextBox();
             this.lName = new System.Windows.Forms.Label();
             this.txtName = new System.Windows.Forms.TextBox();
+            this.bImage = new System.Windows.Forms.Button();
+            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.nudCompetitorsLimit)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // bCancel
             // 
             this.bCancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bCancel.Location = new System.Drawing.Point(133, 742);
-            this.bCancel.Margin = new System.Windows.Forms.Padding(5);
+            this.bCancel.Location = new System.Drawing.Point(150, 863);
+            this.bCancel.Margin = new System.Windows.Forms.Padding(4);
             this.bCancel.Name = "bCancel";
-            this.bCancel.Size = new System.Drawing.Size(388, 108);
+            this.bCancel.Size = new System.Drawing.Size(291, 87);
             this.bCancel.TabIndex = 87;
             this.bCancel.Text = "bCancel";
             this.bCancel.UseVisualStyleBackColor = true;
@@ -60,10 +64,10 @@
             // bAdd
             // 
             this.bAdd.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bAdd.Location = new System.Drawing.Point(1143, 742);
-            this.bAdd.Margin = new System.Windows.Forms.Padding(5);
+            this.bAdd.Location = new System.Drawing.Point(1430, 863);
+            this.bAdd.Margin = new System.Windows.Forms.Padding(4);
             this.bAdd.Name = "bAdd";
-            this.bAdd.Size = new System.Drawing.Size(388, 108);
+            this.bAdd.Size = new System.Drawing.Size(291, 87);
             this.bAdd.TabIndex = 86;
             this.bAdd.Text = "bAdd";
             this.bAdd.UseVisualStyleBackColor = true;
@@ -73,10 +77,10 @@
             // 
             this.lCompetitorsLimit.AutoSize = true;
             this.lCompetitorsLimit.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lCompetitorsLimit.Location = new System.Drawing.Point(948, 199);
-            this.lCompetitorsLimit.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.lCompetitorsLimit.Location = new System.Drawing.Point(1300, 655);
+            this.lCompetitorsLimit.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lCompetitorsLimit.Name = "lCompetitorsLimit";
-            this.lCompetitorsLimit.Size = new System.Drawing.Size(329, 46);
+            this.lCompetitorsLimit.Size = new System.Drawing.Size(265, 37);
             this.lCompetitorsLimit.TabIndex = 85;
             this.lCompetitorsLimit.Text = "lCompetitorsLimit";
             // 
@@ -88,14 +92,15 @@
             0,
             0,
             0});
-            this.nudCompetitorsLimit.Location = new System.Drawing.Point(956, 272);
+            this.nudCompetitorsLimit.Location = new System.Drawing.Point(1307, 708);
+            this.nudCompetitorsLimit.Margin = new System.Windows.Forms.Padding(2);
             this.nudCompetitorsLimit.Maximum = new decimal(new int[] {
             2000,
             0,
             0,
             0});
             this.nudCompetitorsLimit.Name = "nudCompetitorsLimit";
-            this.nudCompetitorsLimit.Size = new System.Drawing.Size(167, 53);
+            this.nudCompetitorsLimit.Size = new System.Drawing.Size(125, 44);
             this.nudCompetitorsLimit.TabIndex = 84;
             this.nudCompetitorsLimit.Tag = "";
             // 
@@ -103,113 +108,139 @@
             // 
             this.lDateLimit.AutoSize = true;
             this.lDateLimit.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lDateLimit.Location = new System.Drawing.Point(948, 363);
-            this.lDateLimit.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.lDateLimit.Location = new System.Drawing.Point(807, 655);
+            this.lDateLimit.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lDateLimit.Name = "lDateLimit";
-            this.lDateLimit.Size = new System.Drawing.Size(197, 46);
+            this.lDateLimit.Size = new System.Drawing.Size(159, 37);
             this.lDateLimit.TabIndex = 83;
             this.lDateLimit.Text = "lDateLimit";
             // 
             // dtDateLimit
             // 
-            this.dtDateLimit.CustomFormat = "MM/dd/yyyy hh:mm:ss";
+            this.dtDateLimit.CustomFormat = "MM/dd/yyyy HH:mm:ss";
             this.dtDateLimit.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtDateLimit.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtDateLimit.Location = new System.Drawing.Point(956, 434);
-            this.dtDateLimit.Margin = new System.Windows.Forms.Padding(5);
+            this.dtDateLimit.Location = new System.Drawing.Point(813, 712);
+            this.dtDateLimit.Margin = new System.Windows.Forms.Padding(4);
             this.dtDateLimit.Name = "dtDateLimit";
-            this.dtDateLimit.Size = new System.Drawing.Size(575, 53);
+            this.dtDateLimit.Size = new System.Drawing.Size(432, 44);
             this.dtDateLimit.TabIndex = 82;
             // 
             // lDateFinish
             // 
             this.lDateFinish.AutoSize = true;
             this.lDateFinish.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lDateFinish.Location = new System.Drawing.Point(948, 523);
-            this.lDateFinish.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.lDateFinish.Location = new System.Drawing.Point(1283, 524);
+            this.lDateFinish.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lDateFinish.Name = "lDateFinish";
-            this.lDateFinish.Size = new System.Drawing.Size(219, 46);
+            this.lDateFinish.Size = new System.Drawing.Size(177, 37);
             this.lDateFinish.TabIndex = 81;
             this.lDateFinish.Text = "lDateFinish";
             // 
             // dtDateFinish
             // 
-            this.dtDateFinish.CustomFormat = "MM/dd/yyyy hh:mm:ss";
+            this.dtDateFinish.CustomFormat = "MM/dd/yyyy HH:mm:ss";
             this.dtDateFinish.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtDateFinish.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtDateFinish.Location = new System.Drawing.Point(956, 586);
-            this.dtDateFinish.Margin = new System.Windows.Forms.Padding(5);
+            this.dtDateFinish.Location = new System.Drawing.Point(1289, 575);
+            this.dtDateFinish.Margin = new System.Windows.Forms.Padding(4);
             this.dtDateFinish.Name = "dtDateFinish";
-            this.dtDateFinish.Size = new System.Drawing.Size(575, 53);
+            this.dtDateFinish.Size = new System.Drawing.Size(432, 44);
             this.dtDateFinish.TabIndex = 80;
             // 
             // lDateStart
             // 
             this.lDateStart.AutoSize = true;
             this.lDateStart.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lDateStart.Location = new System.Drawing.Point(313, 523);
-            this.lDateStart.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.lDateStart.Location = new System.Drawing.Point(807, 524);
+            this.lDateStart.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lDateStart.Name = "lDateStart";
-            this.lDateStart.Size = new System.Drawing.Size(197, 46);
+            this.lDateStart.Size = new System.Drawing.Size(159, 37);
             this.lDateStart.TabIndex = 79;
             this.lDateStart.Text = "lDateStart";
             // 
             // dtDateStart
             // 
-            this.dtDateStart.CustomFormat = "MM/dd/yyyy hh:mm:ss";
+            this.dtDateStart.CustomFormat = "MM/dd/yyyy HH:mm:ss";
             this.dtDateStart.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtDateStart.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtDateStart.Location = new System.Drawing.Point(321, 586);
-            this.dtDateStart.Margin = new System.Windows.Forms.Padding(5);
+            this.dtDateStart.Location = new System.Drawing.Point(813, 575);
+            this.dtDateStart.Margin = new System.Windows.Forms.Padding(4);
             this.dtDateStart.Name = "dtDateStart";
-            this.dtDateStart.Size = new System.Drawing.Size(575, 53);
+            this.dtDateStart.Size = new System.Drawing.Size(432, 44);
             this.dtDateStart.TabIndex = 78;
             // 
             // lDescription
             // 
             this.lDescription.AutoSize = true;
             this.lDescription.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lDescription.Location = new System.Drawing.Point(36, 363);
-            this.lDescription.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.lDescription.Location = new System.Drawing.Point(598, 224);
+            this.lDescription.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lDescription.Name = "lDescription";
-            this.lDescription.Size = new System.Drawing.Size(230, 46);
+            this.lDescription.Size = new System.Drawing.Size(184, 37);
             this.lDescription.TabIndex = 77;
             this.lDescription.Text = "lDescription";
             // 
             // txtDescription
             // 
             this.txtDescription.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDescription.Location = new System.Drawing.Point(322, 356);
-            this.txtDescription.Margin = new System.Windows.Forms.Padding(5);
+            this.txtDescription.Location = new System.Drawing.Point(813, 218);
+            this.txtDescription.Margin = new System.Windows.Forms.Padding(4);
             this.txtDescription.Multiline = true;
             this.txtDescription.Name = "txtDescription";
-            this.txtDescription.Size = new System.Drawing.Size(575, 149);
+            this.txtDescription.Size = new System.Drawing.Size(907, 281);
             this.txtDescription.TabIndex = 76;
             // 
             // lName
             // 
             this.lName.AutoSize = true;
             this.lName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lName.Location = new System.Drawing.Point(125, 281);
-            this.lName.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.lName.Location = new System.Drawing.Point(665, 158);
+            this.lName.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lName.Name = "lName";
-            this.lName.Size = new System.Drawing.Size(135, 46);
+            this.lName.Size = new System.Drawing.Size(110, 37);
             this.lName.TabIndex = 73;
             this.lName.Text = "lName";
             // 
             // txtName
             // 
             this.txtName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtName.Location = new System.Drawing.Point(322, 272);
-            this.txtName.Margin = new System.Windows.Forms.Padding(5);
+            this.txtName.Location = new System.Drawing.Point(813, 150);
+            this.txtName.Margin = new System.Windows.Forms.Padding(4);
             this.txtName.Name = "txtName";
-            this.txtName.Size = new System.Drawing.Size(575, 53);
+            this.txtName.Size = new System.Drawing.Size(907, 44);
             this.txtName.TabIndex = 72;
+            // 
+            // bImage
+            // 
+            this.bImage.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bImage.Location = new System.Drawing.Point(150, 557);
+            this.bImage.Margin = new System.Windows.Forms.Padding(4);
+            this.bImage.Name = "bImage";
+            this.bImage.Size = new System.Drawing.Size(424, 63);
+            this.bImage.TabIndex = 88;
+            this.bImage.Text = "Image";
+            this.bImage.UseVisualStyleBackColor = true;
+            this.bImage.Click += new System.EventHandler(this.bImage_Click);
+            // 
+            // openFileDialog1
+            // 
+            this.openFileDialog1.FileName = "openFileDialog1";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Location = new System.Drawing.Point(150, 150);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(424, 395);
+            this.pictureBox1.TabIndex = 90;
+            this.pictureBox1.TabStop = false;
             // 
             // NewEvent
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(16F, 31F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.bImage);
             this.Controls.Add(this.bCancel);
             this.Controls.Add(this.bAdd);
             this.Controls.Add(this.lCompetitorsLimit);
@@ -224,10 +255,12 @@
             this.Controls.Add(this.txtDescription);
             this.Controls.Add(this.lName);
             this.Controls.Add(this.txtName);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "NewEvent";
-            this.Size = new System.Drawing.Size(1854, 986);
+            this.Size = new System.Drawing.Size(1868, 1079);
             this.Load += new System.EventHandler(this.NewEvent_Load);
             ((System.ComponentModel.ISupportInitialize)(this.nudCompetitorsLimit)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -249,5 +282,8 @@
         private System.Windows.Forms.TextBox txtDescription;
         private System.Windows.Forms.Label lName;
         private System.Windows.Forms.TextBox txtName;
+        private System.Windows.Forms.Button bImage;
+        private System.Windows.Forms.OpenFileDialog openFileDialog1;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

@@ -1,9 +1,6 @@
 ﻿using Ninject;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Drawing;
 
 namespace RFIDSystemTest.Warriror
 {
@@ -51,9 +48,20 @@ namespace RFIDSystemTest.Warriror
         /// <returns></returns>
         public static string DateTimeToJsonStringWithTime( DateTime dt ) {
 
-            return dt.ToString("yyyy-MM-ddThh:mm:ssZ");
+            return dt.ToString("yyyy-MM-ddTHH:mm:ssZ");
 
         }// End of DateTime to json string function
+
+        /// <summary>
+        /// Image to byte function
+        /// </summary>
+        /// <param name="img"></param>
+        /// <returns></returns>
+        public static byte[] ImageToByte(Image img)
+        {
+            ImageConverter converter = new ImageConverter();
+            return (byte[])converter.ConvertTo(img, typeof(byte[]));
+        }// End of ImageToByte function
 
     }// End of DataConvert class
     

@@ -20,6 +20,7 @@ namespace RFIDSystemTest.Views.Events
     public partial class NewEvent : UserControl
     {
         public EventControl event_control;
+        public Image image;
 
         /// <summary>
         /// Constructor
@@ -30,7 +31,8 @@ namespace RFIDSystemTest.Views.Events
             InitializeComponent();
 
             this.event_control = event_control;
-
+            openFileDialog1.Title = "Open Image";
+            openFileDialog1.Filter = "Image files (*.jpg, *.jpeg, *.jpe, *.jfif, *.png) | *.jpg; *.jpeg; *.jpe; *.jfif; *.png";
         }// End of New Event Constructor
 
         /// <summary>
@@ -72,7 +74,40 @@ namespace RFIDSystemTest.Views.Events
         /// <param name="e"></param>
         private void bAdd_Click(object sender, EventArgs e)
         {
-            event_control.event_service.addEvent( createObject(), null );
+            // Save the event to the service
+            Event eve = event_control.event_service.addEvent( createObject(), null );
+            // If the image is not null and the saved event was successfuly saved
+            // Then send the image
+            if ( eve != null )
+            {
+                // Validate if the image is null
+                if (image != null)
+                {
+                    // Send the image to the service
+                    eve = event_control.event_service.ImageToEvent(eve, image, null);
+                    // Validte if the event has been sended
+                    if (eve!=null)
+                    {
+                        // Send the successfuly added box
+                        ControlHelper.SuccessBox(SuccessResource.AddSuccessful);
+                    }// End of event validation
+                    else // If there was an error with the image adding
+                    {
+                        // Send an adding error box
+                        ControlHelper.ErrorBox("There was an error sending the image", 500);
+                    }// End of error
+                }// End of image validation
+                else
+                {
+                    // Send a successfuly added box
+                    ControlHelper.SuccessBox( SuccessResource.AddSuccessful );
+                }// End of success box
+            }// End of the validations
+            else// Return a dialog box with the error
+            {
+                // Send an adding error box
+                ControlHelper.ErrorBox( ErrorResource.AddingError, 404 );
+            }// End of all the validations
         }// End of bAdd_Click function
 
         /// <summary>
@@ -81,9 +116,9 @@ namespace RFIDSystemTest.Views.Events
         /// <returns></returns>
         public Event createObject()
         {
-
+            // Initialize the event
             Event eve = new Event();
-
+            // Set all the event attributes
             eve.name = txtName.Text;
             eve.description = txtName.Text;
             eve.date_start = dtDateStart.Value;
@@ -91,7 +126,7 @@ namespace RFIDSystemTest.Views.Events
             eve.date_limit = dtDateLimit.Value;
             eve.competitors_limit = (int)nudCompetitorsLimit.Value;
             eve.image_url = "";
-
+            // Return the event
             return eve;
 
         }// End of createObject function
@@ -121,6 +156,23 @@ namespace RFIDSystemTest.Views.Events
             ThemeDark.SetButtonsTheme(this);
             ThemeDark.SetLabelsTheme(this);
         }// End of ThemeShit function
+
+        /// <summary>
+        /// Button image click
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void bImage_Click(object sender, EventArgs e)
+        {
+            // Show the dialog and get result.
+            DialogResult result = openFileDialog1.ShowDialog();
+            if (result == DialogResult.OK) // Test result.
+            {
+                image = new Bitmap( openFileDialog1.FileName );
+                pictureBox1.Image = image;
+            }
+            Console.WriteLine(result); // <-- For debugging use.
+        }// End of bImage_Click function
 
     }// End of New Event control class
 } 

@@ -6,6 +6,7 @@ using System.Net;
 using System.Text;
 using System.Configuration;
 using RFIDSystemTest.Resources.Http;
+using System.Drawing;
 
 namespace RFIDSystemTest.Warriror
 {
@@ -170,7 +171,7 @@ namespace RFIDSystemTest.Warriror
             }
 
         }// End of JSONHttpPettitionObject function
-
+        
         /// <summary>
         /// Base 64 encode
         /// </summary>
