@@ -65,7 +65,10 @@ namespace RFIDSystemTest.Views.Competitors
             c.birth_date = dtBirthDate.Value.Date;
             c.email = txtEmail.Text;
             c.zip_code = int.Parse( txtZipCode.Text );
-            c.address = txtAddress.Text;
+            c.address = txtAddress1.Text;
+            c.address2 = txtAddress2.Text;
+            c.sex = cbSex.SelectedItem.Equals("M") ? 0 : 1;
+            c.phone_number = txtPhoneNumber.Text;
 
             return c;
 
@@ -96,7 +99,7 @@ namespace RFIDSystemTest.Views.Competitors
             lName.Text = CompetitorResource.name;
             lSecondName.Text = CompetitorResource.second_name;
             lEmail.Text = CompetitorResource.email;
-            lAddress.Text = CompetitorResource.address;
+            lAddress1.Text = CompetitorResource.address;
             lCity.Text = CompetitorResource.city;
             lCountry.Text = CompetitorResource.country;
             lState.Text = CompetitorResource.state;

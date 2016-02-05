@@ -27,6 +27,6 @@ namespace RFIDSystemTest.Business.Interfaces.Competitors
         Register addRegister(Register register, UserSystem user_log);
         Register updateRegister(Register register, UserSystem user_log);
         bool deleteRegister(Register register, UserSystem user_log);
-
+        int getCompetitorNum(int competition_id, UserSystem user_log );
     }//End of IRegisterService interface
 }

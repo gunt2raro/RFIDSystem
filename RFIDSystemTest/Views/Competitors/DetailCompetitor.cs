@@ -52,7 +52,7 @@ namespace RFIDSystemTest.Views.Competitors
             lName.Text = CompetitorResource.name;
             lSecondName.Text = CompetitorResource.second_name;
             lEmail.Text = CompetitorResource.email;
-            lAddress.Text = CompetitorResource.address;
+            lAddress1.Text = CompetitorResource.address;
             lCity.Text = CompetitorResource.city;
             lCountry.Text = CompetitorResource.country;
             lState.Text = CompetitorResource.state;
@@ -70,7 +70,9 @@ namespace RFIDSystemTest.Views.Competitors
             txtName.Text = competitor.name;
             txtSecondName.Text = competitor.second_name;
             txtEmail.Text = competitor.email;
-            txtAddress.Text = competitor.address;
+            txtAddress1.Text = competitor.address;
+            txtAddress2.Text = competitor.address2;
+            txtPhoneNumber.Text = competitor.phone_number;
             txtCity.Text = competitor.city;
             txtState.Text = competitor.state;
             txtCountry.Text = competitor.country;
@@ -114,8 +116,9 @@ namespace RFIDSystemTest.Views.Competitors
             competitor.birth_date = dtBirthDate.Value.Date;
             competitor.email = txtEmail.Text;
             competitor.zip_code = int.Parse(txtZipCode.Text);
-            competitor.address = txtAddress.Text;
-
+            competitor.address = txtAddress1.Text;
+            competitor.address2 = txtAddress2.Text;
+            competitor.phone_number = txtPhoneNumber.Text;
             return competitor;
 
         }// End of createObject function

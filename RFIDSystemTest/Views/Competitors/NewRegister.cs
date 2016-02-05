@@ -67,6 +67,8 @@ namespace RFIDSystemTest.Views.Competitors
             txtCountry.Text = TWords.EMPTY;
             txtAddress.Text = TWords.EMPTY;
             txtCity.Text = TWords.EMPTY;
+            txtAddress2.Text = TWords.EMPTY;
+            txtPhoneNumber.Text = TWords.EMPTY;
 
         }// End of clearFields function
 
@@ -94,7 +96,17 @@ namespace RFIDSystemTest.Views.Competitors
             loadRegisterStates();
             // Load all the kit states
             loadKitStates();
+            // load competitor number
+            loadCompetitorNum();
         }// End of loadData function
+
+        /// <summary>
+        /// Load Competitor Number Bitch!!!
+        /// </summary>
+        private void loadCompetitorNum()
+        {
+            lCompetitorNumberDes.Text = event_control.register_service.getCompetitorNum( competition_id, null ).ToString();
+        }// End of loadCompetitorNum function
 
         /// <summary>
         /// theme shit
@@ -311,7 +323,10 @@ namespace RFIDSystemTest.Views.Competitors
             comp.second_name = txtSecondName.Text;
             comp.state = txtState.Text;
             comp.address = txtAddress.Text;
+            comp.address2 = txtAddress2.Text;
             comp.zip_code = int.Parse(txtZipCode.Text);
+            comp.phone_number = txtPhoneNumber.Text;
+            comp.sex = cbSex.SelectedItem.Equals("M") ? 0 : 1;
             // REturn competitor object
             return comp;
         }// End of CreateCompetitorObject function
@@ -328,7 +343,7 @@ namespace RFIDSystemTest.Views.Competitors
             reg.category = getCategoryId();
             reg.competition = competition_id;
             reg.competitor = competitor_o.id;
-            reg.competitor_num = 1;
+            reg.competitor_num = int.Parse(lCompetitorNumberDes.Text);
             reg.kit_state = getKitStateId();
             reg.register_state = getRegisterStateId();
             // Return register object
@@ -425,7 +440,10 @@ namespace RFIDSystemTest.Views.Competitors
                 txtCountry.Text = competitor.country;
                 txtAddress.Text = competitor.address;
                 txtCity.Text = competitor.city;
-                dtBirthDate.Value = competitor.birth_date; 
+                dtBirthDate.Value = competitor.birth_date;
+                cbSex.SelectedItem = competitor.sex==0 ? "M" : "F";
+                txtAddress2.Text = competitor.address2;
+                txtPhoneNumber.Text = competitor.phone_number; 
             }// End of competitor validation
 
         }// End of fillCompetitorFields function

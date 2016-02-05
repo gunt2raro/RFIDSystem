@@ -68,7 +68,14 @@
             this.cbKitState = new System.Windows.Forms.ComboBox();
             this.cbCategory = new System.Windows.Forms.ComboBox();
             this.lTitRegister = new System.Windows.Forms.Label();
+            this.txtPhoneNumber = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.lAddress2 = new System.Windows.Forms.Label();
+            this.txtAddress2 = new System.Windows.Forms.TextBox();
+            this.lSex = new System.Windows.Forms.Label();
+            this.cbSex = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataCompetitors)).BeginInit();
+            this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -121,7 +128,7 @@
             this.dataCompetitors.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dataCompetitors.RowTemplate.Height = 28;
             this.dataCompetitors.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataCompetitors.Size = new System.Drawing.Size(482, 752);
+            this.dataCompetitors.Size = new System.Drawing.Size(482, 797);
             this.dataCompetitors.TabIndex = 51;
             this.dataCompetitors.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataCompetitors_CellContentDoubleClick);
             // 
@@ -136,7 +143,7 @@
             // txtEmail
             // 
             this.txtEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtEmail.Location = new System.Drawing.Point(785, 372);
+            this.txtEmail.Location = new System.Drawing.Point(236, 291);
             this.txtEmail.Margin = new System.Windows.Forms.Padding(4);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(323, 44);
@@ -146,7 +153,7 @@
             // 
             this.lEmail.AutoSize = true;
             this.lEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lEmail.Location = new System.Drawing.Point(644, 379);
+            this.lEmail.Location = new System.Drawing.Point(95, 298);
             this.lEmail.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lEmail.Name = "lEmail";
             this.lEmail.Size = new System.Drawing.Size(104, 37);
@@ -227,7 +234,7 @@
             // txtZipCode
             // 
             this.txtZipCode.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtZipCode.Location = new System.Drawing.Point(1307, 430);
+            this.txtZipCode.Location = new System.Drawing.Point(758, 365);
             this.txtZipCode.Margin = new System.Windows.Forms.Padding(4);
             this.txtZipCode.Name = "txtZipCode";
             this.txtZipCode.Size = new System.Drawing.Size(321, 44);
@@ -275,7 +282,7 @@
             // 
             this.lZipCode.AutoSize = true;
             this.lZipCode.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lZipCode.Location = new System.Drawing.Point(1138, 433);
+            this.lZipCode.Location = new System.Drawing.Point(589, 368);
             this.lZipCode.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lZipCode.Name = "lZipCode";
             this.lZipCode.Size = new System.Drawing.Size(145, 37);
@@ -329,15 +336,25 @@
             // panel1
             // 
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Controls.Add(this.lSex);
+            this.panel1.Controls.Add(this.lAddress2);
+            this.panel1.Controls.Add(this.cbSex);
+            this.panel1.Controls.Add(this.txtPhoneNumber);
+            this.panel1.Controls.Add(this.txtAddress2);
+            this.panel1.Controls.Add(this.label1);
+            this.panel1.Controls.Add(this.lZipCode);
+            this.panel1.Controls.Add(this.txtZipCode);
+            this.panel1.Controls.Add(this.txtEmail);
+            this.panel1.Controls.Add(this.lEmail);
             this.panel1.Location = new System.Drawing.Point(548, 118);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1112, 397);
+            this.panel1.Size = new System.Drawing.Size(1112, 443);
             this.panel1.TabIndex = 73;
             // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(83)))), ((int)(((byte)(113)))), ((int)(((byte)(139)))));
-            this.panel2.Location = new System.Drawing.Point(548, 534);
+            this.panel2.Location = new System.Drawing.Point(548, 594);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1112, 34);
             this.panel2.TabIndex = 76;
@@ -356,7 +373,7 @@
             this.panel3.Controls.Add(this.lCategory);
             this.panel3.Controls.Add(this.cbKitState);
             this.panel3.Controls.Add(this.cbCategory);
-            this.panel3.Location = new System.Drawing.Point(548, 602);
+            this.panel3.Location = new System.Drawing.Point(548, 662);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(1112, 438);
             this.panel3.TabIndex = 77;
@@ -483,12 +500,75 @@
             // 
             this.lTitRegister.AutoSize = true;
             this.lTitRegister.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lTitRegister.Location = new System.Drawing.Point(591, 579);
+            this.lTitRegister.Location = new System.Drawing.Point(591, 639);
             this.lTitRegister.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lTitRegister.Name = "lTitRegister";
             this.lTitRegister.Size = new System.Drawing.Size(134, 37);
             this.lTitRegister.TabIndex = 78;
             this.lTitRegister.Text = "Register";
+            // 
+            // txtPhoneNumber
+            // 
+            this.txtPhoneNumber.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPhoneNumber.Location = new System.Drawing.Point(236, 361);
+            this.txtPhoneNumber.Margin = new System.Windows.Forms.Padding(4);
+            this.txtPhoneNumber.Name = "txtPhoneNumber";
+            this.txtPhoneNumber.Size = new System.Drawing.Size(323, 44);
+            this.txtPhoneNumber.TabIndex = 80;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(95, 368);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(116, 37);
+            this.label1.TabIndex = 79;
+            this.label1.Text = "lPhone";
+            // 
+            // lAddress2
+            // 
+            this.lAddress2.AutoSize = true;
+            this.lAddress2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lAddress2.Location = new System.Drawing.Point(592, 301);
+            this.lAddress2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lAddress2.Name = "lAddress2";
+            this.lAddress2.Size = new System.Drawing.Size(160, 37);
+            this.lAddress2.TabIndex = 80;
+            this.lAddress2.Text = "lAddress2";
+            // 
+            // txtAddress2
+            // 
+            this.txtAddress2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtAddress2.Location = new System.Drawing.Point(758, 298);
+            this.txtAddress2.Margin = new System.Windows.Forms.Padding(4);
+            this.txtAddress2.Name = "txtAddress2";
+            this.txtAddress2.Size = new System.Drawing.Size(321, 44);
+            this.txtAddress2.TabIndex = 79;
+            // 
+            // lSex
+            // 
+            this.lSex.AutoSize = true;
+            this.lSex.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lSex.Location = new System.Drawing.Point(300, 238);
+            this.lSex.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lSex.Name = "lSex";
+            this.lSex.Size = new System.Drawing.Size(77, 37);
+            this.lSex.TabIndex = 120;
+            this.lSex.Text = "lSex";
+            // 
+            // cbSex
+            // 
+            this.cbSex.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbSex.FormattingEnabled = true;
+            this.cbSex.Items.AddRange(new object[] {
+            "M",
+            "F"});
+            this.cbSex.Location = new System.Drawing.Point(413, 228);
+            this.cbSex.Name = "cbSex";
+            this.cbSex.Size = new System.Drawing.Size(147, 53);
+            this.cbSex.TabIndex = 119;
             // 
             // NewRegister
             // 
@@ -499,17 +579,13 @@
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.lTitCompetitor);
             this.Controls.Add(this.lAddress);
-            this.Controls.Add(this.lZipCode);
             this.Controls.Add(this.lCountry);
             this.Controls.Add(this.lState);
             this.Controls.Add(this.lCity);
             this.Controls.Add(this.txtAddress);
-            this.Controls.Add(this.txtZipCode);
             this.Controls.Add(this.txtCountry);
             this.Controls.Add(this.txtState);
             this.Controls.Add(this.txtCity);
-            this.Controls.Add(this.txtEmail);
-            this.Controls.Add(this.lEmail);
             this.Controls.Add(this.lBirthDate);
             this.Controls.Add(this.dtBirthDate);
             this.Controls.Add(this.txtSecondName);
@@ -524,6 +600,8 @@
             this.Size = new System.Drawing.Size(1718, 1158);
             this.Load += new System.EventHandler(this.NewRegister_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataCompetitors)).EndInit();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             this.ResumeLayout(false);
@@ -570,5 +648,11 @@
         private System.Windows.Forms.Button bCancel;
         private System.Windows.Forms.Button bRegister;
         private System.Windows.Forms.Button bRegisterAnother;
+        private System.Windows.Forms.Label lAddress2;
+        private System.Windows.Forms.TextBox txtPhoneNumber;
+        private System.Windows.Forms.TextBox txtAddress2;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lSex;
+        private System.Windows.Forms.ComboBox cbSex;
     }
 }

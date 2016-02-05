@@ -32,6 +32,9 @@ namespace RFIDSystemTest.Business.Adapters
             dto.country = competitor.country;
             dto.zip_code = competitor.zip_code;
             dto.address = competitor.address;
+            dto.address2 = competitor.address2;
+            dto.phone_number = competitor.phone_number;
+            dto.sex = competitor.sex;
 
             dto.birth_date = DataConvert.DateTimeToJsonString( competitor.birth_date );
             dto.timestamp = DataConvert.DateTimeToJsonString( competitor.timestamp );

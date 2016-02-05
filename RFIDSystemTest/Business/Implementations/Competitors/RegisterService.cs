@@ -135,6 +135,22 @@ namespace RFIDSystemTest.Business.Implementations.Competitors
         }// End of getByUser function
 
         /// <summary>
+        /// Get competition number
+        /// </summary>
+        /// <param name="competition"></param>
+        /// <param name="user_log"></param>
+        /// <returns></returns>
+        public int getCompetitorNum(int competition_id, UserSystem user_log)
+        {
+            return http_service.JSONHttpPettitionObject<int>(
+                HttpMethod.GET, 
+                string.Format( 
+                    "register/competitornum/{0}", 
+                    competition_id ), 
+                null );
+        }// End of getCompetitionNum function
+
+        /// <summary>
         /// Get registers by competition
         /// </summary>
         /// <param name="competition"></param>
