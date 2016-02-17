@@ -119,8 +119,12 @@ namespace RFIDSystemTest.Views.Events
         {
             ThemeDark.ResponsiveDesign( this, Parent.Parent, 1, 1 );
             ThemeDark.SetButtonsTheme(this);
-            ThemeDark.SetDataGridViewResponsiveWidth(dataEvents, this, .8);
-            ThemeDark.SetDataGridViewResponsiveHeight(dataEvents, this, .5);
+            this.BackColor = Color.FromArgb( 248, 248, 248 );
+            ThemeDark.SetDataGridViewResponsiveWidth(dataEvents, this, 1);
+            ThemeDark.SetDataGridViewResponsiveHeight(dataEvents, this, .50);
+            pButtons.Width = Parent.Parent.Width;
+            pButtons.BackColor = Color.FromArgb(80, 102, 127);
+            pButtons.BorderStyle = BorderStyle.None;
         }// end of ThemeShit function
 
         /// <summary>

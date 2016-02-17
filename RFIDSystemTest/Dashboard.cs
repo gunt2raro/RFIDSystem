@@ -10,6 +10,7 @@ using RFIDSystemTest.Views;
 using RFIDSystemTest.Views.Events;
 using RFIDSystemTest.Warriror;
 using System;
+using System.Drawing;
 using System.Reflection;
 using System.Windows.Forms;
 
@@ -142,11 +143,13 @@ namespace RFIDSystemTest
         /// </summary>
         public void ThemeShit() {
             WindowState = FormWindowState.Maximized;
-            ThemeDark.SetBackgroundColor( this );
-            ThemeDark.SetBackgroundColor(pContent);
-            ThemeDark.SetButtonsTheme( this );
-            ThemeDark.ResponsiveDesign( pContent, this, .70, .75 );
+            this.BackColor = Color.FromArgb(255, 255, 255);
+            pContent.BackColor = Color.FromArgb(255, 255, 255);
+            pMenu.BackColor = Color.FromArgb( 34, 34, 34 );
+            ThemeDark.SetButtonsThemeDark( this );
+            ThemeDark.ResponsiveDesign( pContent, this, .75, 1 );
             ThemeDark.SetLabelsTheme(this);
+            ThemeDark.ResponsiveDesign( pMenu, this, .15, 1 );
         }// End of ThemeShit function
 
         /// <summary>

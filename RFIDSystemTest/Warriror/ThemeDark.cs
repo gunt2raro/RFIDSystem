@@ -46,7 +46,7 @@ namespace RFIDSystemTest.Warriror
         /// </summary>
         /// <param name="control"></param>
         public static void SetBackgroundColor(Control control) {
-            control.BackColor = Color.FromArgb(9, 42, 56);
+            control.BackColor = Color.FromArgb(34, 34, 34);
         }// End of SetBackgroundColor function
 
         /// <summary>
@@ -72,11 +72,14 @@ namespace RFIDSystemTest.Warriror
                 else if (c.GetType() == typeof(Button))
                 {
                     Button b = (Button)c;
-                    b.BackColor = Color.FromArgb(13, 53, 70);
-                    b.ForeColor = Color.FromArgb(148, 165, 181);
-                    b.Font = new Font("Arial", 40, FontStyle.Regular, GraphicsUnit.Document);
-                    b.FlatAppearance.BorderSize = 0;
+                    b.BackColor = Color.FromArgb(255, 255, 255);
+                    b.ForeColor = Color.FromArgb(190, 187, 187);
+                    b.Font = new Font("Segoe UI", 15, FontStyle.Regular, GraphicsUnit.World);
+
                     b.FlatStyle = FlatStyle.Flat;
+                    b.FlatAppearance.BorderColor = Color.FromArgb(192, 192, 192);
+                    b.FlatAppearance.BorderSize = 2;
+
                     if (b.Image != null && b.ImageAlign != ContentAlignment.BottomLeft && b.ImageAlign != ContentAlignment.MiddleRight) {
                         using (Image img = b.Image.Clone() as Image) {
                             b.Image = (Image)(new Bitmap(img, new Size( (int)(b.Width *.75), (int)( b.Height *.75 ) )));
@@ -109,9 +112,90 @@ namespace RFIDSystemTest.Warriror
                 else if (c.GetType() == typeof(Button))
                 {
                     Button b = (Button)c;
-                    b.BackColor = Color.FromArgb(13, 53, 70);
-                    b.ForeColor = Color.FromArgb(148, 165, 181);
-                    b.Font = new Font("Segoe UI", 40, FontStyle.Regular, GraphicsUnit.Document);
+                    b.BackColor = Color.FromArgb(255, 255, 255);
+                    b.ForeColor = Color.FromArgb(190, 187, 187);
+                    b.Font = new Font("Segoe UI", 15, FontStyle.Regular, GraphicsUnit.World);
+
+                    b.FlatStyle = FlatStyle.Flat;
+                    b.FlatAppearance.BorderColor = Color.FromArgb(192, 192, 192);
+                    b.FlatAppearance.BorderSize = 2;
+
+                    if (b.Image != null && b.ImageAlign != ContentAlignment.BottomLeft && b.ImageAlign != ContentAlignment.MiddleRight)
+                    {
+                        using (Image img = b.Image.Clone() as Image)
+                        {
+                            b.Image = (Image)(new Bitmap(img, new Size((int)(b.Width * .75), (int)(b.Height * .75))));
+                        }
+                    }
+                    else if (b.Image != null && b.ImageAlign == ContentAlignment.BottomLeft)
+                    {
+                        using (Image img = b.Image.Clone() as Image)
+                        {
+                            b.Image = (Image)(new Bitmap(img, new Size((int)(b.Width * .13), (int)(b.Height * .8))));
+                        }
+                    }
+
+                }
+            }
+        }// End of SetButtons function
+
+        /// <summary>
+        /// Set buttons theme
+        /// </summary>
+        /// <param name="control"></param>
+        public static void SetButtonsThemeDark(Control control)
+        {
+            foreach (Control c in control.Controls)
+            {
+                if (c.GetType() == typeof(Control) || c.GetType() == typeof(Panel))
+                {
+                    SetButtonsThemeDark(c);
+                }
+                else if (c.GetType() == typeof(Button))
+                {
+                    Button b = (Button)c;
+                    b.BackColor = Color.FromArgb(34, 34, 34);
+                    b.ForeColor = Color.FromArgb(255, 255, 255);
+                    b.Font = new Font("Segoe UI", 15, FontStyle.Bold, GraphicsUnit.World);
+                    b.FlatAppearance.BorderSize = 0;
+                    b.FlatStyle = FlatStyle.Flat;
+                    if (b.Image != null && b.ImageAlign != ContentAlignment.BottomLeft && b.ImageAlign != ContentAlignment.MiddleRight)
+                    {
+                        using (Image img = b.Image.Clone() as Image)
+                        {
+                            b.Image = (Image)(new Bitmap(img, new Size((int)(b.Width * .75), (int)(b.Height * .75))));
+                        }
+                    }
+                    else if (b.Image != null && b.ImageAlign == ContentAlignment.BottomLeft)
+                    {
+                        using (Image img = b.Image.Clone() as Image)
+                        {
+                            b.Image = (Image)(new Bitmap(img, new Size((int)(b.Width * .13), (int)(b.Height * .8))));
+                        }
+                    }
+                }
+            }
+
+        }// End of SetButtons function
+
+        /// <summary>
+        /// Set buttons theme
+        /// </summary>
+        /// <param name="panel"></param>
+        public static void SetButtonsThemeDark(Panel panel)
+        {
+            foreach (Control c in panel.Controls)
+            {
+                if (c.GetType() == typeof(Control) || c.GetType() == typeof(Panel))
+                {
+                    SetButtonsThemeDark(c);
+                }
+                else if (c.GetType() == typeof(Button))
+                {
+                    Button b = (Button)c;
+                    b.BackColor = Color.FromArgb(34, 34, 34);
+                    b.ForeColor = Color.FromArgb(255, 255, 255);
+                    b.Font = new Font("Segoe UI", 15, FontStyle.Bold, GraphicsUnit.World);
                     b.FlatAppearance.BorderSize = 0;
                     b.FlatStyle = FlatStyle.Flat;
 
@@ -210,7 +294,7 @@ namespace RFIDSystemTest.Warriror
         ///
         /// Buttons responsiveness
         /// 
-        #region
+        #region Buttons
         /// <summary>
         /// Buttons responsive width
         /// </summary>

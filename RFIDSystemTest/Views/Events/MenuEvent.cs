@@ -62,7 +62,7 @@ namespace RFIDSystemTest.Views.Events
             ThemeDark.ButtonsResponsiveWidth(bNew, this, .8);
             ThemeDark.ButtonsResponsiveWidth(bSearch, this, .8);
             ThemeDark.ButtonsResponsiveWidth(bMore, this, .8);
-            
+            this.BackColor = Color.FromArgb(248, 248, 248);
         }// End of Theme Shit function
 
         /// <summary>

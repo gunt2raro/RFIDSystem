@@ -4,6 +4,7 @@ using RFIDSystemTest.Business.Interfaces.Events;
 using RFIDSystemTest.Business.Interfaces.Competitors;
 using RFIDSystemTest.Views.Competitors;
 using RFIDSystemTest.Business.Interfaces.States;
+using RFIDSystemTest.Warriror;
 
 namespace RFIDSystemTest.Views.Events
 {
@@ -78,7 +79,16 @@ namespace RFIDSystemTest.Views.Events
             Controls.Clear();
             // Add the event menu control
             Controls.Add( menu_event_control );
+            // Theme shit
+            ThemeShit();
         }// End of EventControl_Load function
+        /// <summary>
+        /// Theme shit of the fuckin control
+        /// </summary>
+        private void ThemeShit()
+        {
+            ThemeDark.ResponsiveDesign(this, Parent, 1, 1);
+        }// End of Theme Shit function
 
     }// End of Event Control class
 }

@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MenuEvent));
             this.bList = new System.Windows.Forms.Button();
             this.bNew = new System.Windows.Forms.Button();
             this.bSearch = new System.Windows.Forms.Button();
@@ -41,7 +40,6 @@
             // 
             this.bList.AutoSize = true;
             this.bList.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bList.Image = ((System.Drawing.Image)(resources.GetObject("bList.Image")));
             this.bList.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.bList.Location = new System.Drawing.Point(150, 150);
             this.bList.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
@@ -57,7 +55,6 @@
             // 
             this.bNew.AutoSize = true;
             this.bNew.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bNew.Image = ((System.Drawing.Image)(resources.GetObject("bNew.Image")));
             this.bNew.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.bNew.Location = new System.Drawing.Point(150, 320);
             this.bNew.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
