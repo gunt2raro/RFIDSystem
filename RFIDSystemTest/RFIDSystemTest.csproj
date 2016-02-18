@@ -451,6 +451,8 @@
     <Compile Include="Warriror\Data.cs" />
     <Compile Include="Warriror\HttpService.cs" />
     <Compile Include="Warriror\IHttpService.cs" />
+    <Compile Include="Warriror\SessionObject.cs" />
+    <Compile Include="Warriror\SessionStuff.cs" />
     <Compile Include="Warriror\ThemeDark.cs" />
     <EmbeddedResource Include="Dashboard.resx">
       <DependentUpon>Dashboard.cs</DependentUpon>

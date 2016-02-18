@@ -1,12 +1,12 @@
-﻿using RFIDSystemTest.Resources.Login;
+﻿using Ninject;
+using RFIDSystemTest.Business.Implementations.Users;
+using RFIDSystemTest.Business.Interfaces;
+using RFIDSystemTest.Data;
+using RFIDSystemTest.Helpers;
+using RFIDSystemTest.Resources.Login;
+using RFIDSystemTest.Warriror;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Reflection;
 using System.Windows.Forms;
 
 namespace RFIDSystemTest
@@ -33,7 +33,6 @@ namespace RFIDSystemTest
             this.lUsername.Text = LoginResource.lUsername;
             this.lPassword.Text = LoginResource.lPassword;
             this.bSignIn.Text = LoginResource.bSignIn;
-            this.bSignUp.Text = LoginResource.bSingUp;
         }//End of addTextResources function
 
         /// <summary>
@@ -43,18 +42,40 @@ namespace RFIDSystemTest
         /// <param name="e"></param>
         private void bSignIn_Click(object sender, EventArgs e)
         {
-
+            if (!txtUserName.Text.Equals(TWords.EMPTY) && !txtPassword.Text.Equals(TWords.EMPTY))
+            {
+                // Init a user
+                User user = new User();
+                // Set the user name and the password on the user
+                user.username = txtUserName.Text;
+                user.password = txtPassword.Text;
+                // Get the user_service
+                IUserService user_service = Injection.kernel.Get<UserService>();
+                // Login the user
+                if (user_service.loginUser(user) != null)
+                {
+                    Hide();
+                    Dashboard dashboard = new Dashboard();
+                    dashboard.Show();
+                }
+                else {
+                    ControlHelper.ErrorBox( "User name and password not correct", 500 );
+                }
+            }
         }//End of bSignIn_click function
 
         /// <summary>
-        /// bSignUp Click
+        /// Login load
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void bSignUp_Click(object sender, EventArgs e)
+        private void Login_Load(object sender, EventArgs e)
         {
+            // Injection stuff
+            Injection.kernel.Load(Assembly.GetExecutingAssembly());
+            // Get the user service
 
-        }//End of bSignUp click function
+        }// End of Login_Load function
 
     }//End of Login Class
 

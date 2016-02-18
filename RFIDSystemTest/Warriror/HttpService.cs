@@ -147,10 +147,16 @@ namespace RFIDSystemTest.Warriror
                         // Return of the serialized object
                         return JsonConvert.DeserializeObject<T>(new StreamReader(response.GetResponseStream()).ReadToEnd());
                     }
-                    else if ( response.StatusCode == HttpStatusCode.OK && method == HttpMethod.PUT)
+                    else if (response.StatusCode == HttpStatusCode.OK && method == HttpMethod.PUT)
                     {
                         // Return of the serialized object
                         return JsonConvert.DeserializeObject<T>(new StreamReader(response.GetResponseStream()).ReadToEnd());
+                    }
+                    else if (response.StatusCode == HttpStatusCode.OK && method == HttpMethod.POST) {
+                        //Get the serialized object on a dictionary
+                        Dictionary<string, T> data_Var = JsonConvert.DeserializeObject<Dictionary<string, T>>(new StreamReader(response.GetResponseStream()).ReadToEnd());
+                        //Return data
+                        return data_Var[TWords.VARDATA];
                     }
                     else if (response.StatusCode == HttpStatusCode.NoContent && method == HttpMethod.DELETE)
                     {

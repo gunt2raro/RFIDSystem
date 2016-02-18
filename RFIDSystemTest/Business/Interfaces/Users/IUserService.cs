@@ -1,8 +1,6 @@
-﻿using System;
+﻿using RFIDSystemTest.Data;
+using RFIDSystemTest.Data.Users;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace RFIDSystemTest.Business.Interfaces
 {
@@ -12,5 +10,10 @@ namespace RFIDSystemTest.Business.Interfaces
     /// </summary>
     public interface IUserService
     {
+        IList<User> getAll( UserSystem user_log );
+        User loginUser( User user );
+        Rol geUserPermissions( User user, UserSystem user_log );
+        bool setUserSession( User user, UserSystem user_log );
+
     }// End of IUserService interface
 }

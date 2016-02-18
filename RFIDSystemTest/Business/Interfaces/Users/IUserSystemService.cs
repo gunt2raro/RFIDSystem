@@ -13,12 +13,11 @@ namespace RFIDSystemTest.Business.Interfaces.Users
     /// </summary>
     public interface IUserSystemService
     {
-        UserSystem logInUser( UserSystem user );
         UserSystem registerUser( UserSystem user, UserSystem user_log );
         UserSystem updateUser( UserSystem user, UserSystem user_log );
         bool deleteUser( UserSystem user, UserSystem user_log );
         UserSystem getById( int user_id, UserSystem user_log );
-        UserSystem getByUserName( string user_name, UserSystem user_log );
+        UserSystem getByUserId( int user_id, UserSystem user_log );
         UserSystem getByEmail( string email, UserSystem user_log );
         IList<UserSystem> getByRol( Rol rol, UserSystem user_log );
 

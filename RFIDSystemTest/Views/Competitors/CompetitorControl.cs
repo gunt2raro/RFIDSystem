@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using RFIDSystemTest.Business.Interfaces.Competitors;
 using RFIDSystemTest.Data.Competitors;
 using RFIDSystemTest.Views.Competitors;
+using RFIDSystemTest.Warriror;
 
 namespace RFIDSystemTest.Views
 {
@@ -51,8 +52,15 @@ namespace RFIDSystemTest.Views
 
             Controls.Clear();
             Controls.Add(menu_competitors_panel);
-
+            ThemeShit();
         }// End of CompetitorControl_Load function
+
+        /// <summary>
+        /// Theme shit init def and shit
+        /// </summary>
+        public void ThemeShit() {
+            ThemeDark.ResponsiveDesign(this, Parent, 1, 1);
+        }// Ene of ThemeShit function
 
     }// End of Competitor Control class
 

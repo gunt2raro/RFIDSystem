@@ -54,7 +54,12 @@ namespace RFIDSystemTest.Business.Implementations.Users
         /// <returns></returns>
         public IList<Rol> getAll(UserSystem user_log)
         {
-            return this.http_service.JSONHttpPettitionList<Rol>( HttpMethod.GET, this.GetType().Name.ToLower().Replace( "service", "" ), null );
+            return this.http_service.JSONHttpPettitionList<Rol>(
+                HttpMethod.GET, 
+                this.GetType().Name.ToLower().Replace(
+                    TWords.SERVICE, 
+                    TWords.EMPTY ), 
+                null );
         }// End of getAll function 
 
         /// <summary>
@@ -65,7 +70,14 @@ namespace RFIDSystemTest.Business.Implementations.Users
         /// <returns></returns>
         public Rol getById(int rol_id, UserSystem user_log)
         {
-            throw new NotImplementedException();
+            return http_service.JSONHttpPettitionObject<Rol>(
+                HttpMethod.GET,
+                GetType().Name.ToLower().Replace(
+                    TWords.SERVICE,
+                    string.Format(
+                        TWords.ONEPARAM,
+                        rol_id)),
+                null);
         }// End of getById function
 
         /// <summary>

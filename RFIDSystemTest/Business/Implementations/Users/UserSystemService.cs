@@ -76,20 +76,15 @@ namespace RFIDSystemTest.Business.Implementations.Users
         /// <param name="user_name"></param>
         /// <param name="user_log"></param>
         /// <returns></returns>
-        public UserSystem getByUserName(string user_name, UserSystem user_log)
+        public UserSystem getByUserId(int user_id, UserSystem user_log)
         {
-            throw new NotImplementedException();
+            return http_service.JSONHttpPettitionObject<UserSystem>(
+                HttpMethod.GET, 
+                string.Format(
+                    "usersystem/getbyuser/?user_id={0}", 
+                    user_id), 
+                null);
         }// End of getByUserName function
-
-        /// <summary>
-        /// Log in user
-        /// </summary>
-        /// <param name="user"></param>
-        /// <returns></returns>
-        public UserSystem logInUser(UserSystem user)
-        {
-            throw new NotImplementedException();
-        }// End of logInUser function
 
         /// <summary>
         /// Register user

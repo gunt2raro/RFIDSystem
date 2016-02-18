@@ -38,17 +38,15 @@
             this.pContent = new System.Windows.Forms.Panel();
             this.pTitle = new System.Windows.Forms.Panel();
             this.lTitle = new System.Windows.Forms.Label();
-            this.pTitle2 = new System.Windows.Forms.Panel();
-            this.lTitle2 = new System.Windows.Forms.Label();
             this.pInfo = new System.Windows.Forms.Panel();
             this.lCredits = new System.Windows.Forms.Label();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.settingsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.lSubtitle = new System.Windows.Forms.Label();
             this.pMenu.SuspendLayout();
             this.pTitle.SuspendLayout();
-            this.pTitle2.SuspendLayout();
             this.pInfo.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -159,12 +157,14 @@
             // 
             // pTitle
             // 
+            this.pTitle.Controls.Add(this.lSubtitle);
             this.pTitle.Controls.Add(this.lTitle);
-            this.pTitle.Location = new System.Drawing.Point(663, 123);
+            this.pTitle.Location = new System.Drawing.Point(645, 89);
             this.pTitle.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.pTitle.Name = "pTitle";
-            this.pTitle.Size = new System.Drawing.Size(950, 112);
+            this.pTitle.Size = new System.Drawing.Size(1851, 151);
             this.pTitle.TabIndex = 2;
+            this.pTitle.Paint += new System.Windows.Forms.PaintEventHandler(this.pTitle_Paint);
             // 
             // lTitle
             // 
@@ -178,27 +178,6 @@
             this.lTitle.Text = "Profile";
             this.lTitle.Click += new System.EventHandler(this.lTitle_Click);
             // 
-            // pTitle2
-            // 
-            this.pTitle2.Controls.Add(this.lTitle2);
-            this.pTitle2.Location = new System.Drawing.Point(1660, 123);
-            this.pTitle2.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.pTitle2.Name = "pTitle2";
-            this.pTitle2.Size = new System.Drawing.Size(950, 112);
-            this.pTitle2.TabIndex = 3;
-            // 
-            // lTitle2
-            // 
-            this.lTitle2.AutoSize = true;
-            this.lTitle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lTitle2.Location = new System.Drawing.Point(32, 34);
-            this.lTitle2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lTitle2.Name = "lTitle2";
-            this.lTitle2.Size = new System.Drawing.Size(494, 55);
-            this.lTitle2.TabIndex = 1;
-            this.lTitle2.Text = "Competition on the go";
-            this.lTitle2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
             // pInfo
             // 
             this.pInfo.Controls.Add(this.lCredits);
@@ -208,6 +187,7 @@
             this.pInfo.Name = "pInfo";
             this.pInfo.Size = new System.Drawing.Size(2552, 134);
             this.pInfo.TabIndex = 1;
+            this.pInfo.Paint += new System.Windows.Forms.PaintEventHandler(this.pInfo_Paint);
             // 
             // lCredits
             // 
@@ -254,13 +234,23 @@
             this.helpToolStripMenuItem.Size = new System.Drawing.Size(77, 36);
             this.helpToolStripMenuItem.Text = "Help";
             // 
+            // lSubtitle
+            // 
+            this.lSubtitle.AutoSize = true;
+            this.lSubtitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lSubtitle.Location = new System.Drawing.Point(36, 93);
+            this.lSubtitle.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lSubtitle.Name = "lSubtitle";
+            this.lSubtitle.Size = new System.Drawing.Size(114, 37);
+            this.lSubtitle.TabIndex = 1;
+            this.lSubtitle.Text = "Profile";
+            // 
             // Dashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(2552, 1273);
             this.Controls.Add(this.pInfo);
-            this.Controls.Add(this.pTitle2);
             this.Controls.Add(this.pTitle);
             this.Controls.Add(this.pContent);
             this.Controls.Add(this.pMenu);
@@ -274,8 +264,6 @@
             this.pMenu.ResumeLayout(false);
             this.pTitle.ResumeLayout(false);
             this.pTitle.PerformLayout();
-            this.pTitle2.ResumeLayout(false);
-            this.pTitle2.PerformLayout();
             this.pInfo.ResumeLayout(false);
             this.pInfo.PerformLayout();
             this.menuStrip1.ResumeLayout(false);
@@ -291,13 +279,11 @@
         private System.Windows.Forms.Panel pContent;
         private System.Windows.Forms.Panel pTitle;
         private System.Windows.Forms.Label lTitle;
-        private System.Windows.Forms.Panel pTitle2;
         private System.Windows.Forms.Panel pInfo;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem fileToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem settingsToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem helpToolStripMenuItem;
-        private System.Windows.Forms.Label lTitle2;
         private System.Windows.Forms.Label lCredits;
         private System.Windows.Forms.Button bSettings;
         private System.Windows.Forms.Button bKits;
@@ -305,5 +291,6 @@
         private System.Windows.Forms.Button bCompetitors;
         private System.Windows.Forms.Button bEvents;
         private System.Windows.Forms.Button bProfile;
+        private System.Windows.Forms.Label lSubtitle;
     }
 }

@@ -12,12 +12,13 @@ namespace RFIDSystemTest.Data.Users
     /// </summary>
     public class UserSystem
     {
-        public int id { get; set; }
+        public int user_id { get; set; }
 
-        public User user { get; set; }
-        public Rol rol { get; set; }
-        public String user_name { get; set; }
+        public int user { get; set; }
+        public int rol { get; set; }
+        public string user_name { get; set; }
         public DateTime birth_date { get; set; }
+        public string password { get; set; }
 
     }//End of UserSystem class
 }

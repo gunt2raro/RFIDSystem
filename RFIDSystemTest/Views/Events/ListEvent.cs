@@ -126,7 +126,7 @@ namespace RFIDSystemTest.Views.Events
             pButtons.BackColor = Color.FromArgb(80, 102, 127);
             pButtons.BorderStyle = BorderStyle.None;
         }// end of ThemeShit function
-
+        
         /// <summary>
         /// TxtSearch text changed
         /// </summary>

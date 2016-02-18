@@ -1,10 +1,4 @@
 ﻿using Ninject;
-using RFIDSystemTest.Business.Implementations.Competitors;
-using RFIDSystemTest.Business.Implementations.Events;
-using RFIDSystemTest.Business.Implementations.States;
-using RFIDSystemTest.Business.Interfaces.Competitors;
-using RFIDSystemTest.Business.Interfaces.Events;
-using RFIDSystemTest.Business.Interfaces.States;
 using RFIDSystemTest.Resources.Menu;
 using RFIDSystemTest.Views;
 using RFIDSystemTest.Views.Events;
@@ -62,9 +56,6 @@ namespace RFIDSystemTest
         {
             // Apparience stuff
             ThemeShit();
-            // Injection stuff
-            Injection.kernel.Load(Assembly.GetExecutingAssembly());
-            
         }// End of dashboard_load function
 
         /// <summary>
@@ -150,6 +141,13 @@ namespace RFIDSystemTest
             ThemeDark.ResponsiveDesign( pContent, this, .75, 1 );
             ThemeDark.SetLabelsTheme(this);
             ThemeDark.ResponsiveDesign( pMenu, this, .15, 1 );
+            pInfo.BackColor = Color.FromArgb( 248, 248, 248 );
+            pTitle.BackColor = Color.FromArgb( 80, 102, 127 );
+            lTitle.ForeColor = Color.FromArgb(255, 255, 255);
+            lSubtitle.ForeColor = Color.FromArgb( 162, 173, 186 );
+            pTitle.Width = (int)(this.Width * .75);
+            lTitle.Font = new Font("Segoe UI", 20, FontStyle.Bold, GraphicsUnit.World);
+            lSubtitle.Font = new Font("Segoe UI", 12, FontStyle.Bold, GraphicsUnit.World);
         }// End of ThemeShit function
 
         /// <summary>
@@ -161,7 +159,16 @@ namespace RFIDSystemTest
         {
             ThemeShit();
         }// End of Dashboard_Resize_End function
-        
+
+        private void pInfo_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void pTitle_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }//End of Dashboard class
 
 }//End of the name space
