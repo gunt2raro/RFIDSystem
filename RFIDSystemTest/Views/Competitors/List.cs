@@ -57,6 +57,7 @@ namespace RFIDSystemTest.Views.Competitors
 
         /// <summary>
         /// Data competitors cell content click
+        /// Comentario nuevo
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
