@@ -100,6 +100,7 @@
             this.bMore.TabIndex = 23;
             this.bMore.Text = "More...";
             this.bMore.UseVisualStyleBackColor = true;
+            this.bMore.Click += new System.EventHandler(this.bMore_Click);
             // 
             // MenuEvent
             // 

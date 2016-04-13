@@ -5,6 +5,7 @@ using RFIDSystemTest.Business.Interfaces.Competitors;
 using RFIDSystemTest.Views.Competitors;
 using RFIDSystemTest.Business.Interfaces.States;
 using RFIDSystemTest.Warriror;
+using RFIDSystemTest.Views.Timing;
 
 namespace RFIDSystemTest.Views.Events
 {
@@ -20,6 +21,8 @@ namespace RFIDSystemTest.Views.Events
         public DetailEvent detail_event_control;
         public NewCompetition new_competition_control;
         public NewRegister new_register_control;
+        public TimingControl timing_control;
+
         #endregion Controls
 
         #region Services
@@ -66,6 +69,7 @@ namespace RFIDSystemTest.Views.Events
             detail_event_control = new DetailEvent( this );
             new_competition_control = new NewCompetition( this );
             new_register_control = new NewRegister( this );
+            timing_control = new TimingControl();
         }// End of Constructor function
 
         /// <summary>
@@ -82,6 +86,7 @@ namespace RFIDSystemTest.Views.Events
             // Theme shit
             ThemeShit();
         }// End of EventControl_Load function
+
         /// <summary>
         /// Theme shit of the fuckin control
         /// </summary>

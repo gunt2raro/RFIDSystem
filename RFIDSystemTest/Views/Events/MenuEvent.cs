@@ -76,5 +76,10 @@ namespace RFIDSystemTest.Views.Events
             event_control.new_event_control.cleanFields();
         }// End of bNew_Click function
 
+        private void bMore_Click(object sender, EventArgs e)
+        {
+            ControlHelper.LoadControlOnControl(event_control, event_control.timing_control);
+        }// End of bMore_click function
+
     }// End of Menu Event control class
 }
