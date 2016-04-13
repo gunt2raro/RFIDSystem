@@ -366,9 +366,11 @@
     </Compile>
     <Compile Include="Views\Events\DetailEvent.cs">
       <SubType>UserControl</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Compile>
     <Compile Include="Views\Events\DetailEvent.Designer.cs">
       <DependentUpon>DetailEvent.cs</DependentUpon>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Compile>
     <Compile Include="Views\Events\EventControl.cs">
       <SubType>UserControl</SubType>
@@ -567,6 +569,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Views\Events\DetailEvent.resx">
       <DependentUpon>DetailEvent.cs</DependentUpon>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\Events\EventControl.resx">
       <DependentUpon>EventControl.cs</DependentUpon>
