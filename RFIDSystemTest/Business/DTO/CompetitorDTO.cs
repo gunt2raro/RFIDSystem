@@ -24,7 +24,7 @@ namespace RFIDSystemTest.Business.DTO
         public string email { get; set; }
         public int sex { get; set; }
         public string phone_number { get; set; } 
-        /// pal rato public int user { get; set; }
+        public int user { get; set; }
         public string timestamp { get; set; }
         public string updated { get; set; }
 

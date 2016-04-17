@@ -12,7 +12,7 @@ namespace RFIDSystemTest.Business.DTO
     public class CategoryDTO
     {
 
-        // pal rato public int user { get; set; }
+        public int user { get; set; }
         public string name { get; set; }
         public string description { get; set; }
         public int age_1 { get; set; }

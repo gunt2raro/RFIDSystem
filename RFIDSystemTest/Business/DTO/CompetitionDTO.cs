@@ -11,7 +11,7 @@ namespace RFIDSystemTest.Business.DTO
     /// </summary>
     public class CompetitionDTO
     {
-        // pal rato public int user { get; set; }
+        public int user { get; set; }
         public string name { get; set; }
         public string description { get; set; }
         public string date_start { get; set; }
@@ -21,6 +21,10 @@ namespace RFIDSystemTest.Business.DTO
         public int competition_type { get; set; }
         public int competitors_limit { get; set; }
         public int competition_event { get; set; }
+
+
+        public string timestamp { get; set; }
+        public string updated { get; set; }
 
     }// End of CompetitorDTO class
 }

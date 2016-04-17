@@ -24,6 +24,7 @@ namespace RFIDSystemTest.Business.Adapters
 
             CategoryDTO dto = new CategoryDTO();
 
+            dto.user = category.user;
             dto.age_1 = category.age_1;
             dto.age_2 = category.age_2;
             dto.name = category.name;
@@ -36,6 +37,54 @@ namespace RFIDSystemTest.Business.Adapters
             return dto;
 
         }// End of Object To DTO function
+
+        public static Category DTOToObject(CategoryDTO dto)
+        {
+            return new Category
+            {
+                age_1=dto.age_1,
+                age_2=dto.age_2,
+                color=dto.color,
+                description=dto.description,
+                name=dto.name,
+                user=dto.user,
+                timestamp=DataConvert.StringJsonToDateTime(dto.timestamp),
+                updated=DataConvert.StringJsonToDateTime(dto.updated)
+            };
+
+        }
+
+
+        public static IList<CategoryDTO> ObjectsToDTOs(IList<Category> objs)
+        {
+
+            IList<CategoryDTO> list = new List<CategoryDTO>();
+
+            foreach (Category obj in objs)
+            {
+
+                CategoryDTO dto = ObjectToDTO(obj);
+                list.Add(dto);
+            }
+
+            return list;
+        }
+
+        public static IList<Category> DTOsToObjects(IList<CategoryDTO> dtos)
+        {
+
+            IList<Category> list = new List<Category>();
+
+            foreach (CategoryDTO dto in dtos)
+            {
+
+                Category obj = DTOToObject(dto);
+                list.Add(obj);
+            }
+
+            return list;
+        }
+
 
     }// End of Category Adapter class
 }

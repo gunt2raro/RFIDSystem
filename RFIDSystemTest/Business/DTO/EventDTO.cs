@@ -11,7 +11,7 @@ namespace RFIDSystemTest.Business.DTO
     /// </summary>
     public class EventDTO
     {
-        // pal rato public int user { get; set; }
+        public int user { get; set; }
         public string name { get; set; }
         public string description { get; set; }
         public string date_start { get; set; }

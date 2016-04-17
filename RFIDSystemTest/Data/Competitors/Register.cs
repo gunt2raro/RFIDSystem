@@ -27,5 +27,7 @@ namespace RFIDSystemTest.Data.Competitors
         public DateTime timestamp { get; set; }
         public DateTime updated { get; set; }
 
+        public int team { get; set; }
+
     }//End fo Register class
 }

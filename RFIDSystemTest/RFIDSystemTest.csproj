@@ -146,6 +146,7 @@
     <Compile Include="Business\Adapters\KitStateAdapter.cs" />
     <Compile Include="Business\Adapters\RegisterAdapter.cs" />
     <Compile Include="Business\Adapters\RegisterStateAdapter.cs" />
+    <Compile Include="Business\Adapters\TeamAdapter.cs" />
     <Compile Include="Business\Adapters\TimeRegAdapter.cs" />
     <Compile Include="Business\DTO\AuthenticationDTO.cs" />
     <Compile Include="Business\DTO\CategoryDTO.cs" />
@@ -156,10 +157,12 @@
     <Compile Include="Business\DTO\KitStateDTO.cs" />
     <Compile Include="Business\DTO\RegisterDTO.cs" />
     <Compile Include="Business\DTO\RegisterStateDTO.cs" />
+    <Compile Include="Business\DTO\TeamDTO.cs" />
     <Compile Include="Business\DTO\TimeRegDTO.cs" />
     <Compile Include="Business\Implementations\Competitors\AuthenticationService.cs" />
     <Compile Include="Business\Implementations\Competitors\CompetitorService.cs" />
     <Compile Include="Business\Implementations\Competitors\RegisterService.cs" />
+    <Compile Include="Business\Implementations\Competitors\TeamService.cs" />
     <Compile Include="Business\Implementations\Competitors\TimeRegService.cs" />
     <Compile Include="Business\Implementations\Events\CategoryService.cs" />
     <Compile Include="Business\Implementations\Events\CompetitionService.cs" />
@@ -173,6 +176,7 @@
     <Compile Include="Business\Interfaces\Competitors\IAuthenticationService.cs" />
     <Compile Include="Business\Interfaces\Competitors\ICompetitorService.cs" />
     <Compile Include="Business\Interfaces\Competitors\IRegisterService.cs" />
+    <Compile Include="Business\Interfaces\Competitors\ITeamService.cs" />
     <Compile Include="Business\Interfaces\Competitors\ITimeRegService.cs" />
     <Compile Include="Business\Interfaces\Events\ICategoryService.cs" />
     <Compile Include="Business\Interfaces\Events\ICompetitionService.cs" />
@@ -192,6 +196,7 @@
     <Compile Include="Data\Competitors\Authentication.cs" />
     <Compile Include="Data\Competitors\Competitor.cs" />
     <Compile Include="Data\Competitors\Register.cs" />
+    <Compile Include="Data\Competitors\Team.cs" />
     <Compile Include="Data\Competitors\TimeReg.cs" />
     <Compile Include="Data\Events\Category.cs" />
     <Compile Include="Data\Events\Competition.cs" />

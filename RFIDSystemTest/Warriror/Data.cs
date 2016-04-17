@@ -32,6 +32,26 @@ namespace RFIDSystemTest.Warriror
     public static class DataConvert{
 
         /// <summary>
+        /// Json String to DateTime
+        /// </summary>
+        /// <param name="date"></param>
+        /// <returns></returns>
+        public static DateTime StringJsonToDateTime(string date)
+        {
+            try
+            {
+                return Convert.ToDateTime(date);
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e);
+                return new DateTime (0,0,0);
+            }
+
+        }
+            
+
+        /// <summary>
         /// Date Time To Json String format 
         /// </summary>
         /// <param name="dt"></param>

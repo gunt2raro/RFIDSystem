@@ -6,16 +6,15 @@ using System.Threading.Tasks;
 
 namespace RFIDSystemTest.Business.DTO
 {
-    /// <summary>
-    /// Authentication data transfer object
-    /// </summary>
-    public class AuthenticationDTO
+    public class TeamDTO
     {
-        public CompetitorDTO competitor { get; set; }
-        public string password { get; set; }
+        public string name { get; set; }
+        public string description { get; set; }
+        public string city { get; set; }
+        public string state { get; set; }
+        public string country { get; set; }
 
         public string timestamp { get; set; }
         public string updated { get; set; }
-
-    }// End of AuthenticationDTO class
+    }
 }

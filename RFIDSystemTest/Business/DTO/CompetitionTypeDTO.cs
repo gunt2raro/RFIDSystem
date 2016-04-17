@@ -11,5 +11,10 @@ namespace RFIDSystemTest.Business.DTO
     /// </summary>
     public class CompetitionTypeDTO
     {
+        public string name { get; set; }
+        public string description { get; set; }
+
+        public string timestamp { get; set; }
+        public string updated { get; set; }
     }// End of CompetitionTypeDTO class
 }

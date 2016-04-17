@@ -44,5 +44,57 @@ namespace RFIDSystemTest.Business.Adapters
                         
         }// End of Object To DTO function
 
+        internal static Competitor DTOToObject(CompetitorDTO competitor)
+        {
+            return new Competitor
+            {
+                name = competitor.name,
+                address = competitor.address,
+                address2 = competitor.address2,
+                city = competitor.city,
+                country = competitor.country,
+                email = competitor.email,
+                phone_number = competitor.phone_number,
+                second_name = competitor.second_name,
+                sex = competitor.sex,
+                state = competitor.state,
+                user = competitor.user,
+                zip_code = competitor.zip_code,
+                birth_date = DataConvert.StringJsonToDateTime(competitor.birth_date),
+                timestamp = DataConvert.StringJsonToDateTime(competitor.timestamp),
+                updated = DataConvert.StringJsonToDateTime(competitor.updated)
+            
+            };
+        }
+
+        public static IList<CompetitorDTO> ObjectsToDTOs(IList<Competitor> objs)
+        {
+
+            IList<CompetitorDTO> list = new List<CompetitorDTO>();
+
+            foreach (Competitor obj in objs)
+            {
+
+                CompetitorDTO dto = ObjectToDTO(obj);
+                list.Add(dto);
+            }
+
+            return list;
+        }
+
+        public static IList<Competitor> DTOsToObjects(IList<CompetitorDTO> dtos)
+        {
+
+            IList<Competitor> list = new List<Competitor>();
+
+            foreach (CompetitorDTO dto in dtos)
+            {
+
+                Competitor obj = DTOToObject(dto);
+                list.Add(obj);
+            }
+
+            return list;
+        }
     }// End of Competitor Adapter class
 }

@@ -11,5 +11,10 @@ namespace RFIDSystemTest.Business.DTO
     /// </summary>
     public class TimeRegDTO
     {
+
+        public RegisterDTO register { get; set; }
+
+        public string timestamp { get; set; }
+        public string updated { get; set; }
     }// End of TimeRegDTO class
 }

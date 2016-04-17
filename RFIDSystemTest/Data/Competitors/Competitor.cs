@@ -25,6 +25,7 @@ namespace RFIDSystemTest.Data.Competitors
         public string address2 { get; set; }
         public string email { get; set; }
         public int user { get; set; }
+
         public int sex { get; set; }
         public string phone_number { get; set;  }
 

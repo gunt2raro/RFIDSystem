@@ -15,9 +15,13 @@ namespace RFIDSystemTest.Business.DTO
         public int competition { get; set; }
         public int category { get; set; }
         public int competitor_num { get; set; }
-        //public int user { get; set; }
+        public int user { get; set; }
         public int register_state { get; set; }
         public int kit_state { get; set; }
+        public string timestamp { get; set; }
+        public string updated { get; set; }
+        public int team { get; set; }
+
 
     }// End of RegisterDTO class
 }
