@@ -21,6 +21,7 @@ namespace RFIDSystemTest.Business.DTO
         public int competition_type { get; set; }
         public int competitors_limit { get; set; }
         public int competition_event { get; set; }
+        public float cost { get; set; }
 
 
         public string timestamp { get; set; }

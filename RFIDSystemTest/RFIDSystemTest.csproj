@@ -78,6 +78,8 @@
       <HintPath>..\packages\Ninject.Web.WebApi.WebHost.3.2.4.0\lib\net45-full\Ninject.Web.WebApi.WebHost.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
     <Reference Include="System" />
     <Reference Include="System.configuration" />
     <Reference Include="System.Core" />
@@ -134,31 +136,43 @@
       <HintPath>..\packages\WebActivatorEx.2.0\lib\net40\WebActivatorEx.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\NinjectBindings.cs" />
-    <Compile Include="Business\Adapters\AuthenticationAdapter.cs" />
-    <Compile Include="Business\Adapters\CategoryAdapter.cs" />
-    <Compile Include="Business\Adapters\CompetitionAdapter.cs" />
-    <Compile Include="Business\Adapters\CompetitionTypeAdapter.cs" />
-    <Compile Include="Business\Adapters\CompetitorAdapter.cs" />
-    <Compile Include="Business\Adapters\EventAdapter.cs" />
-    <Compile Include="Business\Adapters\KitStateAdapter.cs" />
-    <Compile Include="Business\Adapters\RegisterAdapter.cs" />
-    <Compile Include="Business\Adapters\RegisterStateAdapter.cs" />
-    <Compile Include="Business\Adapters\TeamAdapter.cs" />
-    <Compile Include="Business\Adapters\TimeRegAdapter.cs" />
-    <Compile Include="Business\DTO\AuthenticationDTO.cs" />
-    <Compile Include="Business\DTO\CategoryDTO.cs" />
-    <Compile Include="Business\DTO\CompetitionDTO.cs" />
-    <Compile Include="Business\DTO\CompetitionTypeDTO.cs" />
-    <Compile Include="Business\DTO\CompetitorDTO.cs" />
-    <Compile Include="Business\DTO\EventDTO.cs" />
-    <Compile Include="Business\DTO\KitStateDTO.cs" />
-    <Compile Include="Business\DTO\RegisterDTO.cs" />
-    <Compile Include="Business\DTO\RegisterStateDTO.cs" />
-    <Compile Include="Business\DTO\TeamDTO.cs" />
-    <Compile Include="Business\DTO\TimeRegDTO.cs" />
+    <Compile Include="Business\Adapters\Competitors\AuthenticationAdapter.cs" />
+    <Compile Include="Business\Adapters\Events\CategoryAdapter.cs" />
+    <Compile Include="Business\Adapters\Events\CompetitionAdapter.cs" />
+    <Compile Include="Business\Adapters\Events\CompetitionTypeAdapter.cs" />
+    <Compile Include="Business\Adapters\Competitors\CompetitorAdapter.cs" />
+    <Compile Include="Business\Adapters\Events\EventAdapter.cs" />
+    <Compile Include="Business\Adapters\Events\GaleryAdapter.cs" />
+    <Compile Include="Business\Adapters\Events\PriceAdapter.cs" />
+    <Compile Include="Business\Adapters\Users\RolAdapter.cs" />
+    <Compile Include="Business\Adapters\Users\UserAdapter.cs" />
+    <Compile Include="Business\Adapters\Users\UserSystemAdapter.cs" />
+    <Compile Include="Business\DTO\Events\PriceDTO.cs" />
+    <Compile Include="Data\Events\Price.cs" />
+    <Compile Include="Business\Adapters\States\KitStateAdapter.cs" />
+    <Compile Include="Business\Adapters\Competitors\RegisterAdapter.cs" />
+    <Compile Include="Business\Adapters\States\RegisterStateAdapter.cs" />
+    <Compile Include="Business\Adapters\Competitors\TeamAdapter.cs" />
+    <Compile Include="Business\Adapters\Competitors\TimeRegAdapter.cs" />
+    <Compile Include="Business\DTO\Competitors\AuthenticationDTO.cs" />
+    <Compile Include="Business\DTO\Events\CategoryDTO.cs" />
+    <Compile Include="Business\DTO\Events\CompetitionDTO.cs" />
+    <Compile Include="Business\DTO\Events\CompetitionTypeDTO.cs" />
+    <Compile Include="Business\DTO\Competitors\CompetitorDTO.cs" />
+    <Compile Include="Business\DTO\Events\EventDTO.cs" />
+    <Compile Include="Business\DTO\Events\GaleryDTO.cs" />
+    <Compile Include="Business\DTO\States\KitStateDTO.cs" />
+    <Compile Include="Business\DTO\Competitors\RegisterDTO.cs" />
+    <Compile Include="Business\DTO\States\RegisterStateDTO.cs" />
+    <Compile Include="Business\DTO\Users\RolDTO.cs" />
+    <Compile Include="Business\DTO\Competitors\TeamDTO.cs" />
+    <Compile Include="Business\DTO\Competitors\TimeRegDTO.cs" />
+    <Compile Include="Business\DTO\Users\UserDTO.cs" />
+    <Compile Include="Business\DTO\Users\UserSystemDTO.cs" />
     <Compile Include="Business\Implementations\Competitors\AuthenticationService.cs" />
     <Compile Include="Business\Implementations\Competitors\CompetitorService.cs" />
     <Compile Include="Business\Implementations\Competitors\RegisterService.cs" />
@@ -202,6 +216,7 @@
     <Compile Include="Data\Events\Competition.cs" />
     <Compile Include="Data\Events\CompetitionType.cs" />
     <Compile Include="Data\Events\Event.cs" />
+    <Compile Include="Data\Events\Galery.cs" />
     <Compile Include="Data\States\KitState.cs" />
     <Compile Include="Data\States\RegisterState.cs" />
     <Compile Include="Data\Users\Rol.cs" />
@@ -617,7 +632,6 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.5.2">
       <Visible>False</Visible>
@@ -651,6 +665,7 @@
     <Content Include="Resources\Images\three115.png" />
     <Content Include="Resources\Images\trash.png" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

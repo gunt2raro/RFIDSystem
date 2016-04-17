@@ -33,7 +33,7 @@ namespace RFIDSystemTest.Business.Adapters
             dto.categories = competition.categories;
             dto.image_url = competition.image_url;
             dto.user = competition.user;
-
+            dto.cost = competition.cost;
             dto.timestamp = DataConvert.DateTimeToJsonString(competition.timestamp);
             dto.updated = DataConvert.DateTimeToJsonString(competition.updated);
 
@@ -55,7 +55,7 @@ namespace RFIDSystemTest.Business.Adapters
                 categories = dto.categories,
                 image_url = dto.image_url,
                 user = dto.user,
-
+                cost=dto.cost,
                 timestamp = DataConvert.StringJsonToDateTime(dto.timestamp),
                 updated = DataConvert.StringJsonToDateTime(dto.updated),
             };

@@ -24,6 +24,7 @@ namespace RFIDSystemTest.Data.Events
         public int competition_type { get; set; }
         public int competitors_limit { get; set; }
         public int competition_event { get; set; }
+        public float cost { get; set; } 
 
         public DateTime timestamp { get; set; }
         public DateTime updated { get; set; }
