@@ -27,6 +27,10 @@ namespace RFIDSystemTest.Warriror
             return sb.ToString();
         }// End of Create Url function
 
+        /// <summary>
+        /// Get authentication string
+        /// </summary>
+        /// <returns></returns>
         public string GetAuthenticationString( ) {
             StringBuilder sb = new StringBuilder();
             sb.Append( "Basic " )

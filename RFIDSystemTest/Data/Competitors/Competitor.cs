@@ -19,7 +19,7 @@ namespace RFIDSystemTest.Data.Competitors
         public DateTime birth_date { get; set; }
         public string city { get; set; }
         public string state { get; set; }
-        public string country { get; set; }
+        public string country { get; set; } 
         public int zip_code { get; set; }
         public string address { get; set; }
         public string address2 { get; set; }
