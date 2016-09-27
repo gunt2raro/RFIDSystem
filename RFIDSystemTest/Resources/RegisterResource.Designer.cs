@@ -115,6 +115,24 @@ namespace RFIDSystemTest.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Sex.
+        /// </summary>
+        public static string lSex {
+            get {
+                return ResourceManager.GetString("lSex", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Team.
+        /// </summary>
+        public static string lTeam {
+            get {
+                return ResourceManager.GetString("lTeam", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Competitor.
         /// </summary>
         public static string lTitCompetitor {

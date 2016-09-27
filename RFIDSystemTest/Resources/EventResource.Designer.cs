@@ -169,6 +169,42 @@ namespace RFIDSystemTest.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Address.
+        /// </summary>
+        public static string lAddress {
+            get {
+                return ResourceManager.GetString("lAddress", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Event type.
+        /// </summary>
+        public static string lEventType {
+            get {
+                return ResourceManager.GetString("lEventType", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Organizer.
+        /// </summary>
+        public static string lOrginizer {
+            get {
+                return ResourceManager.GetString("lOrginizer", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Ubication.
+        /// </summary>
+        public static string lUbication {
+            get {
+                return ResourceManager.GetString("lUbication", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Name.
         /// </summary>
         public static string name {

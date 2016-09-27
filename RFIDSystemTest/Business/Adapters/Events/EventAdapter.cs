@@ -31,7 +31,11 @@ namespace RFIDSystemTest.Business.Adapters
             dto.image_url = event_o.image_url;
             dto.name = event_o.name;
             dto.user = event_o.user;
-            
+            dto.address = event_o.address;
+            dto.event_type = event_o.event_type;
+            dto.orginizer = event_o.orginizer;
+            dto.ubication = event_o.ubication;
+
             return dto;
 
         }
@@ -47,9 +51,12 @@ namespace RFIDSystemTest.Business.Adapters
             obj.image_url = event_dto.image_url;
             obj.name = event_dto.name;
             obj.user = event_dto.user;
-
+            obj.address = event_dto.address;
+            obj.event_type = event_dto.event_type;
+            obj.orginizer = event_dto.orginizer;
+            obj.ubication = event_dto.ubication;
+            // Return this shit
             return obj;
-
         }// End of Object To DTO function
 
         public static IList<EventDTO> ObjectsToDTOs(IList<Event> objs)

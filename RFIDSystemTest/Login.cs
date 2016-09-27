@@ -1,4 +1,5 @@
 ﻿using Ninject;
+using RFIDSystemTest;
 using RFIDSystemTest.Business.Implementations.Users;
 using RFIDSystemTest.Business.Interfaces;
 using RFIDSystemTest.Data;

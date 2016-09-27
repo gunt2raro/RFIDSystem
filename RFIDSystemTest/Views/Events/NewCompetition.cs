@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using RFIDSystemTest.Data.Events;
 using RFIDSystemTest.Warriror;
 using RFIDSystemTest.Helpers;
+using RFIDSystemTest.Resources;
 
 namespace RFIDSystemTest.Views.Events
 {
@@ -19,6 +20,7 @@ namespace RFIDSystemTest.Views.Events
     public partial class NewCompetition : UserControl
     {
         private EventControl event_control;
+        public Image image;
         public int event_id { get; set; }
         // Categories shit
         private IList<Category> cats;
@@ -38,6 +40,8 @@ namespace RFIDSystemTest.Views.Events
             InitializeComponent();
 
             this.event_control = event_control;
+            openFileDialog1.Title = "Open Image";
+            openFileDialog1.Filter = "Image files (*.jpg, *.jpeg, *.jpe, *.jfif, *.png) | *.jpg; *.jpeg; *.jpe; *.jfif; *.png";
 
         }// End of Constructor function
 
@@ -106,7 +110,32 @@ namespace RFIDSystemTest.Views.Events
         /// <param name="e"></param>
         private void bAdd_Click(object sender, EventArgs e)
         {
-            event_control.competition_service.addCompetition( createObject(), null );
+            Competition comp = event_control.competition_service.addCompetition( createObject(), null );
+
+            if (event_control != null)
+            {
+                if (image != null)
+                {
+                    comp = event_control.competition_service.ImageToCompetition(comp, image, null);
+
+                    if (comp != null)
+                    {
+                        ControlHelper.SuccessBox(SuccessResource.AddSuccessful);
+                    }
+                    else
+                    {
+                        ControlHelper.ErrorBox("There was an error sending the image", 500);
+                    }
+                }
+                else
+                {
+                    ControlHelper.SuccessBox( SuccessResource.AddSuccessful );
+                }
+            }
+            else
+            {
+                ControlHelper.ErrorBox( ErrorResource.AddingError, 404 );
+            }
         }// End of bAdd_Click function
 
         /// <summary>
@@ -125,7 +154,9 @@ namespace RFIDSystemTest.Views.Events
             c.categories = getChoosedCategories();
             c.competition_type = getChoosedCompetitionType();
             c.competition_event = event_id;
-
+            c.user = 1;
+            c.image_url = "";
+            c.cost = (int)nudCompetitorsLimit.Value;
             return c;
 
         }// End of createObject function
@@ -224,5 +255,16 @@ namespace RFIDSystemTest.Views.Events
             cbCompetitiontype.DataSource = competition_types_strings.ToList();
         }// End of fillcbCompetitionType function
 
+        private void bImage_Click(object sender, EventArgs e)
+        {
+            // Show the dialog and get result.
+            DialogResult result = openFileDialog1.ShowDialog();
+            if (result == DialogResult.OK) // Test result.
+            {
+                image = new Bitmap(openFileDialog1.FileName);
+                pictureBox1.Image = image;
+            }
+            Console.WriteLine(result); // <-- For debugging use.
+        }
     }// End of NewCompetitionControl class
 }

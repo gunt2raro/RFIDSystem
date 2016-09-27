@@ -22,6 +22,9 @@ namespace RFIDSystemTest.Data.Events
         public string image_url { get; set; }
         public DateTime date_limit { get; set; }
         public int competitors_limit  { get; set; }
-
+        public string ubication { get; set; }
+        public int event_type { get; set; }
+        public string orginizer { get; set; }
+        public string address { get; set; }
     }// End of Event class
 }

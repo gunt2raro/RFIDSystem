@@ -16,10 +16,6 @@ namespace RFIDSystemTest.Views.VO
         public int id { get; set; }
         [DisplayName("Name")]
         public string name { get; set; }
-        [DisplayName("Start Date")]
-        public DateTime date_start { get; set; }
-        [DisplayName("Finish Date")]
-        public DateTime date_finish { get; set; }
         [DisplayName("Limit Date")]
         public DateTime date_limit { get; set; }
         [DisplayName("Competitors")]

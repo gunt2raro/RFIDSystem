@@ -158,7 +158,12 @@ namespace RFIDSystemTest.Business.Implementations.Competitors
         /// <returns></returns>
         public IList<Register> getRegistersByCompetition(Competition competition, UserSystem user_log)
         {
-            throw new NotImplementedException();
+            return http_service.JSONHttpPettitionList<Register>(
+                HttpMethod.GET,
+                string.Format(
+                    "register/bycompetition/?competition_id={0}",
+                    competition.id),
+                null);
         }// End of getRegistersByCompetition function
 
         /// <summary>

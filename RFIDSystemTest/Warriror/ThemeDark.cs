@@ -74,7 +74,7 @@ namespace RFIDSystemTest.Warriror
                     Button b = (Button)c;
                     b.BackColor = Color.FromArgb(255, 255, 255);
                     b.ForeColor = Color.FromArgb(190, 187, 187);
-                    b.Font = new Font("Segoe UI", 15, FontStyle.Regular, GraphicsUnit.World);
+                    b.Font = new Font("Segoe UI", 12, FontStyle.Regular, GraphicsUnit.World);
 
                     b.FlatStyle = FlatStyle.Flat;
                     b.FlatAppearance.BorderColor = Color.FromArgb(192, 192, 192);
@@ -114,7 +114,7 @@ namespace RFIDSystemTest.Warriror
                     Button b = (Button)c;
                     b.BackColor = Color.FromArgb(255, 255, 255);
                     b.ForeColor = Color.FromArgb(190, 187, 187);
-                    b.Font = new Font("Segoe UI", 15, FontStyle.Regular, GraphicsUnit.World);
+                    b.Font = new Font("Segoe UI", 12, FontStyle.Regular, GraphicsUnit.World);
 
                     b.FlatStyle = FlatStyle.Flat;
                     b.FlatAppearance.BorderColor = Color.FromArgb(192, 192, 192);
@@ -156,7 +156,7 @@ namespace RFIDSystemTest.Warriror
                     Button b = (Button)c;
                     b.BackColor = Color.FromArgb(34, 34, 34);
                     b.ForeColor = Color.FromArgb(255, 255, 255);
-                    b.Font = new Font("Segoe UI", 15, FontStyle.Bold, GraphicsUnit.World);
+                    b.Font = new Font("Segoe UI", 12, FontStyle.Bold, GraphicsUnit.World);
                     b.FlatAppearance.BorderSize = 0;
                     b.FlatStyle = FlatStyle.Flat;
                     if (b.Image != null && b.ImageAlign != ContentAlignment.BottomLeft && b.ImageAlign != ContentAlignment.MiddleRight)
@@ -195,7 +195,7 @@ namespace RFIDSystemTest.Warriror
                     Button b = (Button)c;
                     b.BackColor = Color.FromArgb(34, 34, 34);
                     b.ForeColor = Color.FromArgb(255, 255, 255);
-                    b.Font = new Font("Segoe UI", 15, FontStyle.Bold, GraphicsUnit.World);
+                    b.Font = new Font("Segoe UI", 12, FontStyle.Bold, GraphicsUnit.World);
                     b.FlatAppearance.BorderSize = 0;
                     b.FlatStyle = FlatStyle.Flat;
 
@@ -234,7 +234,7 @@ namespace RFIDSystemTest.Warriror
                 {
                     Label l = (Label)c;
                     l.ForeColor = Color.FromArgb(148, 165, 181);
-                    l.Font = new Font("Segoe UI", 40, FontStyle.Regular, GraphicsUnit.Document);
+                    l.Font = new Font("Segoe UI", 20, FontStyle.Regular, GraphicsUnit.Document);
                 }
             }
 
@@ -256,7 +256,7 @@ namespace RFIDSystemTest.Warriror
                 {
                     Label l = (Label)c;
                     l.ForeColor = Color.FromArgb(148, 165, 181);
-                    l.Font = new Font("Segoe UI", 40, FontStyle.Regular, GraphicsUnit.Document);
+                    l.Font = new Font("Segoe UI", 20, FontStyle.Regular, GraphicsUnit.Document);
                 }
             }
 

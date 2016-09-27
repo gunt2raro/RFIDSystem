@@ -21,6 +21,8 @@ namespace RFIDSystemTest.Views.Events
     {
         public EventControl event_control;
         public Image image;
+        public IList<EventType> event_types;
+        public IList<string> event_types_strings;
 
         /// <summary>
         /// Constructor
@@ -126,10 +128,25 @@ namespace RFIDSystemTest.Views.Events
             eve.date_limit = dtDateLimit.Value;
             eve.competitors_limit = (int)nudCompetitorsLimit.Value;
             eve.image_url = "";
+            eve.user = 1;
+            eve.event_type = getEventTypeId();
+            eve.orginizer = txtOrginizer.Text;
+            eve.ubication = txtUbication.Text;
+            eve.address = txtAddress.Text;
             // Return the event
             return eve;
-
         }// End of createObject function
+
+        /// <summary>
+        /// Get event id from the selected combo box
+        /// </summary>
+        /// <returns></returns>
+        private int getEventTypeId()
+        {
+            return event_types.Where(
+                event_type =>
+                    event_type.name == cbEventType.SelectedItem.ToString()).First().id;
+        }// End of getEventTypeId function
 
         /// <summary>
         /// New Event load
@@ -139,6 +156,7 @@ namespace RFIDSystemTest.Views.Events
         private void NewEvent_Load(object sender, EventArgs e)
         {
             ThemeShit();
+            fillcbEventType();
             lName.Text = EventResource.name;
             lDescription.Text = EventResource.description;
             lDateStart.Text = EventResource.date_start;
@@ -146,6 +164,11 @@ namespace RFIDSystemTest.Views.Events
             lDateLimit.Text = EventResource.date_limit;
             lCompetitorsLimit.Text = EventResource.competitors_limit;
             bCancel.Text = EventResource.bCancel;
+            lUbication.Text = EventResource.lUbication;
+            lAddress.Text = EventResource.lAddress;
+            lOrginizer.Text = EventResource.lOrginizer;
+            lEventType.Text = EventResource.lEventType;
+            
         }// End of NewEvent_Load function
 
         /// <summary>
@@ -173,6 +196,20 @@ namespace RFIDSystemTest.Views.Events
             }
             Console.WriteLine(result); // <-- For debugging use.
         }// End of bImage_Click function
+
+        /// <summary>
+        /// Fill combo box of competition types
+        /// </summary>
+        public void fillcbEventType()
+        {
+            event_types = event_control.event_service.getAllEventTypes(null, null);
+            event_types_strings = new List<string>();
+            foreach (EventType et in event_types)
+            {
+                event_types_strings.Add(et.name);
+            }
+            cbEventType.DataSource = event_types_strings.ToList();
+        }// End of fillcbCompetitionType function
 
     }// End of New Event control class
 } 

@@ -3,6 +3,7 @@ using RFIDSystemTest.Data.Events;
 using RFIDSystemTest.Data.Users;
 using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -25,6 +26,6 @@ namespace RFIDSystemTest.Business.Interfaces.Events
         Competition addCompetition(Competition competition, UserSystem user_log);
         Competition updateCompetition(Competition competition, UserSystem user_log);
         bool deleteCompetition(Competition competition, UserSystem user_log);
-        
+        Competition ImageToCompetition(Competition competition, Image img, UserSystem user_log);
     }//End of ICompetitionService interface
 }

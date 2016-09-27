@@ -19,6 +19,10 @@ namespace RFIDSystemTest.Business.DTO
         public string image_url { get; set; }
         public string date_limit { get; set; }
         public int competitors_limit { get; set; }
+        public int event_type { get; set; }
+        public string address { get; set; }
+        public string ubication { get; set; }
+        public string orginizer { get; set; }
 
     }// End of Event DTO class
 }

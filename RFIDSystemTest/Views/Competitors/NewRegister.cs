@@ -37,6 +37,8 @@ namespace RFIDSystemTest.Views.Competitors
         private IList<string> kit_states_strings;
         private IList<RegisterState> register_states;
         private IList<string> register_states_strings;
+        private IList<Team> teams;
+        private IList<string> teams_strings;
         private IEnumerable<Competitor> competitors;
 
         /// <summary>
@@ -98,6 +100,8 @@ namespace RFIDSystemTest.Views.Competitors
             loadKitStates();
             // load competitor number
             loadCompetitorNum();
+            // load teams
+            loadTeams();
         }// End of loadData function
 
         /// <summary>
@@ -105,7 +109,8 @@ namespace RFIDSystemTest.Views.Competitors
         /// </summary>
         private void loadCompetitorNum()
         {
-            lCompetitorNumberDes.Text = event_control.register_service.getCompetitorNum( competition_id, null ).ToString();
+            lCompetitorNumberDes.Text = event_control.register_service.getCompetitorNum(competition_id, null).ToString();
+            txtCompetitorNum.Text = event_control.register_service.getCompetitorNum(competition_id, null).ToString();
         }// End of loadCompetitorNum function
 
         /// <summary>
@@ -114,8 +119,8 @@ namespace RFIDSystemTest.Views.Competitors
         public void ThemeShit()
         {
             ThemeDark.ResponsiveDesign(this, Parent.Parent, 1, 1);
-            ThemeDark.SetButtonsTheme(this);
-            ThemeDark.SetLabelsTheme(this);
+            //ThemeDark.SetButtonsTheme(this);
+            //ThemeDark.SetLabelsTheme(this);
         }// end of ThemeShit function
 
         /// <summary>
@@ -135,6 +140,8 @@ namespace RFIDSystemTest.Views.Competitors
             lKitState.Text = RegisterResource.kit_state;
             lTitCompetitor.Text = RegisterResource.lTitCompetitor;
             lTitRegister.Text = RegisterResource.lTitRegister;
+            lTeam.Text = RegisterResource.lTeam;
+            lSex.Text = RegisterResource.lSex;
         }// End of loadResources function
 
         /// <summary>
@@ -154,6 +161,23 @@ namespace RFIDSystemTest.Views.Competitors
             // Set the data source to the combo box
             cbCategory.DataSource = categories_strings.ToList();
         }// End of loadCategories function
+
+        /// <summary>
+        /// Load all the teams
+        /// </summary>
+        private void loadTeams() {
+            // Init lists
+            teams = event_control.team_service.getAll(null).ToList();
+            teams_strings = new List<string>();
+            // Add the string names of the register states
+            foreach (Team t in teams)
+            {
+                // Add the description
+                teams_strings.Add(t.name);
+            }// End of register states interation
+            // Set the data source to the combo box
+            cbTeam.DataSource = teams_strings.ToList();
+        }// End of load teams function
 
         /// <summary>
         /// Load register state
@@ -327,6 +351,7 @@ namespace RFIDSystemTest.Views.Competitors
             comp.zip_code = int.Parse(txtZipCode.Text);
             comp.phone_number = txtPhoneNumber.Text;
             comp.sex = cbSex.SelectedItem.Equals("M") ? 0 : 1;
+            comp.user = 1;
             // REturn competitor object
             return comp;
         }// End of CreateCompetitorObject function
@@ -343,12 +368,25 @@ namespace RFIDSystemTest.Views.Competitors
             reg.category = getCategoryId();
             reg.competition = competition_id;
             reg.competitor = competitor_o.id;
-            reg.competitor_num = int.Parse(lCompetitorNumberDes.Text);
+            reg.competitor_num = int.Parse(txtCompetitorNum.Text);
             reg.kit_state = getKitStateId();
             reg.register_state = getRegisterStateId();
+            reg.team = getTeamId();
+            reg.user = 1;
             // Return register object
             return reg;
         }// End of createRegisterObject function
+
+        /// <summary>
+        /// Get team id 
+        /// </summary>
+        /// <returns></returns>
+        private int getTeamId()
+        {
+            return teams.Where(
+                team =>
+                    team.name == cbTeam.SelectedItem.ToString()).First().id;
+        }// End of get Team Id
 
         /// <summary>
         /// Get register state id

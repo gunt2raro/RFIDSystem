@@ -54,8 +54,16 @@
             this.lCity = new System.Windows.Forms.Label();
             this.lTitCompetitor = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.lSex = new System.Windows.Forms.Label();
+            this.lAddress2 = new System.Windows.Forms.Label();
+            this.cbSex = new System.Windows.Forms.ComboBox();
+            this.txtPhoneNumber = new System.Windows.Forms.TextBox();
+            this.txtAddress2 = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.lTeam = new System.Windows.Forms.Label();
+            this.cbTeam = new System.Windows.Forms.ComboBox();
             this.bRegisterAnother = new System.Windows.Forms.Button();
             this.bCancel = new System.Windows.Forms.Button();
             this.bRegister = new System.Windows.Forms.Button();
@@ -68,12 +76,7 @@
             this.cbKitState = new System.Windows.Forms.ComboBox();
             this.cbCategory = new System.Windows.Forms.ComboBox();
             this.lTitRegister = new System.Windows.Forms.Label();
-            this.txtPhoneNumber = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.lAddress2 = new System.Windows.Forms.Label();
-            this.txtAddress2 = new System.Windows.Forms.TextBox();
-            this.lSex = new System.Windows.Forms.Label();
-            this.cbSex = new System.Windows.Forms.ComboBox();
+            this.txtCompetitorNum = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataCompetitors)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -82,10 +85,9 @@
             // bSearch
             // 
             this.bSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bSearch.Location = new System.Drawing.Point(24, 194);
-            this.bSearch.Margin = new System.Windows.Forms.Padding(4);
+            this.bSearch.Location = new System.Drawing.Point(18, 155);
             this.bSearch.Name = "bSearch";
-            this.bSearch.Size = new System.Drawing.Size(482, 60);
+            this.bSearch.Size = new System.Drawing.Size(562, 48);
             this.bSearch.TabIndex = 52;
             this.bSearch.Text = "Search";
             this.bSearch.UseVisualStyleBackColor = true;
@@ -113,8 +115,7 @@
             this.dataCompetitors.DefaultCellStyle = dataGridViewCellStyle2;
             this.dataCompetitors.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
             this.dataCompetitors.GridColor = System.Drawing.Color.AliceBlue;
-            this.dataCompetitors.Location = new System.Drawing.Point(24, 288);
-            this.dataCompetitors.Margin = new System.Windows.Forms.Padding(4);
+            this.dataCompetitors.Location = new System.Drawing.Point(18, 230);
             this.dataCompetitors.MultiSelect = false;
             this.dataCompetitors.Name = "dataCompetitors";
             this.dataCompetitors.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Sunken;
@@ -128,35 +129,34 @@
             this.dataCompetitors.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dataCompetitors.RowTemplate.Height = 28;
             this.dataCompetitors.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataCompetitors.Size = new System.Drawing.Size(482, 797);
+            this.dataCompetitors.Size = new System.Drawing.Size(562, 638);
             this.dataCompetitors.TabIndex = 51;
             this.dataCompetitors.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataCompetitors_CellContentDoubleClick);
             // 
             // txtSearch
             // 
             this.txtSearch.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSearch.Location = new System.Drawing.Point(24, 118);
+            this.txtSearch.Location = new System.Drawing.Point(18, 94);
+            this.txtSearch.Margin = new System.Windows.Forms.Padding(2);
             this.txtSearch.Name = "txtSearch";
-            this.txtSearch.Size = new System.Drawing.Size(482, 50);
+            this.txtSearch.Size = new System.Drawing.Size(562, 39);
             this.txtSearch.TabIndex = 53;
             // 
             // txtEmail
             // 
             this.txtEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtEmail.Location = new System.Drawing.Point(236, 291);
-            this.txtEmail.Margin = new System.Windows.Forms.Padding(4);
+            this.txtEmail.Location = new System.Drawing.Point(177, 233);
             this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(323, 44);
+            this.txtEmail.Size = new System.Drawing.Size(243, 35);
             this.txtEmail.TabIndex = 61;
             // 
             // lEmail
             // 
             this.lEmail.AutoSize = true;
             this.lEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lEmail.Location = new System.Drawing.Point(95, 298);
-            this.lEmail.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lEmail.Location = new System.Drawing.Point(71, 238);
             this.lEmail.Name = "lEmail";
-            this.lEmail.Size = new System.Drawing.Size(104, 37);
+            this.lEmail.Size = new System.Drawing.Size(80, 29);
             this.lEmail.TabIndex = 60;
             this.lEmail.Text = "lEmail";
             // 
@@ -164,10 +164,9 @@
             // 
             this.lBirthDate.AutoSize = true;
             this.lBirthDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lBirthDate.Location = new System.Drawing.Point(591, 294);
-            this.lBirthDate.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lBirthDate.Location = new System.Drawing.Point(672, 235);
             this.lBirthDate.Name = "lBirthDate";
-            this.lBirthDate.Size = new System.Drawing.Size(157, 37);
+            this.lBirthDate.Size = new System.Drawing.Size(118, 29);
             this.lBirthDate.TabIndex = 59;
             this.lBirthDate.Text = "lBirthDate";
             // 
@@ -176,29 +175,26 @@
             this.dtBirthDate.CustomFormat = "yyyy-dd-MM";
             this.dtBirthDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtBirthDate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtBirthDate.Location = new System.Drawing.Point(785, 288);
-            this.dtBirthDate.Margin = new System.Windows.Forms.Padding(4);
+            this.dtBirthDate.Location = new System.Drawing.Point(818, 230);
             this.dtBirthDate.Name = "dtBirthDate";
-            this.dtBirthDate.Size = new System.Drawing.Size(323, 44);
+            this.dtBirthDate.Size = new System.Drawing.Size(243, 35);
             this.dtBirthDate.TabIndex = 58;
             // 
             // txtSecondName
             // 
             this.txtSecondName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSecondName.Location = new System.Drawing.Point(785, 217);
-            this.txtSecondName.Margin = new System.Windows.Forms.Padding(4);
+            this.txtSecondName.Location = new System.Drawing.Point(818, 174);
             this.txtSecondName.Name = "txtSecondName";
-            this.txtSecondName.Size = new System.Drawing.Size(323, 44);
+            this.txtSecondName.Size = new System.Drawing.Size(243, 35);
             this.txtSecondName.TabIndex = 57;
             // 
             // lSecondName
             // 
             this.lSecondName.AutoSize = true;
             this.lSecondName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lSecondName.Location = new System.Drawing.Point(554, 221);
-            this.lSecondName.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lSecondName.Location = new System.Drawing.Point(645, 177);
             this.lSecondName.Name = "lSecondName";
-            this.lSecondName.Size = new System.Drawing.Size(218, 37);
+            this.lSecondName.Size = new System.Drawing.Size(167, 29);
             this.lSecondName.TabIndex = 56;
             this.lSecondName.Text = "lSecondName";
             // 
@@ -206,75 +202,67 @@
             // 
             this.lName.AutoSize = true;
             this.lName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lName.Location = new System.Drawing.Point(626, 154);
-            this.lName.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lName.Location = new System.Drawing.Point(699, 123);
             this.lName.Name = "lName";
-            this.lName.Size = new System.Drawing.Size(110, 37);
+            this.lName.Size = new System.Drawing.Size(84, 29);
             this.lName.TabIndex = 55;
             this.lName.Text = "lName";
             // 
             // txtName
             // 
             this.txtName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtName.Location = new System.Drawing.Point(785, 147);
-            this.txtName.Margin = new System.Windows.Forms.Padding(4);
+            this.txtName.Location = new System.Drawing.Point(818, 118);
             this.txtName.Name = "txtName";
-            this.txtName.Size = new System.Drawing.Size(323, 44);
+            this.txtName.Size = new System.Drawing.Size(243, 35);
             this.txtName.TabIndex = 54;
             // 
             // txtAddress
             // 
             this.txtAddress.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtAddress.Location = new System.Drawing.Point(1307, 360);
-            this.txtAddress.Margin = new System.Windows.Forms.Padding(4);
+            this.txtAddress.Location = new System.Drawing.Point(1209, 288);
             this.txtAddress.Name = "txtAddress";
-            this.txtAddress.Size = new System.Drawing.Size(321, 44);
+            this.txtAddress.Size = new System.Drawing.Size(242, 35);
             this.txtAddress.TabIndex = 66;
             // 
             // txtZipCode
             // 
             this.txtZipCode.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtZipCode.Location = new System.Drawing.Point(758, 365);
-            this.txtZipCode.Margin = new System.Windows.Forms.Padding(4);
+            this.txtZipCode.Location = new System.Drawing.Point(568, 292);
             this.txtZipCode.Name = "txtZipCode";
-            this.txtZipCode.Size = new System.Drawing.Size(321, 44);
+            this.txtZipCode.Size = new System.Drawing.Size(242, 35);
             this.txtZipCode.TabIndex = 65;
             // 
             // txtCountry
             // 
             this.txtCountry.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCountry.Location = new System.Drawing.Point(1305, 293);
-            this.txtCountry.Margin = new System.Windows.Forms.Padding(4);
+            this.txtCountry.Location = new System.Drawing.Point(1208, 234);
             this.txtCountry.Name = "txtCountry";
-            this.txtCountry.Size = new System.Drawing.Size(323, 44);
+            this.txtCountry.Size = new System.Drawing.Size(243, 35);
             this.txtCountry.TabIndex = 64;
             // 
             // txtState
             // 
             this.txtState.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtState.Location = new System.Drawing.Point(1305, 214);
-            this.txtState.Margin = new System.Windows.Forms.Padding(4);
+            this.txtState.Location = new System.Drawing.Point(1208, 171);
             this.txtState.Name = "txtState";
-            this.txtState.Size = new System.Drawing.Size(323, 44);
+            this.txtState.Size = new System.Drawing.Size(243, 35);
             this.txtState.TabIndex = 63;
             // 
             // txtCity
             // 
             this.txtCity.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCity.Location = new System.Drawing.Point(1305, 143);
-            this.txtCity.Margin = new System.Windows.Forms.Padding(4);
+            this.txtCity.Location = new System.Drawing.Point(1208, 114);
             this.txtCity.Name = "txtCity";
-            this.txtCity.Size = new System.Drawing.Size(323, 44);
+            this.txtCity.Size = new System.Drawing.Size(243, 35);
             this.txtCity.TabIndex = 62;
             // 
             // lAddress
             // 
             this.lAddress.AutoSize = true;
             this.lAddress.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lAddress.Location = new System.Drawing.Point(1141, 363);
-            this.lAddress.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lAddress.Location = new System.Drawing.Point(1085, 290);
             this.lAddress.Name = "lAddress";
-            this.lAddress.Size = new System.Drawing.Size(142, 37);
+            this.lAddress.Size = new System.Drawing.Size(108, 29);
             this.lAddress.TabIndex = 71;
             this.lAddress.Text = "lAddress";
             // 
@@ -282,10 +270,9 @@
             // 
             this.lZipCode.AutoSize = true;
             this.lZipCode.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lZipCode.Location = new System.Drawing.Point(589, 368);
-            this.lZipCode.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lZipCode.Location = new System.Drawing.Point(442, 294);
             this.lZipCode.Name = "lZipCode";
-            this.lZipCode.Size = new System.Drawing.Size(145, 37);
+            this.lZipCode.Size = new System.Drawing.Size(112, 29);
             this.lZipCode.TabIndex = 70;
             this.lZipCode.Text = "lZipCode";
             // 
@@ -293,10 +280,9 @@
             // 
             this.lCountry.AutoSize = true;
             this.lCountry.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lCountry.Location = new System.Drawing.Point(1147, 295);
-            this.lCountry.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lCountry.Location = new System.Drawing.Point(1089, 236);
             this.lCountry.Name = "lCountry";
-            this.lCountry.Size = new System.Drawing.Size(136, 37);
+            this.lCountry.Size = new System.Drawing.Size(101, 29);
             this.lCountry.TabIndex = 69;
             this.lCountry.Text = "lCountry";
             // 
@@ -304,10 +290,9 @@
             // 
             this.lState.AutoSize = true;
             this.lState.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lState.Location = new System.Drawing.Point(1185, 217);
-            this.lState.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lState.Location = new System.Drawing.Point(1118, 174);
             this.lState.Name = "lState";
-            this.lState.Size = new System.Drawing.Size(98, 37);
+            this.lState.Size = new System.Drawing.Size(74, 29);
             this.lState.TabIndex = 68;
             this.lState.Text = "lState";
             // 
@@ -315,10 +300,9 @@
             // 
             this.lCity.AutoSize = true;
             this.lCity.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lCity.Location = new System.Drawing.Point(1190, 146);
-            this.lCity.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lCity.Location = new System.Drawing.Point(1121, 117);
             this.lCity.Name = "lCity";
-            this.lCity.Size = new System.Drawing.Size(78, 37);
+            this.lCity.Size = new System.Drawing.Size(59, 29);
             this.lCity.TabIndex = 67;
             this.lCity.Text = "lCity";
             // 
@@ -326,10 +310,9 @@
             // 
             this.lTitCompetitor.AutoSize = true;
             this.lTitCompetitor.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lTitCompetitor.Location = new System.Drawing.Point(598, 98);
-            this.lTitCompetitor.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lTitCompetitor.Location = new System.Drawing.Point(677, 78);
             this.lTitCompetitor.Name = "lTitCompetitor";
-            this.lTitCompetitor.Size = new System.Drawing.Size(174, 37);
+            this.lTitCompetitor.Size = new System.Drawing.Size(132, 29);
             this.lTitCompetitor.TabIndex = 72;
             this.lTitCompetitor.Text = "Competitor";
             // 
@@ -346,45 +329,128 @@
             this.panel1.Controls.Add(this.txtZipCode);
             this.panel1.Controls.Add(this.txtEmail);
             this.panel1.Controls.Add(this.lEmail);
-            this.panel1.Location = new System.Drawing.Point(548, 118);
+            this.panel1.Location = new System.Drawing.Point(640, 94);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1112, 443);
+            this.panel1.Size = new System.Drawing.Size(834, 355);
             this.panel1.TabIndex = 73;
+            // 
+            // lSex
+            // 
+            this.lSex.AutoSize = true;
+            this.lSex.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lSex.Location = new System.Drawing.Point(225, 190);
+            this.lSex.Name = "lSex";
+            this.lSex.Size = new System.Drawing.Size(60, 29);
+            this.lSex.TabIndex = 120;
+            this.lSex.Text = "lSex";
+            // 
+            // lAddress2
+            // 
+            this.lAddress2.AutoSize = true;
+            this.lAddress2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lAddress2.Location = new System.Drawing.Point(444, 241);
+            this.lAddress2.Name = "lAddress2";
+            this.lAddress2.Size = new System.Drawing.Size(121, 29);
+            this.lAddress2.TabIndex = 80;
+            this.lAddress2.Text = "lAddress2";
+            // 
+            // cbSex
+            // 
+            this.cbSex.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbSex.FormattingEnabled = true;
+            this.cbSex.Items.AddRange(new object[] {
+            "M",
+            "F"});
+            this.cbSex.Location = new System.Drawing.Point(310, 182);
+            this.cbSex.Margin = new System.Windows.Forms.Padding(2);
+            this.cbSex.Name = "cbSex";
+            this.cbSex.Size = new System.Drawing.Size(111, 40);
+            this.cbSex.TabIndex = 119;
+            // 
+            // txtPhoneNumber
+            // 
+            this.txtPhoneNumber.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPhoneNumber.Location = new System.Drawing.Point(177, 289);
+            this.txtPhoneNumber.Name = "txtPhoneNumber";
+            this.txtPhoneNumber.Size = new System.Drawing.Size(243, 35);
+            this.txtPhoneNumber.TabIndex = 80;
+            // 
+            // txtAddress2
+            // 
+            this.txtAddress2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtAddress2.Location = new System.Drawing.Point(568, 238);
+            this.txtAddress2.Name = "txtAddress2";
+            this.txtAddress2.Size = new System.Drawing.Size(242, 35);
+            this.txtAddress2.TabIndex = 79;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(71, 294);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(89, 29);
+            this.label1.TabIndex = 79;
+            this.label1.Text = "lPhone";
             // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(83)))), ((int)(((byte)(113)))), ((int)(((byte)(139)))));
-            this.panel2.Location = new System.Drawing.Point(548, 594);
+            this.panel2.Location = new System.Drawing.Point(640, 475);
+            this.panel2.Margin = new System.Windows.Forms.Padding(2);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1112, 34);
+            this.panel2.Size = new System.Drawing.Size(834, 27);
             this.panel2.TabIndex = 76;
             // 
             // panel3
             // 
             this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel3.Controls.Add(this.txtCompetitorNum);
+            this.panel3.Controls.Add(this.lTeam);
+            this.panel3.Controls.Add(this.cbTeam);
             this.panel3.Controls.Add(this.bRegisterAnother);
             this.panel3.Controls.Add(this.bCancel);
             this.panel3.Controls.Add(this.bRegister);
             this.panel3.Controls.Add(this.lRegisterState);
             this.panel3.Controls.Add(this.cbRegisterState);
-            this.panel3.Controls.Add(this.lCompetitorNumberDes);
             this.panel3.Controls.Add(this.lCompetitorNumber);
             this.panel3.Controls.Add(this.lKitState);
             this.panel3.Controls.Add(this.lCategory);
             this.panel3.Controls.Add(this.cbKitState);
             this.panel3.Controls.Add(this.cbCategory);
-            this.panel3.Location = new System.Drawing.Point(548, 662);
+            this.panel3.Location = new System.Drawing.Point(640, 530);
+            this.panel3.Margin = new System.Windows.Forms.Padding(2);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1112, 438);
+            this.panel3.Size = new System.Drawing.Size(834, 351);
             this.panel3.TabIndex = 77;
+            // 
+            // lTeam
+            // 
+            this.lTeam.AutoSize = true;
+            this.lTeam.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lTeam.Location = new System.Drawing.Point(124, 77);
+            this.lTeam.Name = "lTeam";
+            this.lTeam.Size = new System.Drawing.Size(82, 29);
+            this.lTeam.TabIndex = 116;
+            this.lTeam.Text = "lTeam";
+            // 
+            // cbTeam
+            // 
+            this.cbTeam.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbTeam.FormattingEnabled = true;
+            this.cbTeam.Location = new System.Drawing.Point(214, 71);
+            this.cbTeam.Margin = new System.Windows.Forms.Padding(2);
+            this.cbTeam.Name = "cbTeam";
+            this.cbTeam.Size = new System.Drawing.Size(325, 40);
+            this.cbTeam.TabIndex = 115;
             // 
             // bRegisterAnother
             // 
             this.bRegisterAnother.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bRegisterAnother.Location = new System.Drawing.Point(788, 193);
-            this.bRegisterAnother.Margin = new System.Windows.Forms.Padding(4);
+            this.bRegisterAnother.Location = new System.Drawing.Point(591, 154);
             this.bRegisterAnother.Name = "bRegisterAnother";
-            this.bRegisterAnother.Size = new System.Drawing.Size(291, 87);
+            this.bRegisterAnother.Size = new System.Drawing.Size(218, 70);
             this.bRegisterAnother.TabIndex = 114;
             this.bRegisterAnother.Text = "bRegisterAnother";
             this.bRegisterAnother.UseVisualStyleBackColor = true;
@@ -393,10 +459,9 @@
             // bCancel
             // 
             this.bCancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bCancel.Location = new System.Drawing.Point(788, 89);
-            this.bCancel.Margin = new System.Windows.Forms.Padding(4);
+            this.bCancel.Location = new System.Drawing.Point(591, 71);
             this.bCancel.Name = "bCancel";
-            this.bCancel.Size = new System.Drawing.Size(291, 87);
+            this.bCancel.Size = new System.Drawing.Size(218, 70);
             this.bCancel.TabIndex = 113;
             this.bCancel.Text = "bCancel";
             this.bCancel.UseVisualStyleBackColor = true;
@@ -405,10 +470,9 @@
             // bRegister
             // 
             this.bRegister.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bRegister.Location = new System.Drawing.Point(788, 300);
-            this.bRegister.Margin = new System.Windows.Forms.Padding(4);
+            this.bRegister.Location = new System.Drawing.Point(591, 240);
             this.bRegister.Name = "bRegister";
-            this.bRegister.Size = new System.Drawing.Size(291, 87);
+            this.bRegister.Size = new System.Drawing.Size(218, 70);
             this.bRegister.TabIndex = 79;
             this.bRegister.Text = "bRegister";
             this.bRegister.UseVisualStyleBackColor = true;
@@ -418,10 +482,9 @@
             // 
             this.lRegisterState.AutoSize = true;
             this.lRegisterState.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lRegisterState.Location = new System.Drawing.Point(59, 344);
-            this.lRegisterState.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lRegisterState.Location = new System.Drawing.Point(44, 275);
             this.lRegisterState.Name = "lRegisterState";
-            this.lRegisterState.Size = new System.Drawing.Size(215, 37);
+            this.lRegisterState.Size = new System.Drawing.Size(165, 29);
             this.lRegisterState.TabIndex = 112;
             this.lRegisterState.Text = "lRegisterState";
             // 
@@ -429,19 +492,20 @@
             // 
             this.cbRegisterState.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbRegisterState.FormattingEnabled = true;
-            this.cbRegisterState.Location = new System.Drawing.Point(287, 334);
+            this.cbRegisterState.Location = new System.Drawing.Point(215, 267);
+            this.cbRegisterState.Margin = new System.Windows.Forms.Padding(2);
             this.cbRegisterState.Name = "cbRegisterState";
-            this.cbRegisterState.Size = new System.Drawing.Size(432, 53);
+            this.cbRegisterState.Size = new System.Drawing.Size(325, 40);
             this.cbRegisterState.TabIndex = 111;
             // 
             // lCompetitorNumberDes
             // 
             this.lCompetitorNumberDes.AutoSize = true;
             this.lCompetitorNumberDes.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lCompetitorNumberDes.Location = new System.Drawing.Point(367, 76);
-            this.lCompetitorNumberDes.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lCompetitorNumberDes.ForeColor = System.Drawing.Color.Red;
+            this.lCompetitorNumberDes.Location = new System.Drawing.Point(1206, 499);
             this.lCompetitorNumberDes.Name = "lCompetitorNumberDes";
-            this.lCompetitorNumberDes.Size = new System.Drawing.Size(352, 37);
+            this.lCompetitorNumberDes.Size = new System.Drawing.Size(268, 29);
             this.lCompetitorNumberDes.TabIndex = 110;
             this.lCompetitorNumberDes.Text = "lCompetitorNumberDes";
             // 
@@ -449,10 +513,9 @@
             // 
             this.lCompetitorNumber.AutoSize = true;
             this.lCompetitorNumber.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lCompetitorNumber.Location = new System.Drawing.Point(59, 76);
-            this.lCompetitorNumber.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lCompetitorNumber.Location = new System.Drawing.Point(314, 18);
             this.lCompetitorNumber.Name = "lCompetitorNumber";
-            this.lCompetitorNumber.Size = new System.Drawing.Size(296, 37);
+            this.lCompetitorNumber.Size = new System.Drawing.Size(225, 29);
             this.lCompetitorNumber.TabIndex = 79;
             this.lCompetitorNumber.Text = "lCompetitorNumber";
             // 
@@ -460,10 +523,9 @@
             // 
             this.lKitState.AutoSize = true;
             this.lKitState.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lKitState.Location = new System.Drawing.Point(139, 265);
-            this.lKitState.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lKitState.Location = new System.Drawing.Point(104, 212);
             this.lKitState.Name = "lKitState";
-            this.lKitState.Size = new System.Drawing.Size(135, 37);
+            this.lKitState.Size = new System.Drawing.Size(102, 29);
             this.lKitState.TabIndex = 109;
             this.lKitState.Text = "lKitState";
             // 
@@ -471,10 +533,9 @@
             // 
             this.lCategory.AutoSize = true;
             this.lCategory.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lCategory.Location = new System.Drawing.Point(121, 183);
-            this.lCategory.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lCategory.Location = new System.Drawing.Point(91, 146);
             this.lCategory.Name = "lCategory";
-            this.lCategory.Size = new System.Drawing.Size(153, 37);
+            this.lCategory.Size = new System.Drawing.Size(116, 29);
             this.lCategory.TabIndex = 79;
             this.lCategory.Text = "lCategory";
             // 
@@ -482,97 +543,43 @@
             // 
             this.cbKitState.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbKitState.FormattingEnabled = true;
-            this.cbKitState.Location = new System.Drawing.Point(287, 255);
+            this.cbKitState.Location = new System.Drawing.Point(215, 204);
+            this.cbKitState.Margin = new System.Windows.Forms.Padding(2);
             this.cbKitState.Name = "cbKitState";
-            this.cbKitState.Size = new System.Drawing.Size(432, 53);
+            this.cbKitState.Size = new System.Drawing.Size(325, 40);
             this.cbKitState.TabIndex = 108;
             // 
             // cbCategory
             // 
             this.cbCategory.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbCategory.FormattingEnabled = true;
-            this.cbCategory.Location = new System.Drawing.Point(287, 173);
+            this.cbCategory.Location = new System.Drawing.Point(215, 138);
+            this.cbCategory.Margin = new System.Windows.Forms.Padding(2);
             this.cbCategory.Name = "cbCategory";
-            this.cbCategory.Size = new System.Drawing.Size(432, 53);
+            this.cbCategory.Size = new System.Drawing.Size(325, 40);
             this.cbCategory.TabIndex = 107;
             // 
             // lTitRegister
             // 
             this.lTitRegister.AutoSize = true;
             this.lTitRegister.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lTitRegister.Location = new System.Drawing.Point(591, 639);
-            this.lTitRegister.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lTitRegister.Location = new System.Drawing.Point(672, 511);
             this.lTitRegister.Name = "lTitRegister";
-            this.lTitRegister.Size = new System.Drawing.Size(134, 37);
+            this.lTitRegister.Size = new System.Drawing.Size(104, 29);
             this.lTitRegister.TabIndex = 78;
             this.lTitRegister.Text = "Register";
             // 
-            // txtPhoneNumber
+            // txtCompetitorNum
             // 
-            this.txtPhoneNumber.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPhoneNumber.Location = new System.Drawing.Point(236, 361);
-            this.txtPhoneNumber.Margin = new System.Windows.Forms.Padding(4);
-            this.txtPhoneNumber.Name = "txtPhoneNumber";
-            this.txtPhoneNumber.Size = new System.Drawing.Size(323, 44);
-            this.txtPhoneNumber.TabIndex = 80;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(95, 368);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(116, 37);
-            this.label1.TabIndex = 79;
-            this.label1.Text = "lPhone";
-            // 
-            // lAddress2
-            // 
-            this.lAddress2.AutoSize = true;
-            this.lAddress2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lAddress2.Location = new System.Drawing.Point(592, 301);
-            this.lAddress2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lAddress2.Name = "lAddress2";
-            this.lAddress2.Size = new System.Drawing.Size(160, 37);
-            this.lAddress2.TabIndex = 80;
-            this.lAddress2.Text = "lAddress2";
-            // 
-            // txtAddress2
-            // 
-            this.txtAddress2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtAddress2.Location = new System.Drawing.Point(758, 298);
-            this.txtAddress2.Margin = new System.Windows.Forms.Padding(4);
-            this.txtAddress2.Name = "txtAddress2";
-            this.txtAddress2.Size = new System.Drawing.Size(321, 44);
-            this.txtAddress2.TabIndex = 79;
-            // 
-            // lSex
-            // 
-            this.lSex.AutoSize = true;
-            this.lSex.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lSex.Location = new System.Drawing.Point(300, 238);
-            this.lSex.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lSex.Name = "lSex";
-            this.lSex.Size = new System.Drawing.Size(77, 37);
-            this.lSex.TabIndex = 120;
-            this.lSex.Text = "lSex";
-            // 
-            // cbSex
-            // 
-            this.cbSex.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbSex.FormattingEnabled = true;
-            this.cbSex.Items.AddRange(new object[] {
-            "M",
-            "F"});
-            this.cbSex.Location = new System.Drawing.Point(413, 228);
-            this.cbSex.Name = "cbSex";
-            this.cbSex.Size = new System.Drawing.Size(147, 53);
-            this.cbSex.TabIndex = 119;
+            this.txtCompetitorNum.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCompetitorNum.Location = new System.Drawing.Point(591, 12);
+            this.txtCompetitorNum.Name = "txtCompetitorNum";
+            this.txtCompetitorNum.Size = new System.Drawing.Size(218, 35);
+            this.txtCompetitorNum.TabIndex = 121;
             // 
             // NewRegister
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.lTitRegister);
             this.Controls.Add(this.panel3);
@@ -582,6 +589,7 @@
             this.Controls.Add(this.lCountry);
             this.Controls.Add(this.lState);
             this.Controls.Add(this.lCity);
+            this.Controls.Add(this.lCompetitorNumberDes);
             this.Controls.Add(this.txtAddress);
             this.Controls.Add(this.txtCountry);
             this.Controls.Add(this.txtState);
@@ -596,8 +604,9 @@
             this.Controls.Add(this.bSearch);
             this.Controls.Add(this.dataCompetitors);
             this.Controls.Add(this.panel1);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "NewRegister";
-            this.Size = new System.Drawing.Size(1718, 1158);
+            this.Size = new System.Drawing.Size(1528, 926);
             this.Load += new System.EventHandler(this.NewRegister_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataCompetitors)).EndInit();
             this.panel1.ResumeLayout(false);
@@ -654,5 +663,8 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label lSex;
         private System.Windows.Forms.ComboBox cbSex;
+        private System.Windows.Forms.Label lTeam;
+        private System.Windows.Forms.ComboBox cbTeam;
+        private System.Windows.Forms.TextBox txtCompetitorNum;
     }
 }

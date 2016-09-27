@@ -74,6 +74,20 @@ namespace RFIDSystemTest.Business.Implementations.Events
         }// End of getAll function
 
         /// <summary>
+        /// Get all event types
+        /// </summary>
+        /// <param name="event_o"></param>
+        /// <param name="user_log"></param>
+        /// <returns></returns>
+        public IList<EventType> getAllEventTypes(Event event_o, UserSystem user_log)
+        {
+            return http_service.JSONHttpPettitionList<EventType>(
+                HttpMethod.GET,
+                "eventtype",
+                null);
+        }// End of getAllEventTypes function
+
+        /// <summary>
         /// Get by data
         /// </summary>
         /// <param name="date"></param>
@@ -148,7 +162,6 @@ namespace RFIDSystemTest.Business.Implementations.Events
                    JsonConvert.SerializeObject(
                        EventAdapter.ObjectToDTO(event_o)));
         }// End of updateEvent function
-
         
     }// End of EventRepository class
 }

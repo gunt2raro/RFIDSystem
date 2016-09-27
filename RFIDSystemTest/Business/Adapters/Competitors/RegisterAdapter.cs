@@ -31,14 +31,18 @@ namespace RFIDSystemTest.Business.Adapters
             dto.register_state = register.register_state;
             dto.team = register.team;
             dto.user = register.user;
-
-
-
+            
             dto.timestamp = DataConvert.DateTimeToJsonString(register.timestamp);
             dto.timestamp = DataConvert.DateTimeToJsonString(register.timestamp);
+
             return dto;
         }// End of ObjectToDTO function
 
+        /// <summary>
+        /// DTO To object conversion
+        /// </summary>
+        /// <param name="dto"></param>
+        /// <returns></returns>
         public static Register DTOToObject(RegisterDTO dto)
         {
             Register obj = new Register();
@@ -55,8 +59,13 @@ namespace RFIDSystemTest.Business.Adapters
             obj.timestamp = DataConvert.StringJsonToDateTime(dto.timestamp);
             obj.timestamp = DataConvert.StringJsonToDateTime(dto.timestamp);
             return obj;
-        }
+        }// End of DTOToIbject function
 
+        /// <summary>
+        /// Objects to DTO list
+        /// </summary>
+        /// <param name="objs"></param>
+        /// <returns></returns>
         public static IList<RegisterDTO> ObjectsToDTOs(IList<Register> objs)
         {
 

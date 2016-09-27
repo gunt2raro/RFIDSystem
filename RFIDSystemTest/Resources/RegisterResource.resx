@@ -135,6 +135,12 @@
   <data name="kit_state" xml:space="preserve">
     <value>Kit State</value>
   </data>
+  <data name="lSex" xml:space="preserve">
+    <value>Sex</value>
+  </data>
+  <data name="lTeam" xml:space="preserve">
+    <value>Team</value>
+  </data>
   <data name="lTitCompetitor" xml:space="preserve">
     <value>Competitor</value>
   </data>

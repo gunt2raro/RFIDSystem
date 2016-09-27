@@ -22,6 +22,7 @@ namespace RFIDSystemTest.Views.Events
         public NewCompetition new_competition_control;
         public NewRegister new_register_control;
         public TimingControl timing_control;
+        public ReportControl report_control;
 
         #endregion Controls
 
@@ -34,6 +35,9 @@ namespace RFIDSystemTest.Views.Events
         public IRegisterService register_service;
         public IKitStateService kit_state_service;
         public IRegisterStateService register_state_service;
+        public ITeamService team_service;
+        public ITimeRegService time_reg_service;
+
         #endregion Services
 
         /// <summary>
@@ -48,7 +52,9 @@ namespace RFIDSystemTest.Views.Events
             ICompetitorService competitor_service,
             IRegisterService register_service,
             IKitStateService kit_state_service,
-            IRegisterStateService register_state_service
+            IRegisterStateService register_state_service, 
+            ITeamService team_service,
+            ITimeRegService time_reg_service
         )
         {
             // Default stuff
@@ -62,6 +68,8 @@ namespace RFIDSystemTest.Views.Events
             this.register_service = register_service;
             this.kit_state_service = kit_state_service;
             this.register_state_service = register_state_service;
+            this.team_service = team_service;
+            this.time_reg_service = time_reg_service;
             /// Init controls
             list_event_control = new ListEvent( this );
             menu_event_control = new MenuEvent( this );
@@ -69,6 +77,7 @@ namespace RFIDSystemTest.Views.Events
             detail_event_control = new DetailEvent( this );
             new_competition_control = new NewCompetition( this );
             new_register_control = new NewRegister( this );
+            report_control = new ReportControl(this);
             timing_control = new TimingControl();
         }// End of Constructor function
 

@@ -10,6 +10,7 @@ using RFIDSystemTest.Data.Users;
 using RFIDSystemTest.Warriror;
 using RFIDSystemTest.Business.Adapters;
 using Newtonsoft.Json;
+using System.Drawing;
 
 namespace RFIDSystemTest.Business.Implementations.Events
 {
@@ -153,6 +154,22 @@ namespace RFIDSystemTest.Business.Implementations.Events
         {
             throw new NotImplementedException();
         }// End of getCompetitorsById function
+
+        /// <summary>
+        /// Upload the image of the route to the db
+        /// </summary>
+        /// <param name="competition"></param>
+        /// <param name="img"></param>
+        /// <param name="user_log"></param>
+        /// <returns></returns>
+        public Competition ImageToCompetition(Competition competition, Image img, UserSystem user_log)
+        {
+            return http_service.JSONHttpPettitionObject<Competition>(
+                HttpMethod.PUT,
+                string.Format(
+                    "competition/image/{0}",
+                    competition.id), JsonConvert.SerializeObject(DataConvert.ImageToByte(img)));
+        }// End of ImageToCompetition function
 
         /// <summary>
         /// Update competition

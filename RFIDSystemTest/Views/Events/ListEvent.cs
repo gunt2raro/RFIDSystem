@@ -36,15 +36,13 @@ namespace RFIDSystemTest.Views.Events
         /// </summary>
         internal void loadData()
         {
-            
-            dataEvents.DataSource = event_control.event_service.getAll(null).Select(
+            dgEvents.DataSource = event_control.event_service.getAll(null).Select(
                 o => new EventVO() {
                     id = o.id,
                     name = o.name,
-                    date_start = o.date_start,
-                    date_finish = o.date_finish,
                     date_limit = o.date_limit,
                     competitors_limit = o.competitors_limit }).ToList();
+            dgEvents.ResumeLayout();
 
         }// End of loadData function
 
@@ -84,10 +82,10 @@ namespace RFIDSystemTest.Views.Events
         private void bEdit_Click(object sender, EventArgs e)
         {
 
-            if (dataEvents.SelectedRows != null)
+            if (dgEvents.SelectedRows != null)
             {
 
-                using (DataGridViewRow row = dataEvents.SelectedRows[0])
+                using (DataGridViewRow row = dgEvents.SelectedRows[0])
                 {
                     event_control.detail_event_control.event_o = event_control.event_service.getById(int.Parse(row.Cells[0].Value.ToString()), null);
                     event_control.detail_event_control.loadData();
@@ -120,9 +118,12 @@ namespace RFIDSystemTest.Views.Events
             ThemeDark.ResponsiveDesign( this, Parent.Parent, 1, 1 );
             ThemeDark.SetButtonsTheme(this);
             this.BackColor = Color.FromArgb( 248, 248, 248 );
-            ThemeDark.SetDataGridViewResponsiveWidth(dataEvents, this, 1);
-            ThemeDark.SetDataGridViewResponsiveHeight(dataEvents, this, .50);
-            pButtons.Width = Parent.Parent.Width;
+            //ThemeDark.SetDataGridViewResponsiveHeight(dgEvents, this, .50);
+            //ThemeDark.SetDataGridViewResponsiveWidth(dgEvents, this, 1);
+            //dataEvents.RowHeadersWidth =(int) (dataEvents.Width * .80);
+            //dataEvents.Refresh();
+            ThemeDark.ResponsiveDesign( pButtons, Parent.Parent, 1, .10 );
+            //pButtons.Width = Parent.Parent.Width;
             pButtons.BackColor = Color.FromArgb(80, 102, 127);
             pButtons.BorderStyle = BorderStyle.None;
         }// end of ThemeShit function
@@ -149,13 +150,11 @@ namespace RFIDSystemTest.Views.Events
             if (query != TWords.EMPTY && query != " ")
             {
                 IEnumerable<Event> events_o = from event_o in event_control.event_service.getAll(null).ToList() where event_o.name.Contains(query) select event_o;
-                dataEvents.DataSource = events_o.Select(
+                dgEvents.DataSource = events_o.Select(
                     o => new EventVO()
                     {
                         id = o.id,
                         name = o.name,
-                        date_start = o.date_start,
-                        date_finish = o.date_finish,
                         date_limit = o.date_limit,
                         competitors_limit = o.competitors_limit
                     }).ToList();
@@ -169,6 +168,26 @@ namespace RFIDSystemTest.Views.Events
                 ControlHelper.WarningBox("Need to put something on the search box first!!");
             }
         }// End of bSearch_Click function
+
+        private void bReports_Click(object sender, EventArgs e)
+        {
+
+            if (dgEvents.SelectedRows != null)
+            {
+
+                using (DataGridViewRow row = dgEvents.SelectedRows[0])
+                {
+                    event_control.report_control.eventou = event_control.event_service.getById(int.Parse(row.Cells[0].Value.ToString()), null);
+                    ControlHelper.LoadControlOnControl(event_control, event_control.report_control);
+                }
+
+            }
+            else
+            {
+                ControlHelper.WarningBox(String.Format(WarningResource.SelectRow, typeof(Event).ToString()));
+            }
+
+        }// End of bReports_click function
 
     }// End of ListEvent control class
 }

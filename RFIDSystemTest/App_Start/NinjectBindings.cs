@@ -37,6 +37,8 @@ namespace RFIDSystemTest.App_Start
             Bind<ICompetitionTypeService>().To<CompetitionTypeService>();
             Bind<ICategoryService>().To<CategoryService>();
             Bind<IRegisterService>().To<RegisterService>();
+            Bind<ITeamService>().To<TeamService>();
+            Bind<ITimeRegService>().To<TimeRegService>();
             // Authentication injections
             Bind<IUserService>().To<UserService>();
             Bind<IUserSystemService>().To<UserSystemService>();

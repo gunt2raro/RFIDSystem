@@ -121,7 +121,14 @@ namespace RFIDSystemTest.Business.Implementations.Competitors
         /// <returns></returns>
         public IList<TimeReg> getByRegister(Register register, UserSystem user_log)
         {
-            throw new NotImplementedException();
+            return http_service.JSONHttpPettitionList<TimeReg>(
+                HttpMethod.GET,
+                string.Format("{0}/byregister/?register_id={1}",
+                    GetType().Name.ToLower().Replace(
+                        TWords.SERVICE,
+                        TWords.EMPTY),
+                    register.id),
+                null);
         }// End of getByRegister function
 
         /// <summary>

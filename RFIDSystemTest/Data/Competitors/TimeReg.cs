@@ -15,7 +15,8 @@ namespace RFIDSystemTest.Data.Competitors
     {
         public int id { get; set; }
 
-        public Register register { get; set; }
+        public int register { get; set; }
+        public string time { get; set; }
 
         public DateTime timestamp { get; set; }
         public DateTime updated { get; set; }

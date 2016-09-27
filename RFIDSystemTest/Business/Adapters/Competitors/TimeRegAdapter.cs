@@ -21,9 +21,7 @@ namespace RFIDSystemTest.Business.Adapters
         /// <returns></returns>
         public static TimeRegDTO ObjectToDTO(TimeReg obj)
         {
-            return new TimeRegDTO
-            {
-                register=RegisterAdapter.ObjectToDTO(obj.register),
+            return new TimeRegDTO { 
                 timestamp=DataConvert.DateTimeToJsonString(obj.timestamp),
                 updated=DataConvert.DateTimeToJsonString(obj.updated)
                
@@ -34,7 +32,6 @@ namespace RFIDSystemTest.Business.Adapters
         {
             return new TimeReg
             {
-                register = RegisterAdapter.DTOToObject(dto.register),
                 timestamp = DataConvert.StringJsonToDateTime(dto.timestamp),
                 updated = DataConvert.StringJsonToDateTime(dto.updated)
 
